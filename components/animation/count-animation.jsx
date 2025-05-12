@@ -1,0 +1,20 @@
+"use client";
+
+import { cn } from "@/lib/utils";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useEffect } from "react";
+
+function CountAnimation({ number, className }) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, Math.round);
+
+  useEffect(() => {
+    const animation = animate(count, number, { duration: 3 });
+
+    return animation.stop;
+  }, []);
+
+  return <motion.h1 className={cn(className)}>{rounded}</motion.h1>;
+}
+
+export { CountAnimation };
