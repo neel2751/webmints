@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { ArrowRight, CheckCircle, Mail, Rocket } from "lucide-react";
 import { Input } from "./ui/input";
+import { sendMail } from "@/server/mail.server";
 export default function CommingSoon() {
   return (
     <>
@@ -58,7 +59,7 @@ export default function CommingSoon() {
                     />
                   </div>
                   <div className="w-full shrink-0 px-4 py-6 md:p-8 lg:w-1/2 lg:px-16 space-y-3">
-                    <h2 className="font-grotesk font-semibold text-2xl tracking-tighter text-indigo-600">
+                    <h2 className="font-grotesk font-semibold text-2xl tracking-tighter text-black">
                       Transform your workflow with our enterprise solution
                     </h2>
                     <SubscriptionForm />
@@ -124,9 +125,12 @@ function SubscriptionForm() {
     // Simulate API call
     try {
       // In a real app, you would send this to your API
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setIsSubmitted(true);
-      setEmail("");
+      const info = await sendMail(email);
+      if (info.success) {
+        setIsSubmitted(true);
+        setEmail("");
+      }
+      // await new Promise((resolve) => setTimeout(resolve, 1000));
     } catch (err) {
       setError("Something went wrong. Please try again.");
     } finally {
@@ -144,7 +148,7 @@ function SubscriptionForm() {
             <Input
               type="email"
               placeholder="Enter your email"
-              className="pl-10 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 focus:border-indigo-500 focus:ring-indigo-500"
+              className="pl-10 bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 focus:border-indigo-600 focus:ring-indigo-600"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={isSubmitting}
@@ -153,7 +157,7 @@ function SubscriptionForm() {
 
           <Button
             type="submit"
-            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
+            className="w-full hover:bg-indigo-600 text-white"
             disabled={isSubmitting}
           >
             {isSubmitting ? (
