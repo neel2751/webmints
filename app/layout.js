@@ -1,15 +1,17 @@
-import { Sora } from "next/font/google";
+import { Inter, Space_Grotesk, Work_Sans } from "next/font/google";
 import "./globals.css";
 
-const sora = Sora({
+const inter = Work_Sans({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
 });
 
-// const quickSand = Quicksand({
-//   subsets: ["latin"],
-//   weight: ["400", "500", "600", "700"],
-// });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
+});
 
 export const metadata = {
   title: "WebMints",
@@ -18,8 +20,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${sora.className} antialiased`}>{children}</body>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <body className="antialiased font-sans">{children}</body>
     </html>
   );
 }

@@ -30,6 +30,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const products = [
   {
@@ -100,7 +101,16 @@ export function SiteHeader() {
       <div className="max-w-7xl mx-auto flex h-16 items-center">
         <div className="mr-4 flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="font-bold">LOGO</span>
+            <Image
+              src={"/images/webmints.svg"}
+              alt="Webmints Logo"
+              width={100}
+              height={100}
+              className="h-10 w-auto"
+            />
+            <span className="text-xl font-semibold text-indigo-600 font-grotesk tracking-tight">
+              Webmints
+            </span>
           </Link>
         </div>
 
@@ -109,21 +119,24 @@ export function SiteHeader() {
           <NavigationMenuList>
             {NAV_ITEMS.map((item, index) => (
               <NavigationMenuItem key={index}>
-                <Link href={item.link} legacyBehavior passHref>
-                  <NavigationMenuLink
-                    className={`${navigationMenuTriggerStyle()}`}
-                  >
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href={item.link}>
                     <span
-                      className={`${
-                        paraam === item?.link
-                          ? "text-indigo-600 font-semibold"
-                          : ""
-                      }`}
+                      className={`font-grotesk text-base
+                        ${
+                          paraam === item?.link
+                            ? "text-indigo-600 font-bold"
+                            : "font-semibold text-neutral-700"
+                        }
+                      `}
                     >
                       {item.label}
                     </span>
-                  </NavigationMenuLink>
-                </Link>
+                  </Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>

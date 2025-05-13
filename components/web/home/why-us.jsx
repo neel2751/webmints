@@ -68,13 +68,13 @@ export default function WhyUs() {
 
             {/* Right side - Content */}
             <div>
-              <p className="mb-4 text-sm font-semibold text-indigo-600">
+              <p className="mb-4 text-base font-semibold text-indigo-600 font-sans">
                 Why Chapter?
               </p>
-              <h2 className="text-3xl md:text-2xl font-semibold text-gray-900 mb-2">
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-2 font-grotesk">
                 Unlock Your Unique Potential with a Platform Built for You
               </h2>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-800 mb-6 font-sans text-lg tracking-tight">
                 Stop settling for off-the-shelf solutions. We empower your
                 business with a fully customizable SaaS platform, providing the
                 exact tools and flexibility you need to thrive in today's
@@ -84,8 +84,8 @@ export default function WhyUs() {
               {/* Feature highlights */}
               <div className="space-y-6">
                 <div className="border-l-2 border-indigo-600 px-4 py-1">
-                  <p className="text-gray-600">
-                    <strong className="text-gray-900 font-semibold text-base">
+                  <p className="text-gray-800 font-sans text-base">
+                    <strong className="text-gray-900 font-semibold text-lg font-grotesk">
                       Our courses
                     </strong>{" "}
                     are designed by experts, ensuring you gain real-world skills
@@ -94,8 +94,8 @@ export default function WhyUs() {
                 </div>
 
                 <div className="border-l-2 border-indigo-600 px-4 py-1">
-                  <p className="text-gray-600">
-                    <strong className="text-gray-900 text-base font-semibold">
+                  <p className="text-gray-800 font-sans text-base">
+                    <strong className="text-gray-900 font-semibold text-lg font-grotesk">
                       Engage with a community
                     </strong>{" "}
                     of passionate learners, track your progress in real-time,
@@ -123,8 +123,10 @@ const WebminstCard = ({ Icon, title, desc, color }) => (
       <div className={`bg-${color}-50 p-2 rounded-lg`}>
         <Icon className={`text-${color}-600 h-6 w-6`} />
       </div>
-      <h3 className="font-semibold text-gray-900">{title}</h3>
+      <h3 className="font-semibold text-gray-900 font-grotesk text-lg">
+        {title}
+      </h3>
     </div>
-    <p className="text-gray-600 text-sm">{desc}</p>
+    <p className="text-gray-800 text-base tracking-tight font-sans">{desc}</p>
   </div>
 );

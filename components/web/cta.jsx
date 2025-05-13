@@ -53,14 +53,14 @@ const Cta = () => {
               <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
                 <div className="inline-flex items-center mb-4 gap-2">
                   <Sparkles className="h-5 w-5 text-amber-400 rotate-45" />
-                  <p className="bg-gradient-to-tr from-amber-200 to-amber-400 text-transparent bg-clip-text font-medium uppercase tracking-tight text-sm">
+                  <p className="bg-gradient-to-tr from-amber-200 to-amber-400 text-transparent bg-clip-text font-medium uppercase tracking-tight text-sm font-sans">
                     Ready to dive in?
                   </p>
                 </div>
-                <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-1">
+                <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-1 font-grotesk">
                   Ready to Scale Your Business with Custom SaaS?
                 </h2>
-                <p className="text-white/90 text-lg mb-10 max-w-lg">
+                <p className="text-white/90 text-lg mb-10 max-w-lg font-sans">
                   Our team is here to help you every step of the way. From
                   consultation to implementation, we'll work with you to create
                   a customized solution that meets your unique needs and goals.
@@ -68,19 +68,19 @@ const Cta = () => {
                 <div className="flex flex-col sm:flex-row gap-6 mb-10">
                   <div className="flex items-center gap-1">
                     <CheckCircle className="text-amber-400 w-4" />
-                    <span className="text-white whitespace-nowrap">
+                    <span className="text-white whitespace-nowrap font-grotesk">
                       Expert Guidance
                     </span>
                   </div>
                   <div className="flex items-center gap-1">
                     <CheckCircle className="text-amber-400 w-4" />
-                    <span className="text-white whitespace-nowrap">
+                    <span className="text-white whitespace-nowrap font-grotesk">
                       Customized Solutions
                     </span>
                   </div>
                   <div className="flex items-center gap-1">
                     <CheckCircle className="text-amber-400 w-4" />
-                    <span className="text-white whitespace-nowrap">
+                    <span className="text-white whitespace-nowrap font-grotesk">
                       Free Quote
                     </span>
                   </div>
