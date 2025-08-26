@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Story() {
@@ -5,12 +6,12 @@ export default function Story() {
     <section className="py-32">
       <section className="relative container max-w-5xl py-10 md:py-12 lg:py-15 mx-auto">
         <div className="">
-          <h1 className="text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl font-grotesk">
             We are different
             <br />
             from the agency
           </h1>
-          <p className="mt-4 max-w-2xl text-2xl text-muted-foreground md:text-3xl">
+          <p className="mt-4 max-w-2xl text-2xl text-muted-foreground md:text-3xl font-sans">
             Beyond Bespoke Services: The Power of Customizable SaaS
           </p>
         </div>
@@ -60,91 +61,112 @@ export default function Story() {
         </div>
       </section>
       <section className="container max-w-5xl border-y py-5 mx-auto">
-        <h2 className="font-mono text-sm font-semibold tracking-widest text-accent-foreground">
+        <h2 className="text-sm font-semibold tracking-widest text-accent-foreground font-grotesk">
           By the numbers
         </h2>
         <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl text-indigo-600">
-              $150M
+            <h3 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl text-indigo-600 font-grotesk">
+              22+
             </h3>
-            <p className="mt-1 font-medium text-muted-foreground">Raised</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl text-indigo-600">
-              20K
-            </h3>
-            <p className="mt-1 font-medium text-muted-foreground">Companies</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl text-indigo-600">
-              1.3B
-            </h3>
-            <p className="mt-1 font-medium text-muted-foreground">
-              Monthly transactions
+            <p className="mt-1 font-medium text-muted-foreground font-sans">
+              Projects Delivered
             </p>
           </div>
           <div>
-            <h3 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl text-indigo-600">
-              1.5K
+            <h3 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl text-indigo-600 font-grotesk">
+              98%
             </h3>
-            <p className="mt-1 font-medium text-muted-foreground">
-              Connections per minute
+            <p className="mt-1 font-medium text-muted-foreground font-sans">
+              Client Retention Rate
+            </p>
+          </div>
+          <div>
+            <h3 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl text-indigo-600 font-grotesk">
+              6+
+            </h3>
+            <p className="mt-1 font-medium text-muted-foreground font-sans">
+              Core Industries Served
+            </p>
+          </div>
+          <div>
+            <h3 className="text-4xl font-medium tracking-tight md:text-5xl lg:text-6xl text-indigo-600 font-grotesk">
+              13x
+            </h3>
+            <p className="mt-1 font-medium text-muted-foreground font-sans">
+              Faster Time to Launch
             </p>
           </div>
         </div>
       </section>
       <section className="container max-w-5xl py-10 md:py-12 lg:py-15 mx-auto">
-        <div className="max-w-2xl space-y-5 md:space-y-8 lg:space-y-10">
-          <p className="text-lg">
-            Unlike an agency that typically delivers project-based services, we
-            empower you with a customizable SaaS platform that becomes an
-            integral part of your operational infrastructure. You're not just
-            paying for our time; you're investing in a long-term solution that
-            you can own and adapt as your business evolves. Our research and
-            build process ensures this foundation is precisely aligned with your
-            needs, offering sustained value and efficiency beyond a typical
-            agency engagement
-          </p>
-          <h2 className="text-xl font-medium tracking-tight md:text-2xl">
-            Building Your Foundation, Not Just Providing Hours
-          </h2>
-          <p className="text-lg">
-            While agencies excel at providing tailored services, our approach is
-            fundamentally different. We're not just offering our time and
-            expertise; we've built a robust and adaptable SaaS platform that
-            serves as the foundation for your unique solution. This means you
-            benefit from the scalability, efficiency, and ongoing evolution of a
-            software product, combined with the precise customization you need –
-            a powerful synergy that traditional agencies often can't provide.
-          </p>
+        <div className="grid-cols-2 grid">
+          <div className="max-w-2xl space-y-5 md:space-y-8 lg:space-y-10">
+            <p className="text-lg font-sans">
+              Unlike an agency that typically delivers project-based services,
+              we empower you with a customizable SaaS platform that becomes an
+              integral part of your operational infrastructure. You're not just
+              paying for our time; you're investing in a long-term solution that
+              you can own and adapt as your business evolves. Our research and
+              build process ensures this foundation is precisely aligned with
+              your needs, offering sustained value and efficiency beyond a
+              typical agency engagement
+            </p>
+            <h2 className="text-xl font-medium tracking-tight md:text-2xl font-grotesk">
+              Building Your Foundation, Not Just Providing Hours
+            </h2>
+            <p className="text-lg font-sans">
+              While agencies excel at providing tailored services, our approach
+              is fundamentally different. We're not just offering our time and
+              expertise; we've built a robust and adaptable SaaS platform that
+              serves as the foundation for your unique solution. This means you
+              benefit from the scalability, efficiency, and ongoing evolution of
+              a software product, combined with the precise customization you
+              need – a powerful synergy that traditional agencies often can't
+              provide.
+            </p>
+          </div>
+          <Image
+            src={"/images/about/diff.svg"}
+            alt=""
+            height={400}
+            width={400}
+            className="object-contain h-full w-full"
+          />
         </div>
       </section>
-      <section className="container mx-auto">
+      <section className="container mx-auto grid grid-cols-2">
+        <Image
+          src={"/images/about/tech.svg"}
+          alt="Beyond the tech box"
+          height={400}
+          width={400}
+          className="h-full w-full object-cover p-4"
+        />
         <div className="mr-0 ml-auto max-w-2xl space-y-5 md:space-y-8 lg:space-y-10">
-          <p className="text-lg">
+          <p className="text-lg font-sans">
             Our unique approach centers on uderstanding individual needs,
             building from the ground up to create truly tailored experiences.and
             We're forging our own path, to deliver solutions that go beyond
             standard tech offerings.
           </p>
-          <h2 className="text-2xl font-medium tracking-tight md:text-3xl">
+          <h2 className="text-2xl font-medium tracking-tight md:text-3xl font-grotesk">
             Beyond the Usual Tech Box: We're Building Something Different.
           </h2>
-          <p className="text-lg">
+          <p className="text-lg font-sans">
             Think of us differently. We combine the power of technology with a
             commitment to long-term partnerships to offer solutions that break
             the mold of typical tech companies.
           </p>
         </div>
       </section>
-      <section className="container py-10 md:py-12 lg:py-15 mx-auto">
+      <section className="container py-10 md:py-12 lg:py-15 mx-auto max-w-5xl">
         <div className="grid gap-5 md:grid-cols-2 md:gap-10 lg:gap-16">
           <div className="order-2 md:order-1">
-            <h2 className="text-4xl font-semibold tracking-tight md:text-4xl">
+            <h2 className="text-4xl font-semibold tracking-tight md:text-4xl font-grotesk">
               The founding team
             </h2>
-            <p className="mt-5 text-lg md:mt-6">
+            <p className="mt-5 text-lg md:mt-6 font-sans">
               We started building Webmints between 2023 and 2024. From the very
               beginning in 2022. That's why every endpoint has been meticulously
               designed from the ground up, ensuring a clean and efficient

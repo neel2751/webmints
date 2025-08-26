@@ -1,14 +1,15 @@
 import { GlobeLock, Headset, Layers, Siren, TrendingUp } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 export default function KeyFeature() {
   return (
-    <section className="relative overflow-hidden bg-black py-20 lg:rounded-[2rem] lg:mx-px">
+    <section className="relative overflow-hidden bg-[#08080a] py-20 lg:rounded-[2rem] lg:mx-px">
       <div className="mx-auto mb-16 grid max-w-6xl gap-6 px-12 md:grid-cols-2 lg:gap-0">
-        <h2 className="text-3xl font-semibold text-white md:text-4xl font-grotesk">
-          Growing with <span className="text-amber-500">You</span> and
-          innovative approach to
-          <br /> <span className="text-amber-500">Digital</span> transformation
+        <h2 className="text-3xl font-semibold text-gray-300 md:text-4xl font-grotesk">
+          Growing with <span className="text-white">You</span> and innovative
+          approach to
+          <br /> <span className="text-white">Digital</span> transformation
         </h2>
         <div className="max-w-md text-gray-300">
           <p className="text-lg tracking-tight font-sans">
@@ -55,11 +56,11 @@ export default function KeyFeature() {
             className="absolute -bottom-1 right-3 hidden size-2 border border-gray-800 bg-gray-900 shadow-sm sm:right-5 lg:right-11 lg:block"
           ></div>
           <div className="relative grid divide-y divide-white/10 border-x border-b border-white/10 lg:grid-cols-2 lg:divide-x lg:divide-y-0">
-            <div className="relative p-6 before:absolute before:inset-0 before:bg-gradient-to-t before:from-white/5 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:p-8 lg:p-12">
+            <div className="relative p-6 group before:absolute before:inset-0 before:bg-gradient-to-t before:from-white/5 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:p-8 lg:p-12">
               <div className="inline-flex gap-2">
-                <Siren className="text-amber-500" />
+                <Siren className="text-gray-500 group-hover:text-green-500" />
                 <h3 className="relative text-lg text-white font-grotesk">
-                  Solution power
+                  Industry-Specific Solutions
                 </h3>
               </div>
               <p className="relative mt-4 text-gray-300 font-sans">
@@ -67,19 +68,18 @@ export default function KeyFeature() {
                 ensuring seamless scalability and automation. Fully adobpatble
                 to your business needs.
               </p>
-              <img
-                src="https://notioly.com/wp-content/uploads/2025/03/525.Waiting-In-Line.png"
-                className="mt-8 mix-blend-lighten grayscale rounded-md"
+              <Image
+                src={"/images/home/sol1.svg"}
+                // src="https://notioly.com/wp-content/uploads/2025/03/525.Waiting-In-Line.png"
+                className="mt-8 mix-blend-lighten border grayscale group-hover:grayscale-0 rounded-md border-neutral-800"
                 alt="Area chart"
                 width="1344"
                 height="1108"
-                loading="lazy"
-                decoding="async"
               />
             </div>
-            <div className="relative p-6 before:absolute before:inset-0 before:bg-gradient-to-t before:from-white/5 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:p-8 lg:p-12">
+            <div className="relative p-6 group before:absolute before:inset-0 before:bg-gradient-to-t before:from-white/5 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:p-8 lg:p-12">
               <div className="inline-flex gap-2">
-                <GlobeLock className="text-amber-500" />
+                <GlobeLock className="text-gray-500 group-hover:text-blue-400" />
                 <h3 className="relative text-lg text-white font-grotesk">
                   Scalable Architecture
                 </h3>
@@ -90,21 +90,20 @@ export default function KeyFeature() {
                 compliance, we prioritize the protection of your data and
                 privacy.
               </p>
-              <img
-                src="https://notioly.com/wp-content/uploads/2025/03/525.Waiting-In-Line.png"
-                className="mt-8 mix-blend-lighten grayscale"
+              <Image
+                // src="https://notioly.com/wp-content/uploads/2025/03/525.Waiting-In-Line.png"
+                src={"/images/home/arch1.svg"}
+                className="mt-8 mix-blend-lighten border grayscale hover:grayscale-0 rounded-md border-neutral-800"
                 alt="bar chart"
                 width="1344"
                 height="1108"
-                loading="lazy"
-                decoding="async"
               />
             </div>
           </div>
           <div className="relative grid divide-y divide-white/10 border-x border-white/10 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-3">
-            <div className="relative p-6 before:absolute before:inset-0 before:bg-gradient-to-t before:from-primary-600/15 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:p-8 lg:p-12">
+            <div className="relative p-6 group before:absolute before:inset-0 before:bg-gradient-to-t before:from-indigo-600/15 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:p-8 lg:p-12">
               <div className="flex items-center gap-2">
-                <TrendingUp className=" text-amber-500 size-5" />
+                <TrendingUp className="text-gray-500 size-5 group-hover:text-indigo-400" />
 
                 <h3 className="text-lg text-white font-grotesk">
                   High Performance
@@ -117,9 +116,9 @@ export default function KeyFeature() {
               any questions or concerns. */}
               </p>
             </div>
-            <div className="relative p-6 before:absolute before:inset-0 before:bg-gradient-to-t before:from-secondary-600/15 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:p-8 lg:p-12">
+            <div className="relative p-6 group before:absolute before:inset-0 before:bg-gradient-to-t before:from-purple-600/15 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:p-8 lg:p-12">
               <div className="flex items-center gap-2">
-                <Layers className=" text-amber-500 size-5" />
+                <Layers className=" text-gray-500 size-5 group-hover:text-purple-400" />
 
                 <h3 className="text-lg text-white font-grotesk">
                   Seamless Integrations
@@ -132,17 +131,17 @@ export default function KeyFeature() {
               information is secure. */}
               </p>
             </div>
-            <div className="relative p-6 before:absolute before:inset-0 before:bg-gradient-to-t before:from-accent-600/15 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:hidden sm:p-8 lg:block lg:p-12">
+            <div className="relative p-6 group before:absolute before:inset-0 before:bg-gradient-to-t before:from-green-600/15 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:hidden sm:p-8 lg:block lg:p-12">
               <div className="flex items-center gap-2">
-                <Headset className="text-amber-500 size-5" />
+                <Headset className="text-gray-500 size-5 group-hover:text-green-400" />
 
                 <h3 className="text-lg text-white font-grotesk">
-                  24/7 Support
+                  Rapid Implementation
                 </h3>
               </div>
               <p className="mt-4 text-base text-gray-300 font-sans">
-                Our dedicated support team is available 24/7 to help you with
-                any questions or concerns.
+                Get up and running in days, not months, with our streamlined
+                onboarding process.
               </p>
             </div>
           </div>

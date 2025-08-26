@@ -1,6 +1,9 @@
 import { Space_Grotesk, Work_Sans } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
+import { Toaster } from "sonner";
+import { CookieConsent } from "./(pages)/cookie/cookie";
+import UseCookie from "./(pages)/cookie/useCookie";
 
 const inter = Work_Sans({
   subsets: ["latin"],
@@ -23,7 +26,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <GoogleTagManager gtmId="GTM-M79C75BG" />
-      <body className="antialiased font-sans">{children}</body>
+      <body className="antialiased font-sans">
+        {children}
+        <Toaster />
+        <UseCookie />
+      </body>
     </html>
   );
 }

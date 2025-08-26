@@ -29,7 +29,7 @@ export default function MaintenancePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white" />
         <div className="container relative py-24 md:py-32 mx-auto">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-grotesk">
               Maintenance & Support
             </h1>
             <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -41,7 +41,7 @@ export default function MaintenancePage() {
                 <a href="#maintenance-plans">View Maintenance Plans</a>
               </Button>
               <Button variant="outline">
-                <Link href="/contact">Contact Support</Link>
+                <Link href="/contact-us">Contact Support</Link>
               </Button>
             </div>
           </div>
@@ -49,52 +49,54 @@ export default function MaintenancePage() {
       </section>
 
       {/* Free Support Period Banner */}
-      <section className="container py-6 mx-auto">
-        <div className="mx-auto max-w-4xl">
-          <div className="relative overflow-hidden rounded-lg border-2 border-indigo-600 bg-white p-6 shadow-md">
-            <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-indigo-100"></div>
-            <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex-1">
-                <h3 className="text-xl font-bold text-indigo-600 md:text-2xl">
-                  Free Support Period
-                </h3>
-                <p className="mt-2 text-muted-foreground">
-                  We provide{" "}
-                  <span className="font-semibold text-neutral-600">
-                    3 months of free maintenance and support
-                  </span>{" "}
-                  after the official handover of your system. After this period,
-                  you can choose from our flexible maintenance plans.
-                </p>
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-8 border-indigo-100 bg-white">
-                  <div className="absolute inset-0 rounded-full border-t-8 border-indigo-600"></div>
-                  <div className="text-center">
-                    <span className="block text-3xl font-bold text-indigo-600">
-                      3
-                    </span>
-                    <span className="text-sm font-medium text-muted-foreground">
-                      months free
-                    </span>
-                  </div>
+      {/* <div className="mx-auto max-w-3xl">
+        <div className="relative overflow-hidden rounded-lg border-2 border-indigo-600 bg-white px-6 py-6 shadow-md">
+          <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-indigo-100"></div>
+          <div className="relative flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-indigo-600 md:text-2xl font-grotesk">
+                Limited Availability
+              </h3>
+              <p className="mt-2 text-muted-foreground font-sans">
+                Due to our commitment to quality and personalized service, we
+                only take on a limited number of custom projects each month.
+              </p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-8 border-indigo-100 bg-white">
+                <div className="absolute inset-0 rounded-full border-t-8 border-indigo-600"></div>
+                <div className="text-center">
+                  <span className="block text-3xl font-bold text-indigo-600 font-grotesk">
+                    2
+                  </span>
+                  <span className="text-sm font-medium text-muted-foreground font-sans">
+                    slots remaining
+                  </span>
                 </div>
-                <Button
-                  asChild
-                  className="mt-4 bg-indigo-600 hover:bg-indigo-700"
-                >
-                  <a href="#maintenance-plans">Explore Plans</a>
-                </Button>
               </div>
+              <Button
+                asChild
+                className="mt-4 bg-indigo-600 hover:bg-indigo-700 font-grotesk"
+              >
+                <Link href="/pricing/#request-quote">Reserve Your Slot</Link>
+              </Button>
             </div>
           </div>
+          <p className="mt-4 text-sm text-muted-foreground font-sans">
+            Next availability window opens:{" "}
+            <span className="font-semibold font-grotesk text-indigo-600">
+              June 1, 2025
+            </span>
+          </p>
         </div>
-      </section>
+      </div> */}
+
+      <LimitedSeat />
 
       {/* Support Channels Section */}
       <section className="container mx-auto">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
             Support Channels
           </h2>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -129,7 +131,7 @@ export default function MaintenancePage() {
       <section className="bg-black py-16">
         <div className="container mx-auto">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-white font-grotesk">
               Response Time SLA
             </h2>
             <p className="max-w-[42rem] leading-normal text-white/80 sm:text-xl sm:leading-8">
@@ -137,7 +139,7 @@ export default function MaintenancePage() {
               resolutions based on issue severity.
             </p>
           </div>
-          <div className="container mx-auto py-8">
+          <div className="max-w-5xl mx-auto py-8">
             <Table className=" bg-white rounded-xl">
               <TableHeader>
                 <TableRow className="border-b border-gray-200">
@@ -149,7 +151,7 @@ export default function MaintenancePage() {
                   ].map((item, index) => (
                     <TableHead
                       key={index}
-                      className="w-[200px] font-semibold text-black border-r last-of-type:border-r-0 border-gray-200 p-4 first-of-type:text-left text-center"
+                      className="w-[200px] font-semibold text-black border-r last-of-type:border-r-0 border-gray-200 p-4 first-of-type:text-left text-center font-grotesk"
                     >
                       {item}
                     </TableHead>
@@ -160,7 +162,7 @@ export default function MaintenancePage() {
                 {/* Initial cost */}
                 {slaData.map((item, index) => (
                   <TableRow key={index} className="border-b border-gray-200">
-                    <TableCell className="font-semibold border-r border-gray-200 p-4">
+                    <TableCell className="font-semibold border-r border-gray-200 p-4 font-grotesk">
                       {item.description}
                     </TableCell>
                     <TableCell className="text-center border-r border-gray-200">
@@ -195,7 +197,7 @@ export default function MaintenancePage() {
       {/* Maintenance Components Section */}
       <section className="container mx-auto">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
             Maintenance Components
           </h2>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -233,7 +235,7 @@ export default function MaintenancePage() {
       >
         <div className="container mx-auto">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
               Maintenance Plans
             </h2>
             <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -243,11 +245,11 @@ export default function MaintenancePage() {
           </div>
 
           <Tabs defaultValue="monthly" className="mx-auto max-w-7xl">
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-8 font-grotesk">
               <TabsList>
                 <TabsTrigger value="monthly">Monthly Billing</TabsTrigger>
                 <TabsTrigger value="annual">
-                  Annual Billing (Save 15%)
+                  Annual Billing (Save 17%)
                 </TabsTrigger>
               </TabsList>
             </div>
@@ -262,7 +264,7 @@ export default function MaintenancePage() {
                     } transition-all duration-200 hover:shadow-md`}
                   >
                     {plan.popular && (
-                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium font-grotesk">
                         Recommended
                       </div>
                     )}
@@ -272,7 +274,7 @@ export default function MaintenancePage() {
                     </CardHeader>
                     <CardContent className="flex-1">
                       <div className="mb-6">
-                        <span className="text-4xl font-bold">
+                        <span className="text-4xl font-bold font-grotesk">
                           ${plan.monthlyPrice}
                         </span>
                         <span className="text-muted-foreground ml-1">
@@ -283,7 +285,7 @@ export default function MaintenancePage() {
                         {plan.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
-                            <span>{feature}</span>
+                            <span className="font-grotesk">{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -297,7 +299,11 @@ export default function MaintenancePage() {
                             : "bg-indigo-600/90 hover:bg-indigo-600"
                         }`}
                       >
-                        <Link href={plan.href}>{plan.buttonText}</Link>
+                        <Link
+                          href={`/request-quote?maintenance_plan=${plan.slug}&type=monthly`}
+                        >
+                          {plan.buttonText}
+                        </Link>
                       </Button>
                     </CardFooter>
                   </Card>
@@ -323,7 +329,7 @@ export default function MaintenancePage() {
                       } transition-all duration-200 hover:shadow-md`}
                     >
                       {plan.popular && (
-                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium font-grotesk">
                           Recommended
                         </div>
                       )}
@@ -333,7 +339,7 @@ export default function MaintenancePage() {
                       </CardHeader>
                       <CardContent className="flex-1">
                         <div className="mb-2">
-                          <span className="text-4xl font-bold">
+                          <span className="text-4xl font-bold font-grotesk">
                             ${annualPrice}
                           </span>
                           <span className="text-muted-foreground ml-1">
@@ -341,7 +347,7 @@ export default function MaintenancePage() {
                           </span>
                         </div>
                         <div className="mb-6">
-                          <span className="text-sm text-indigo-600 font-medium">
+                          <span className="text-sm text-indigo-600 font-medium font-grotesk">
                             Save ${monthlySavings} compared to monthly billing
                           </span>
                         </div>
@@ -363,7 +369,11 @@ export default function MaintenancePage() {
                               : "bg-indigo-600/90 hover:bg-indigo-600"
                           }`}
                         >
-                          <Link href={plan.href}>{plan.buttonText}</Link>
+                          <Link
+                            href={`/request-quote?maintenance_plan=${plan.slug}&type=annual`}
+                          >
+                            {plan.buttonText}
+                          </Link>
                         </Button>
                       </CardFooter>
                     </Card>
@@ -374,7 +384,7 @@ export default function MaintenancePage() {
           </Tabs>
 
           <div className="mt-8 text-center text-sm text-muted-foreground">
-            <p>
+            <p className="font-grotesk text-base">
               All plans include our standard SLA response times. For custom
               maintenance plans or enterprise needs, please{" "}
               <Link
@@ -392,7 +402,7 @@ export default function MaintenancePage() {
       {/* Benefits Section */}
       <section className="container mx-auto">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
             Benefits of Ongoing Maintenance
           </h2>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -404,11 +414,11 @@ export default function MaintenancePage() {
         <div className="grid gap-8 md:grid-cols-2">
           <div className="relative rounded-lg overflow-hidden border shadow-sm">
             <Image
-              src="/placeholder.svg?height=600&width=800"
+              src="/images/main/1.svg"
               alt="Maintenance Benefits"
               width={800}
               height={600}
-              className="object-cover"
+              className="object-cover h-full w-full"
             />
           </div>
           <div className="flex flex-col justify-center space-y-6">
@@ -418,7 +428,9 @@ export default function MaintenancePage() {
                   <Check className="h-5 w-5 text-indigo-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">{benefit.title}</h3>
+                  <h3 className="font-semibold text-lg font-grotesk">
+                    {benefit.title}
+                  </h3>
                   <p className="text-muted-foreground">{benefit.description}</p>
                 </div>
               </div>
@@ -427,41 +439,10 @@ export default function MaintenancePage() {
         </div>
       </section>
 
-      {/* Custom Maintenance Section */}
-      <section className="bg-indigo-600 text-white py-16">
-        <div className="container mx-auto">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              Need a Custom Maintenance Plan?
-            </h2>
-            <p className="text-xl text-white/80 mb-8">
-              We understand that every business has unique needs. Contact us to
-              discuss a tailored maintenance plan that's perfect for your
-              specific requirements.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                asChild
-                className="bg-white text-indigo-600 hover:bg-gray-100"
-              >
-                <Link href="/contact">Contact Sales</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="text-white border-white hover:bg-white/10"
-              >
-                <Link href="/help-support">Visit Help & Support</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="container py-16 mx-auto">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
             Frequently Asked Questions
           </h2>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -469,8 +450,8 @@ export default function MaintenancePage() {
           </p>
         </div>
 
-        <div className="mx-auto max-w-3xl">
-          <div className="grid gap-6">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-6 sm:grid-cols-2">
             {maintenanceFaqs.map((faq, index) => (
               <Card
                 key={index}
@@ -484,6 +465,36 @@ export default function MaintenancePage() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-indigo-600 text-white py-16">
+        <div className="container mx-auto">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 font-grotesk">
+              Ready to build your custom solution?
+            </h2>
+            <p className="text-xl text-white/80 mb-8 font-sans">
+              Let's discuss how our technology expertise can help you create a
+              powerful, scalable SaaS platform tailored to your industry needs.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                asChild
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+              >
+                <Link href="/schedule-call">Schedule a Consultation</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="text-white bg-indigo-600 border-white hover:bg-white/10 hover:text-white"
+              >
+                <Link href="/pricing">View Pricing</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -575,6 +586,7 @@ const maintenancePlans = [
     name: "Basic Maintenance",
     description: "Essential maintenance for small businesses",
     monthlyPrice: 499,
+    slug: "basic",
     features: [
       "Standard SLA response times",
       "Email support during business hours",
@@ -584,13 +596,14 @@ const maintenancePlans = [
       "Up to 5 hours of bug fixes per month",
     ],
     buttonText: "Select Basic Plan",
-    href: "/contact?plan=basic",
+    href: "/request-quote?maintenance_plan=basic",
     popular: false,
   },
   {
     name: "Professional Maintenance",
     description: "Comprehensive maintenance for growing businesses",
     monthlyPrice: 999,
+    slug: "professional",
     features: [
       "Enhanced SLA response times",
       "Email and instant messaging support",
@@ -602,13 +615,14 @@ const maintenancePlans = [
       "Quarterly performance review",
     ],
     buttonText: "Select Pro Plan",
-    href: "/contact?plan=professional",
+    href: "/request-quote?maintenance_plan=professional",
     popular: true,
   },
   {
     name: "Enterprise Maintenance",
     description: "Premium maintenance for large organizations",
     monthlyPrice: 1999,
+    slug: "enterprise",
     features: [
       "Priority SLA response times",
       "24/7 support for critical issues",
@@ -622,7 +636,7 @@ const maintenancePlans = [
       "Dedicated support team",
     ],
     buttonText: "Select Enterprise Plan",
-    href: "/contact?plan=enterprise",
+    href: "/request-quote?maintenance_plan=enterprise",
     popular: false,
   },
 ];
@@ -666,17 +680,22 @@ const maintenanceFaqs = [
   {
     question: "What happens after the free 3-month maintenance period?",
     answer:
-      "After the free 3-month period, you can choose one of our maintenance plans or opt for ad-hoc support. We'll contact you before the free period ends to discuss your options and ensure a smooth transition.",
+      "After the complimentary 3-month support ends, you can continue with one of our flexible maintenance plans or request ad-hoc support as needed. We’ll reach out in advance to ensure a seamless handover into your preferred option.",
   },
   {
     question: "Can I upgrade or downgrade my maintenance plan?",
     answer:
-      "Yes, you can upgrade your maintenance plan at any time. Downgrades can be made at the end of your current billing cycle. Simply contact our support team to request a change to your plan.",
+      "Yes! You can upgrade your plan at any time to access more support features. Downgrades can be made at the end of your billing cycle—just get in touch with our support team.",
   },
   {
     question: "What's not covered in the maintenance plans?",
     answer:
       "Our maintenance plans cover bug fixes, security updates, and minor improvements. Major feature additions, significant UI redesigns, or integrations with new systems are typically considered new development and may require additional quotes.",
+  },
+  {
+    question: "Do you offer design changes as part of maintenance?",
+    answer:
+      "Small design tweaks like button styles, layout fixes, or branding updates are covered under Premium or Enterprise plans. Large-scale UI/UX changes are considered new design projects and quoted separately.",
   },
   {
     question: "How do I report issues or request support?",
@@ -691,3 +710,4 @@ const maintenanceFaqs = [
 ];
 
 import { Mail, MessageSquare, Phone } from "lucide-react";
+import LimitedSeat from "@/components/limitedSeat/limitedSeat";

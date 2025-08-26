@@ -1,5 +1,8 @@
 import React from "react";
 import { Button } from "../../ui/button";
+import { ArrowRightIcon } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Industry() {
   return (
@@ -20,15 +23,21 @@ export default function Industry() {
           {/* No matter your industry, our SaaS platform adapts to your needs. */}
         </p>
         <div className="w-full text-center mt-4">
-          <Button className="bg-gradient-to-b from-indigo-600 via-indigo-700 to-indigo-800 hover:bg-gradient-to-t hover:from-indigo-600 hover:via-indigo-700 hover:to-indigo-800 text-white">
-            Learn More
+          <Button
+            className="bg-gradient-to-b from-indigo-600 via-indigo-700 to-indigo-800 hover:bg-gradient-to-t hover:from-indigo-600 hover:via-indigo-700 hover:to-indigo-800 text-white"
+            asChild
+          >
+            <Link href={"/industries"}>
+              Explore All Industries
+              <ArrowRightIcon />
+            </Link>
           </Button>
         </div>
         <div className="mt-8 md:mt-12 lg:mt-20">
           <div className="text-muted-foreground relative h-px w-full container scale-x-105">
             <div className="h-px w-full bg-[repeating-linear-gradient(90deg,transparent,transparent_4px,currentColor_4px,currentColor_10px)] [mask-image:linear-gradient(90deg,transparent,black_25%,black_75%,transparent)]"></div>
           </div>
-          <div className="relative container flex max-md:flex-col">
+          <div className="relative container flex max-md:flex-col sm:px-0 px-4">
             <div className="relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8 flex-1 [&amp;>.title-container]:mb-5 md:[&amp;>.title-container]:mb-8 xl:[&amp;>.image-container]:translate-x-6 [&amp;>.image-container]:translate-x-2">
               <div className="title-container text-balance space-y-2">
                 <h3 className="inline font-semibold font-grotesk text-xl text-indigo-600">
@@ -55,11 +64,11 @@ export default function Industry() {
                   src="/images/industries/enterprise.svg"
                 />
               </div>
-              <div className="text-muted-foreground h-full w-px absolute top-0 right-0 max-md:hidden">
-                <div className="h-full w-px bg-[repeating-linear-gradient(180deg,transparent,transparent_4px,currentColor_4px,currentColor_10px)] [mask-image:linear-gradient(180deg,transparent,black_25%,black_75%,transparent)]"></div>
+              <div className="text-gray-500 h-full w-px absolute top-0 right-0 max-md:hidden">
+                <div className="h-full w-px bg-[repeating-linear-gradient(180deg,transparent,transparent_4px,#4B0082_4px,#4B0082_10px)] [mask-image:linear-gradient(180deg,transparent,black_25%,black_75%,transparent)]"></div>
               </div>
-              <div className="text-muted-foreground h-px w-full absolute inset-x-0 bottom-0 md:hidden">
-                <div className="h-px w-full bg-[repeating-linear-gradient(90deg,transparent,transparent_4px,currentColor_4px,currentColor_10px)] [mask-image:linear-gradient(90deg,transparent,black_25%,black_75%,transparent)]"></div>
+              <div className="text-gray-500 h-px w-full absolute inset-x-0 bottom-0 md:hidden">
+                <div className="h-px w-full bg-[repeating-linear-gradient(90deg,transparent,transparent_4px,#4B0082_4px,#4B0082_10px)] [mask-image:linear-gradient(90deg,transparent,black_25%,black_75%,transparent)]"></div>
               </div>
             </div>
             <div className="relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8 flex-1 [&amp;>.title-container]:mb-5 md:[&amp;>.title-container]:mb-8 md:[&amp;>.title-container]:translate-x-2 xl:[&amp;>.title-container]:translate-x-4 [&amp;>.title-container]:translate-x-0">
@@ -91,9 +100,9 @@ export default function Industry() {
             </div>
           </div>
           <div className="text-muted-foreground relative h-px w-full container max-w-7xl scale-x-110">
-            <div className="h-px w-full bg-[repeating-linear-gradient(90deg,transparent,transparent_4px,currentColor_4px,currentColor_10px)] [mask-image:linear-gradient(90deg,transparent,black_25%,black_75%,transparent)]"></div>
+            <div className="h-px w-full bg-[repeating-linear-gradient(90deg,transparent,transparent_4px,#4B0082_4px,#4B0082_10px)] [mask-image:linear-gradient(90deg,transparent,black_25%,black_75%,transparent)]"></div>
           </div>
-          <div className="relative container grid max-w-7xl md:grid-cols-3">
+          <div className="relative container grid max-w-7xl md:grid-cols-3 sm:px-0 px-4">
             <div className="relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8 md:pb-0 [&amp;>.title-container]:mb-5 md:[&amp;>.title-container]:mb-8 xl:[&amp;>.image-container]:translate-x-6 [&amp;>.image-container]:translate-x-2">
               <div className="title-container text-balance space-y-2">
                 <h3 className="inline font-semibold font-grotesk text-xl text-indigo-600">
@@ -119,7 +128,7 @@ export default function Industry() {
                   data-nimg="1"
                   className="object-contain object-left-top"
                   style={{ color: "transparent" }}
-                  src="/images/industries/con.svg"
+                  src="/images/industries/eduHome.svg"
                 />
               </div>
               <div className="text-muted-foreground h-full w-px absolute top-0 right-0 max-md:hidden">
@@ -176,16 +185,14 @@ export default function Industry() {
               </div>
               <div className="from-muted/80 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent md:hidden"></div>
               <div className="image-container grid grid-cols-1 gap-4">
-                <img
+                <Image
                   alt="Notifications interface"
                   loading="lazy"
-                  width="305"
-                  height="280"
-                  decoding="async"
-                  data-nimg="1"
-                  className="object-contain object-left-top"
+                  width="400"
+                  height="400"
+                  className="object-cover"
                   style={{ color: "transparent" }}
-                  src="/images/industries/con.svg"
+                  src="/images/industries/conHome.svg"
                 />
               </div>
             </div>

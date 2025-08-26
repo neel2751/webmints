@@ -64,9 +64,14 @@ function SelectWithSearch({ options, field, value, setValue, label }) {
             variant="outline"
             role="combobox"
             aria-expanded={open}
-            className="w-full justify-between bg-background px-3 font-normal outline-offset-0 hover:bg-background focus-visible:border-ring focus-visible:outline-[3px] focus-visible:outline-ring/20"
+            className="w-full justify-between bg-background px-3 font-normal outline-offset-0 hover:bg-background focus-visible:border-ring focus-visible:outline-[3px] focus-visible:outline-ring/20 h-11"
           >
-            <span className={cn("truncate", !value && "text-muted-foreground")}>
+            <span
+              className={cn(
+                "truncate font-grotesk text-sm font-medium",
+                !value && "text-muted-foreground"
+              )}
+            >
               {value
                 ? options?.find((framework) => framework?.value === value)
                     ?.label
@@ -100,7 +105,11 @@ function SelectWithSearch({ options, field, value, setValue, label }) {
                   >
                     {framework?.label}
                     {value === framework?.value && (
-                      <Check size={16} strokeWidth={2} className="ml-auto" />
+                      <Check
+                        size={16}
+                        strokeWidth={2}
+                        className="ml-auto text-indigo-600"
+                      />
                     )}
                   </CommandItem>
                 ))}

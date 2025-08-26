@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
@@ -21,6 +20,9 @@ import {
   Cloud,
   Zap,
 } from "lucide-react";
+import TabTechFeature from "@/components/tab-tech";
+import { TechTab } from "@/data/data";
+import { Marquee } from "@/components/animation/marquee";
 
 export default function TechnologiesPage() {
   return (
@@ -30,293 +32,89 @@ export default function TechnologiesPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white" />
         <div className="container relative py-24 md:py-32 mx-auto">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-grotesk">
               Our Technology Stack
             </h1>
-            <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+            <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 font-sans">
               We leverage cutting-edge technologies to build robust, scalable,
               and secure SaaS solutions tailored to your industry needs.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <Button asChild className="bg-indigo-600 hover:bg-indigo-700">
-                <Link href="/contact">Discuss Your Project</Link>
+                <Link href="/contact-us">Discuss Your Project</Link>
               </Button>
               <Button variant="outline">
-                <Link href="/case-studies">View Case Studies</Link>
+                <Link href="/solution">Explore Our Solution</Link>
               </Button>
+            </div>
+          </div>
+          {/* Tech Stack Overview Section */}
+          <div className="container mx-auto mt-10">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {techCategories.map((category, index) => (
+                <Card
+                  key={index}
+                  className="transition-all duration-200 hover:shadow-md"
+                >
+                  <CardHeader>
+                    <div className="mb-2 rounded-md bg-indigo-50 p-2 w-fit">
+                      {category.icon}
+                    </div>
+                    <CardTitle className="font-grotesk">
+                      {category.title}
+                    </CardTitle>
+                    <CardDescription className="font-sans">
+                      {category.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {category.technologies.map((tech, techIndex) => (
+                        <Badge
+                          key={techIndex}
+                          variant="secondary"
+                          className="text-xs font-grotesk"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Tech Stack Overview Section */}
-      <section className="container mx-auto">
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Our Technology Stack
-          </h2>
-          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            We carefully select the best technologies to ensure performance,
-            security, and scalability for your custom SaaS solution.
-          </p>
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {techCategories.map((category, index) => (
-            <Card
-              key={index}
-              className="transition-all duration-200 hover:shadow-md"
-            >
-              <CardHeader>
-                <div className="mb-2 rounded-md bg-indigo-50 p-2 w-fit">
-                  {category.icon}
-                </div>
-                <CardTitle>{category.title}</CardTitle>
-                <CardDescription>{category.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2">
-                  {category.technologies.map((tech, techIndex) => (
-                    <Badge
-                      key={techIndex}
-                      variant="secondary"
-                      className="text-xs"
-                    >
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Detailed Tech Stack Section */}
-      <section className="bg-indigo-50 py-16">
-        <div className="container mx-auto">
-          <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Technology Deep Dive
-            </h2>
-            <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-              Explore the specific technologies we use to build industry-leading
-              SaaS solutions.
-            </p>
-          </div>
-
-          <Tabs defaultValue="frontend" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8">
-              <TabsTrigger value="frontend">Frontend</TabsTrigger>
-              <TabsTrigger value="backend">Backend</TabsTrigger>
-              <TabsTrigger value="database">Database</TabsTrigger>
-              <TabsTrigger value="cloud">Cloud & DevOps</TabsTrigger>
-              <TabsTrigger value="security">Security</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="frontend" className="mt-0">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">Frontend Technologies</h3>
-                  <p className="text-muted-foreground">
-                    We build responsive, intuitive, and performant user
-                    interfaces using modern frontend technologies.
-                  </p>
-                  <ul className="space-y-4">
-                    {frontendTechnologies.map((tech, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          <Code className="h-5 w-5 text-indigo-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">{tech.name}</h4>
-                          <p className="text-sm text-muted-foreground">
-                            {tech.description}
-                          </p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="relative rounded-lg overflow-hidden border shadow-sm">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt="Frontend Technologies"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="backend" className="mt-0">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">Backend Technologies</h3>
-                  <p className="text-muted-foreground">
-                    Our backend systems are built for reliability, performance,
-                    and scalability.
-                  </p>
-                  <ul className="space-y-4">
-                    {backendTechnologies.map((tech, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          <Server className="h-5 w-5 text-indigo-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">{tech.name}</h4>
-                          <p className="text-sm text-muted-foreground">
-                            {tech.description}
-                          </p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="relative rounded-lg overflow-hidden border shadow-sm">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt="Backend Technologies"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="database" className="mt-0">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">Database Technologies</h3>
-                  <p className="text-muted-foreground">
-                    We select the right database technology based on your
-                    specific data requirements and usage patterns.
-                  </p>
-                  <ul className="space-y-4">
-                    {databaseTechnologies.map((tech, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          <Database className="h-5 w-5 text-indigo-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">{tech.name}</h4>
-                          <p className="text-sm text-muted-foreground">
-                            {tech.description}
-                          </p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="relative rounded-lg overflow-hidden border shadow-sm">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt="Database Technologies"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="cloud" className="mt-0">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">Cloud & DevOps</h3>
-                  <p className="text-muted-foreground">
-                    Our cloud and DevOps practices ensure reliable, scalable,
-                    and cost-effective infrastructure.
-                  </p>
-                  <ul className="space-y-4">
-                    {cloudTechnologies.map((tech, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          <Cloud className="h-5 w-5 text-indigo-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">{tech.name}</h4>
-                          <p className="text-sm text-muted-foreground">
-                            {tech.description}
-                          </p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="relative rounded-lg overflow-hidden border shadow-sm">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt="Cloud Technologies"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="security" className="mt-0">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">Security Technologies</h3>
-                  <p className="text-muted-foreground">
-                    We implement robust security measures to protect your data
-                    and ensure compliance with industry standards.
-                  </p>
-                  <ul className="space-y-4">
-                    {securityTechnologies.map((tech, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          <Shield className="h-5 w-5 text-indigo-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-semibold">{tech.name}</h4>
-                          <p className="text-sm text-muted-foreground">
-                            {tech.description}
-                          </p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="relative rounded-lg overflow-hidden border shadow-sm">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt="Security Technologies"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
+      {/* <TabTechFeature
+        badge="Our Technology Stack"
+        tabs={TechTab}
+        heading="Explore Our Technology Stack"
+        description="
+        Discover the technologies we use to build robust, scalable, and secure SaaS solutions tailored to your industry needs."
+      /> */}
 
       {/* Technology Benefits Section */}
       <section className="container mx-auto">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk ">
             Benefits of Our Technology Choices
           </h2>
-          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 font-sans">
             Our carefully selected technology stack provides numerous advantages
             for your custom SaaS solution.
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="relative rounded-lg overflow-hidden border shadow-sm">
+          <div className="relative rounded-lg overflow-hidden border shadow-sm p-4 bg-[#F8F8F8]">
             <Image
-              src="/placeholder.svg?height=600&width=800"
+              src="/images/tech/frontend.svg"
               alt="Technology Benefits"
               width={800}
               height={600}
-              className="object-cover"
+              className="object-cover w-full h-full rounded-lg"
             />
           </div>
           <div className="flex flex-col justify-center space-y-6">
@@ -326,8 +124,12 @@ export default function TechnologiesPage() {
                   <Check className="h-5 w-5 text-indigo-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">{benefit.title}</h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
+                  <h3 className="font-semibold text-lg font-grotesk">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-muted-foreground font-sans">
+                    {benefit.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -339,10 +141,10 @@ export default function TechnologiesPage() {
       <section className="bg-indigo-50 py-16">
         <div className="container mx-auto">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
               Industry-Specific Technologies
             </h2>
-            <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+            <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 font-sans">
               We leverage specialized technologies to address the unique
               requirements of different industries.
             </p>
@@ -356,15 +158,19 @@ export default function TechnologiesPage() {
               >
                 <CardHeader>
                   <div className="mb-2 text-3xl">{industry.icon}</div>
-                  <CardTitle>{industry.title}</CardTitle>
-                  <CardDescription>{industry.description}</CardDescription>
+                  <CardTitle className="font-grotesk">
+                    {industry.title}
+                  </CardTitle>
+                  <CardDescription className="font-sans">
+                    {industry.description}
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
                     {industry.technologies.map((tech, techIndex) => (
                       <div key={techIndex} className="flex items-start gap-2">
                         <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
-                        <span>{tech}</span>
+                        <span className="font-grotesk">{tech}</span>
                       </div>
                     ))}
                   </div>
@@ -375,8 +181,12 @@ export default function TechnologiesPage() {
                     variant="outline"
                     className="w-full border-indigo-600 text-indigo-600 hover:bg-indigo-50"
                   >
-                    <Link href={`/industries/${industry.id}`}>
-                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    <Link
+                      href={`/request-quote?industry=${industry.id}`}
+                      className="font-grotesk"
+                    >
+                      Request Custom Solution
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                 </CardFooter>
@@ -389,20 +199,20 @@ export default function TechnologiesPage() {
       {/* Technology Partners Section */}
       <section className="container py-16 mx-auto">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
             Our Technology Partners
           </h2>
-          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 font-sans">
             We collaborate with leading technology providers to deliver the best
             solutions for our clients.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-20 gap-x-6 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-16 gap-x-6 items-center justify-items-center">
           {techPartners.map((partner, index) => (
             <div
               key={index}
-              className="grayscale hover:grayscale-0 transition-all duration-300"
+              className=" grayscale-0 transition-all duration-300 flex items-center justify-center flex-col gap-6"
             >
               <Image
                 src={partner.logo || "/placeholder.svg?height=80&width=160"}
@@ -411,6 +221,7 @@ export default function TechnologiesPage() {
                 height={80}
                 className="h-12 w-auto object-contain"
               />
+              <CardTitle className="text-neutral-700">{partner.name}</CardTitle>
             </div>
           ))}
         </div>
@@ -420,10 +231,10 @@ export default function TechnologiesPage() {
       <section className="bg-indigo-600 text-white py-16">
         <div className="container mx-auto">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 font-grotesk">
               Ready to build your custom solution?
             </h2>
-            <p className="text-xl text-white/80 mb-8">
+            <p className="text-xl text-white/80 mb-8 font-sans">
               Let's discuss how our technology expertise can help you create a
               powerful, scalable SaaS platform tailored to your industry needs.
             </p>
@@ -437,7 +248,7 @@ export default function TechnologiesPage() {
               <Button
                 asChild
                 variant="outline"
-                className="text-white border-white hover:bg-white/10"
+                className="text-white bg-indigo-600 border-white hover:bg-white/10 hover:text-white"
               >
                 <Link href="/case-studies">View Success Stories</Link>
               </Button>
@@ -802,6 +613,11 @@ const techPartners = [
     name: "Google Cloud",
     logo: "/images/tech/gcp.svg",
   },
+
+  {
+    name: "DigitalOcean",
+    logo: "/images/tech/digitalocean.svg",
+  },
   {
     name: "MongoDB",
     logo: "/images/tech/mongodb.svg",
@@ -811,6 +627,14 @@ const techPartners = [
     logo: "/images/tech/postgresql.svg",
   },
   {
+    name: "MySQL",
+    logo: "/images/tech/mysql.svg",
+  },
+  {
+    name: "Redis",
+    logo: "/images/tech/redis.svg",
+  },
+  {
     name: "Docker",
     logo: "/images/tech/docker.svg",
   },
@@ -818,33 +642,22 @@ const techPartners = [
     name: "Kubernetes",
     logo: "/images/tech/kubernetes.svg",
   },
-  {
-    name: "MySQL",
-    logo: "/images/tech/mysql.svg",
-  },
+
   {
     name: "Node",
     logo: "/images/tech/node.svg",
-  },
-  {
-    name: "Next.js",
-    logo: "/images/tech/nextjs.svg",
   },
   {
     name: "React",
     logo: "/images/tech/react.svg",
   },
   {
+    name: "Next.js",
+    logo: "/images/tech/nextjs.svg",
+  },
+  {
     name: "Tailwind CSS",
     logo: "/images/tech/tailwind.svg",
-  },
-  {
-    name: "Redis",
-    logo: "/images/tech/redis.svg",
-  },
-  {
-    name: "DigitalOcean",
-    logo: "/images/tech/digitalocean.svg",
   },
   {
     name: "React Query",
@@ -859,7 +672,7 @@ const techPartners = [
     logo: "/images/tech/github.svg",
   },
   {
-    name: "GitLab",
-    logo: "/images/tech/git.svg",
+    name: "Figma",
+    logo: "/images/tech/figma.svg",
   },
 ];

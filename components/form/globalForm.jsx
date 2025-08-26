@@ -10,75 +10,135 @@ import {
   FormRadio,
   FormTextarea,
   SearchableSelect,
+  URLInput,
 } from "./form-field";
 import { Button } from "../ui/button";
 import { Loader2 } from "lucide-react";
+import { useEffect } from "react";
 
 export function GlobalForm({
-  fields,
+  groupedFields, // <-- Now we expect groupedFields directly!
   initialValues,
   onSubmit,
   isLoading,
   btnName,
+  resetForm,
 }) {
   const method = useForm({
     defaultValues: initialValues || {},
     shouldUnregister: true,
   });
   const watchField = method.watch();
+
+  useEffect(() => {
+    if (resetForm) {
+      method.reset();
+    }
+  }, [resetForm]);
+
+  const filterVisibleFields = (fields) =>
+    fields.filter((field) => {
+      if (field.showIf) {
+        const { field: dependentField, value } = field.showIf;
+        if (watchField[dependentField] !== value) return false;
+      }
+      if (field.hideIf) {
+        const { field: dependentField, value } = field.hideIf;
+        if (watchField[dependentField] === value) return false;
+      }
+      return true;
+    });
+
+  const groupIntoRows = (fields) => {
+    const grouped = [];
+    for (let i = 0; i < fields.length; ) {
+      const current = fields[i];
+      if (current.size) {
+        grouped.push([current]);
+        i++;
+      } else {
+        const next = fields[i + 1];
+        if (next && !next.size) {
+          grouped.push([current, next]);
+          i += 2;
+        } else {
+          grouped.push([current]);
+          i++;
+        }
+      }
+    }
+    return grouped;
+  };
+
   return (
     <FormProvider {...method}>
-      <form onSubmit={method.handleSubmit(onSubmit)}>
-        <div className="grid grid-cols-6 gap-4">
-          {fields.map((field, index) => {
-            if (field.showIf) {
-              const { field: dependentField, value } = field?.showIf;
-              if (watchField[dependentField] !== value) {
-                return null;
-              }
-            }
-            return (
-              <div
-                key={index}
-                className={`col-span-6 sm:col-span-3 ${
-                  field.size ? "sm:col-span-6" : "sm:col-span-3"
-                }`}
-              >
-                {(field.type === "text" ||
-                  field.type === "email" ||
-                  field.type === "password" ||
-                  field.type === "tel" ||
-                  field.type === "number") && (
-                  <FormInputNew key={field?.name} field={field} />
-                )}
-                {field.type === "select" && (
-                  <SearchableSelect key={field?.name} field={field} />
-                )}
-                {field.type === "multipleSelect" && (
-                  <FormMultipleSelect key={field?.name} field={field} />
-                )}
-                {field.type === "radio" && (
-                  <FormRadio key={field?.name} field={field} />
-                )}
-                {field.type === "checkbox" && (
-                  <FormCheckbox key={field?.name} field={field} />
-                )}
-                {field.type === "textarea" && (
-                  <FormTextarea key={field?.name} field={field} />
-                )}
-                {field.type === "date" && (
-                  <FormDate key={field?.name} field={field} />
-                )}
-                {field.type === "image" && (
-                  <FormImageUpload key={field?.name} field={field} />
-                )}
-                {field.type === "multiple" && (
-                  <FormMultiInput key={field?.name} field={field} />
-                )}
-              </div>
-            );
-          })}
-        </div>
+      <form onSubmit={method.handleSubmit(onSubmit)} className="space-y-6">
+        {groupedFields.map((section, index) => {
+          const visible = filterVisibleFields(section.fields);
+          const rows = groupIntoRows(visible);
+
+          return (
+            <div key={index} className="space-y-3">
+              <h3 className="text-xl font-medium pb-2 font-grotesk tracking-tight">
+                {section.title}
+              </h3>
+
+              {rows.map((row, rowIndex) => (
+                <div
+                  key={rowIndex}
+                  className={
+                    row.length === 1
+                      ? "grid grid-cols-1"
+                      : "grid grid-cols-6 gap-4"
+                  }
+                >
+                  {row.map((field, index) => (
+                    <div
+                      key={index}
+                      className={`col-span-6 ${
+                        field.size || row.length === 1
+                          ? "sm:col-span-6"
+                          : "sm:col-span-3"
+                      }`}
+                    >
+                      {field.type === "text" ||
+                      field.type === "email" ||
+                      field.type === "password" ||
+                      field.type === "tel" ||
+                      field.type === "number" ? (
+                        <FormInputNew field={field} />
+                      ) : null}
+                      {field.type === "url" && (
+                        <URLInput key={field.name} field={field} />
+                      )}
+                      {field.type === "select" && (
+                        <SearchableSelect field={field} />
+                      )}
+                      {field.type === "multipleSelect" && (
+                        <FormMultipleSelect field={field} />
+                      )}
+                      {field.type === "radio" && <FormRadio field={field} />}
+                      {field.type === "checkbox" && (
+                        <FormCheckbox field={field} />
+                      )}
+                      {field.type === "textarea" && (
+                        <FormTextarea field={field} />
+                      )}
+                      {field.type === "date" && <FormDate field={field} />}
+                      {field.type === "image" && (
+                        <FormImageUpload field={field} />
+                      )}
+                      {field.type === "multiple" && (
+                        <FormMultiInput field={field} />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          );
+        })}
+
         <div className="mt-8">
           <Button
             disabled={isLoading}
@@ -87,7 +147,7 @@ export function GlobalForm({
           >
             {isLoading ? (
               <>
-                <Loader2 className="animate-spin" />
+                <Loader2 className="animate-spin mr-2" />
                 <span>Please wait...</span>
               </>
             ) : (

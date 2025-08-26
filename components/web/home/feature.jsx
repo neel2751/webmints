@@ -1,12 +1,13 @@
+import ShinyText from "@/components/animation/shiny-text";
 import { BarChart, Layers, Shield, Star, User, Zap } from "lucide-react";
 import React from "react";
 
 export default function Feature() {
   const features = [
     {
-      title: "Smart Automation",
+      title: "Industry-Specific Solutions",
       description:
-        "Automate repetitive tasks and workflows to save time and reduce errors.",
+        "Tailored features and workflows designed specifically for your industry's unique requirements.",
       icon: <Zap className="w-5 text-indigo-600" />,
     },
     {
@@ -34,9 +35,9 @@ export default function Feature() {
       icon: <Layers className="w-6 text-indigo-600" />,
     },
     {
-      title: "24/7 Support",
+      title: "Automation",
       description:
-        "Get help whenever you need it with our dedicated support team.",
+        "Save time and reduce errors by automating repetitive tasks and workflows.",
       icon: <Star className="w-6 text-indigo-600" />,
     },
   ];
@@ -45,14 +46,24 @@ export default function Feature() {
     <section id="features" className="w-full py-20 md:py-32 bg-slate-50">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-grotesk">
-            Everything You Need to Succeed
+          <ShinyText
+            text="Features"
+            className="bg-indigo-600 border border-indigo-700 text-white px-4 py-1 rounded-full text-xs sm:text-sm font-medium cursor-pointer transition-colors"
+          />
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight font-grotesk">
+            {/* Everything You Need to Succeed */}
+            Powerful Features for Every Industry
           </h2>
-          <p className="max-w-[800px] text-muted-foreground md:text-lg font-sans">
-            Our comprehensive services provides all the tools you need to
+          <p className="max-w-[800px] text-neutral-600 md:text-lg font-sans">
+            {/* Our comprehensive services provides all the tools you need to
             streamline your workflow, boost productivity, and achieve your
-            goals.
+            goals. */}
+            Our platform combines industry-specific functionality with powerful
+            core features to help your business thrive.Our comprehensive
+            services provides all the tools you need to streamline your
+            workflow, boost productivity, and achieve your goals.
           </p>
+          {/* To do add the button */}
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (

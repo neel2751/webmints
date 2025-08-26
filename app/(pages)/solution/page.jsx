@@ -6,10 +6,8 @@ import {
   ChevronRight,
   Globe,
   BarChart3,
-  ShieldCheck,
   Zap,
-  Clock,
-  Users,
+  BarChart,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -21,9 +19,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import Text from "@/components/animation/text";
+import { SolutionsTab } from "@/data/data";
+import TabFeature from "@/components/tab-feature";
+import GlobalCta from "@/components/web/cta/global-cta";
 
 export const metadata = {
   title: "Solutions | Custom SaaS Development",
@@ -35,16 +35,16 @@ export default function SolutionsPage() {
   return (
     <main className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-indigo-50 to-white py-20 px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge
               variant="outline"
-              className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm"
+              className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm font-grotesk"
             >
               Enterprise-Grade Solutions
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-grotesk">
               Built to Solve Real Business
               <span className="text-indigo-600">
                 <Text
@@ -53,534 +53,48 @@ export default function SolutionsPage() {
                 />
               </span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 font-sans">
               Discover our comprehensive suite of SaaS solutions designed to
               transform your business operations, enhance productivity, and
               drive growth across industries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700">
-                Explore Feature <ArrowRight className="ml-2 h-4 w-4" />
+              <Button
+                size="lg"
+                className="bg-indigo-600 hover:bg-indigo-700"
+                asChild
+              >
+                <Link href={"/features"}>
+                  Explore Feature <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
+                asChild
                 className="border-indigo-600 text-indigo-600 hover:bg-indigo-50"
               >
-                Schedule a Demo
+                <Link href={"schedule-call"}>Schedule a Call</Link>
               </Button>
             </div>
           </div>
 
-          <div className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-xl">
-            <img
-              src="https://cdn.dribbble.com/userupload/43243517/file/original-f39a67757e2e26c6da5d93fd768008e9.png?resize=1600x1200&vertical=center"
+          <div className="relative rounded-xl h-full w-full overflow-hidden border border-indigo-100 bg-indigo-50 p-6">
+            <Image
+              // src="https://cdn.dribbble.com/userupload/43305894/file/original-5caabe2f3d991ac1ee16642103786b60.png?resize=1600x1600&vertical=center"
+              src={"/images/solution/solhero.svg"}
               alt="SaaS Solutions Dashboard"
-              // fill
-              className="object-cover"
-              // priority
+              height={600}
+              width={600}
+              className="object-contain h-full w-full"
+              priority
             />
           </div>
         </div>
       </section>
 
       {/* Solution Categories */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Comprehensive Solution Categories
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our SaaS solutions are categorized to address specific business
-              needs across various domains.
-            </p>
-          </div>
-
-          <Tabs defaultValue="enterprise" className="w-full">
-            <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-8 bg-transparent h-auto">
-              <TabsTrigger
-                value="enterprise"
-                className="data-[state=active]:bg-indigo-100 data-[state=active]:text-indigo-800 py-3"
-              >
-                Enterprise
-              </TabsTrigger>
-              <TabsTrigger
-                value="productivity"
-                className="data-[state=active]:bg-indigo-100 data-[state=active]:text-indigo-800 py-3"
-              >
-                Productivity
-              </TabsTrigger>
-              <TabsTrigger
-                value="analytics"
-                className="data-[state=active]:bg-indigo-100 data-[state=active]:text-indigo-800 py-3"
-              >
-                Analytics
-              </TabsTrigger>
-              <TabsTrigger
-                value="security"
-                className="data-[state=active]:bg-indigo-100 data-[state=active]:text-indigo-800 py-3"
-              >
-                Security
-              </TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="enterprise" className="mt-4">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <Globe className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Enterprise Resource Planning</CardTitle>
-                    <CardDescription>
-                      Comprehensive ERP solutions to streamline business
-                      operations
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Integrated modules for finance, HR, and operations
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Real-time data synchronization across departments
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Customizable workflows and approval processes
-                        </span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/enterprise-resource-planning"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <Users className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Customer Relationship Management</CardTitle>
-                    <CardDescription>
-                      Powerful CRM tools to enhance customer engagement
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>360° customer view with interaction history</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Sales pipeline management and forecasting</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Marketing automation and campaign tracking</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/customer-relationship-management"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <Clock className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Supply Chain Management</CardTitle>
-                    <CardDescription>
-                      End-to-end supply chain visibility and optimization
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Inventory management and demand forecasting</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Supplier relationship and performance tracking
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Logistics optimization and route planning</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/supply-chain-management"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="productivity" className="mt-4">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <Zap className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Project Management</CardTitle>
-                    <CardDescription>
-                      Streamline project workflows and team collaboration
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Task management with dependencies and milestones
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Resource allocation and capacity planning</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Gantt charts and timeline visualization</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/project-management"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-
-                {/* Additional productivity solutions would go here */}
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <Users className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Team Collaboration</CardTitle>
-                    <CardDescription>
-                      Enhance team productivity with integrated tools
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Real-time document collaboration and editing
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Integrated messaging and video conferencing</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Knowledge base and information sharing</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/team-collaboration"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <Clock className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Time & Resource Management</CardTitle>
-                    <CardDescription>
-                      Optimize time tracking and resource allocation
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Automated time tracking and reporting</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Resource utilization and availability monitoring
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Workload balancing and capacity planning</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/time-resource-management"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="analytics" className="mt-4">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <BarChart3 className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Business Intelligence</CardTitle>
-                    <CardDescription>
-                      Transform data into actionable insights
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Interactive dashboards and data visualization
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Predictive analytics and trend forecasting</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Custom reporting and KPI tracking</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/business-intelligence"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-
-                {/* Additional analytics solutions would go here */}
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <BarChart3 className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Data Visualization</CardTitle>
-                    <CardDescription>
-                      Convert complex data into intuitive visuals
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Interactive charts and graphical representations
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Real-time data streaming and visualization</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Customizable dashboards for different stakeholders
-                        </span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/data-visualization"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <BarChart3 className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Predictive Analytics</CardTitle>
-                    <CardDescription>
-                      Forecast trends and make data-driven decisions
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Machine learning algorithms for trend prediction
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Anomaly detection and pattern recognition</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Scenario modeling and what-if analysis</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/predictive-analytics"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-              </div>
-            </TabsContent>
-
-            <TabsContent value="security" className="mt-4">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <ShieldCheck className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Data Protection</CardTitle>
-                    <CardDescription>
-                      Secure sensitive information with advanced protection
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          End-to-end encryption for data at rest and in transit
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Data loss prevention and access controls</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Compliance management for GDPR, HIPAA, etc.</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/data-protection"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-
-                {/* Additional security solutions would go here */}
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <ShieldCheck className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Identity Management</CardTitle>
-                    <CardDescription>
-                      Secure access control and authentication
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Multi-factor authentication and SSO</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Role-based access control and permissions</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>User activity monitoring and audit trails</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/identity-management"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-
-                <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
-                  <CardHeader>
-                    <ShieldCheck className="h-10 w-10 text-indigo-600 mb-2" />
-                    <CardTitle>Threat Detection</CardTitle>
-                    <CardDescription>
-                      Proactive monitoring and threat prevention
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Real-time threat monitoring and alerts</span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>
-                          Vulnerability scanning and penetration testing
-                        </span>
-                      </li>
-                      <li className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span>Incident response and remediation</span>
-                      </li>
-                    </ul>
-                  </CardContent>
-                  <CardFooter>
-                    <Link
-                      href="/solutions/threat-detection"
-                      className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
-                    >
-                      Learn more <ChevronRight className="h-4 w-4 ml-1" />
-                    </Link>
-                  </CardFooter>
-                </Card>
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
+      <TabFeature tabs={SolutionsTab} />
 
       {/* Featured Solution */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-indigo-50">
@@ -589,14 +103,14 @@ export default function SolutionsPage() {
             <div>
               <Badge
                 variant="outline"
-                className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm"
+                className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm font-grotesk"
               >
                 Featured Solution
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-grotesk">
                 Enterprise Resource Planning
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-600 mb-6 font-sans">
                 Our flagship ERP solution integrates all core processes needed
                 to run a company – finance, HR, manufacturing, supply chain,
                 services, procurement, and more – into a single system.
@@ -608,10 +122,10 @@ export default function SolutionsPage() {
                     <Globe className="h-6 w-6 text-indigo-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">
+                    <h3 className="font-semibold text-gray-900 font-grotesk">
                       Unified Operations
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 font-sans">
                       Seamlessly connect all departments and functions across
                       your organization.
                     </p>
@@ -623,10 +137,10 @@ export default function SolutionsPage() {
                     <BarChart3 className="h-6 w-6 text-indigo-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">
+                    <h3 className="font-semibold text-gray-900 font-grotesk">
                       Real-time Analytics
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 font-sans">
                       Make informed decisions with instant access to critical
                       business data.
                     </p>
@@ -638,10 +152,10 @@ export default function SolutionsPage() {
                     <Zap className="h-6 w-6 text-indigo-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">
+                    <h3 className="font-semibold text-gray-900 font-grotesk">
                       Process Automation
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 font-sans">
                       Automate routine tasks and workflows to increase
                       efficiency.
                     </p>
@@ -649,20 +163,112 @@ export default function SolutionsPage() {
                 </div>
               </div>
 
-              <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700">
-                Explore ERP Solution <ArrowRight className="ml-2 h-4 w-4" />
+              <Button
+                size="lg"
+                className="bg-indigo-600 hover:bg-indigo-700"
+                asChild
+              >
+                <Link href={"/industries"}>
+                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </div>
 
-            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
+            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg bg-white px-4">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/images/solution/solfeature.svg"
                 alt="ERP Dashboard"
                 fill
-                className="object-cover"
+                className="object-contain px-4"
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/*  */}
+      <section id="adaptive-workflows" className="mt-12">
+        <div className="border-y">
+          <div className="container flex flex-col gap-4  border-x py-4 max-lg:border-x lg:py-8 px-8 mx-auto">
+            <h2 className="text-3xl leading-tight tracking-tight md:text-4xl lg:text-6xl font-grotesk">
+              Stay agile with adaptive workflows
+            </h2>
+            <p className="text-muted-foreground max-w-[600px] tracking-[-0.32px]">
+              AI streamlines your processes to adjust as priorities shift.
+            </p>
+          </div>
+        </div>
+        <div className="container border-x lg:!px-0 mx-auto">
+          <div className="items-center">
+            <div className="grid flex-1 max-lg:divide-y max-lg:border-x lg:grid-cols-3 lg:divide-x">
+              <div className="relative isolate pt-5 text-start lg:pt-10">
+                <div className="px-2 lg:px-8">
+                  <BarChart className="size-10 bg-indigo-600 text-white rounded-full p-2" />
+                </div>
+                <h3 className="mt-2 px-1 text-lg tracking-[-0.36px] lg:px-8">
+                  Unified Scheduling
+                </h3>
+                <p className="text-muted-foreground px-1 py-4 tracking-[-0.32px] lg:px-8">
+                  Keep all your appointments and events in sync with seamless
+                  cross-platform calendar connectivity.
+                </p>
+                <div className="border-t py-4 lg:px-2">
+                  <Image
+                    src={"/images/solution/1.svg"}
+                    alt="Unified Scheduling"
+                    height={400}
+                    width={400}
+                    className="rounded-md shadow-md lg:rounded-xl lg:shadow-lg dark:invert border"
+                  />
+                </div>
+              </div>
+              <div className="relative isolate pt-5 text-start lg:pt-10">
+                <div className="px-2 lg:px-8">
+                  <BarChart className="size-10 bg-indigo-600 text-white rounded-full p-2" />
+                </div>
+                <h3 className="mt-2 px-1 text-lg tracking-[-0.36px] lg:px-8">
+                  Insightful Performance
+                </h3>
+                <p className="text-muted-foreground px-1 py-4 tracking-[-0.32px] lg:px-8">
+                  Get clear, real-time analytics tracking your progress, key
+                  milestones, focus hours, and completed tasks.
+                </p>
+                <div className="border-t py-4 lg:px-2">
+                  <Image
+                    src={"/images/solution/solfeature.svg"}
+                    alt="Insightful Performance"
+                    height={400}
+                    width={400}
+                    className="rounded-md shadow-md lg:rounded-xl lg:shadow-lg dark:invert p-2 border"
+                  />
+                </div>
+              </div>
+              <div className="relative isolate pt-5 text-start lg:pt-10">
+                <div className="px-2 lg:px-8">
+                  <BarChart className="size-10 bg-indigo-600 text-white rounded-full p-2" />
+                </div>
+                <h3 className="mt-2 px-1 text-lg tracking-[-0.36px] lg:px-8">
+                  Effortless Tool Integrations
+                </h3>
+                <p className="text-muted-foreground px-1 py-4 tracking-[-0.32px] lg:px-8">
+                  Link your favorite apps and services to streamline work
+                  without switching between platforms.
+                </p>
+                <div className="border-t py-4 lg:px-2">
+                  <Image
+                    src="/images/solution/2.svg"
+                    height={400}
+                    width={400}
+                    alt="Effortless Tool Integrations"
+                    className="rounded-md shadow-md lg:rounded-xl lg:shadow-lg dark:invert p-2 border"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="h-8 w-full border-y md:h-12 lg:h-[112px]">
+          <div className="container h-full w-full border-x"></div>
         </div>
       </section>
 
@@ -672,14 +278,14 @@ export default function SolutionsPage() {
           <div className="text-center mb-16">
             <Badge
               variant="outline"
-              className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm"
+              className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm font-grotesk"
             >
               Success Stories
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-grotesk">
               Transforming Businesses Across Industries
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
               See how our SaaS solutions have helped organizations overcome
               challenges and achieve their goals.
             </p>
@@ -689,36 +295,43 @@ export default function SolutionsPage() {
             <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=200&width=400"
+                  // src="/images/industries/con.svg"
+                  src="/images/casestudy/con.svg"
                   alt="E-commerce Success Story"
                   fill
                   className="object-cover"
                 />
               </div>
               <CardHeader>
-                <div className="flex items-center justify-between">
-                  <Badge className="bg-green-100 text-green-800 hover:bg-green-100">
-                    E-commerce
+                <div className="flex items-center justify-between mb-2">
+                  <Badge className="bg-green-100 text-green-800 hover:bg-green-100 font-grotesk">
+                    Enterprise
                   </Badge>
-                  <span className="text-sm text-gray-500">Case Study</span>
+                  <span className="text-sm text-gray-500 font-sans">
+                    Case Study
+                  </span>
                 </div>
-                <CardTitle className="mt-2">
-                  Global Retail Chain Increases Sales by 45%
+                <CardTitle className="font-grotesk">
+                  🧑‍💼Smart HR Management Platform
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Learn how our integrated e-commerce solution helped a global
-                  retail chain streamline operations and significantly boost
-                  their online sales performance.
+                <p className="text-gray-600 font-sans">
+                  Empowering teams with seamless employee management, leave
+                  tracking, and rota scheduling We built a custom HR solution
+                  designed to streamline workforce operations for teams. From
+                  centralized records to AI-assisted weekly rota creation and
+                  leave approvals, the platform boosts efficiency and keeps your
+                  team aligned. A complete dashboard ensures clear oversight of
+                  employee activity and availability.
                 </p>
               </CardContent>
               <CardFooter>
                 <Link
-                  href="/case-studies/retail-chain"
-                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
+                  href="#"
+                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center text-sm font-grotesk"
                 >
-                  Read case study <ChevronRight className="h-4 w-4 ml-1" />
+                  Comming Soon <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
               </CardFooter>
             </Card>
@@ -726,36 +339,42 @@ export default function SolutionsPage() {
             <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=200&width=400"
-                  alt="Healthcare Success Story"
+                  src="/images/casestudy/fin.svg"
+                  alt="E-commerce Success Story"
                   fill
                   className="object-cover"
                 />
               </div>
               <CardHeader>
-                <div className="flex items-center justify-between">
-                  <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100">
-                    Healthcare
+                <div className="mb-2 flex items-center justify-between">
+                  <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 font-grotesk">
+                    Finance
                   </Badge>
-                  <span className="text-sm text-gray-500">Case Study</span>
+                  <span className="text-sm text-gray-500 font-sans">
+                    Case Study
+                  </span>
                 </div>
-                <CardTitle className="mt-2">
-                  Hospital Network Reduces Costs by 30%
+                <CardTitle className="mt-2 font-grotesk">
+                  💰AI-Powered Finance Management Software
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  Discover how our healthcare management solution helped a major
-                  hospital network optimize resource allocation and
-                  significantly reduce operational costs.
+                <p className="text-gray-600 font-sans">
+                  Simplify payroll, invoicing, and communications with
+                  intelligent automation This financial platform handles
+                  everything from payroll processing to invoice generation and
+                  client email dispatches. Leveraging AI, we introduced features
+                  like smart reminders for unpaid invoices and predictive cash
+                  flow insights. It’s a secure, modular system built for clarity
+                  and control over your financial operations.
                 </p>
               </CardContent>
               <CardFooter>
                 <Link
-                  href="/case-studies/hospital-network"
-                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
+                  href="#"
+                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center text-sm font-grotesk"
                 >
-                  Read case study <ChevronRight className="h-4 w-4 ml-1" />
+                  Comming Soon <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
               </CardFooter>
             </Card>
@@ -763,79 +382,99 @@ export default function SolutionsPage() {
             <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/placeholder.svg?height=200&width=400"
-                  alt="Fintech Success Story"
+                  src="/images/casestudy/hr.svg"
+                  alt="E-commerce Success Story"
                   fill
                   className="object-cover"
                 />
               </div>
               <CardHeader>
-                <div className="flex items-center justify-between">
-                  <Badge className="bg-amber-100 text-amber-800 hover:bg-amber-100">
-                    Fintech
+                <div className="mb-2 flex items-center justify-between">
+                  <Badge className="bg-amber-100 text-amber-800 hover:bg-amber-100 font-grotesk">
+                    Construction
                   </Badge>
-                  <span className="text-sm text-gray-500">Case Study</span>
+                  <span className="text-sm text-gray-500 font-sans">
+                    Case Study
+                  </span>
                 </div>
-                <CardTitle className="mt-2">
-                  Banking Institution Improves Security by 200%
+                <CardTitle className="font-grotesk">
+                  🏗️ Construction Project Management Tool
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
-                  See how our security solutions helped a leading banking
-                  institution strengthen their cybersecurity posture and protect
-                  sensitive customer data.
+                <p className="text-gray-600 font-sans">
+                  Track budgets, manage site expenses, documents and monitor
+                  real-time costs with confidence Designed for the fast-paced
+                  construction industry, this platform centralizes budgeting,
+                  site cost tracking, and financial forecasting—enhanced by AI
+                  for pattern detection and over-budget alerts. Intuitive
+                  dashboards give both field teams and managers full control,
+                  all in one cloud-based solution.
                 </p>
               </CardContent>
               <CardFooter>
                 <Link
-                  href="/case-studies/banking-security"
-                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
+                  href="#"
+                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center text-sm font-grotesk"
                 >
-                  Read case study <ChevronRight className="h-4 w-4 ml-1" />
+                  Comming Soon <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
               </CardFooter>
             </Card>
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <Button
               variant="outline"
               className="border-indigo-600 text-indigo-600 hover:bg-indigo-50"
             >
               View All Case Studies <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-indigo-600">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business with Our SaaS Solutions?
-          </h2>
-          <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-            Schedule a personalized demo to see how our solutions can address
-            your specific business challenges.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-indigo-600 hover:bg-indigo-50"
-            >
-              Schedule a Demo
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-indigo-700"
-            >
-              Contact Sales
-            </Button>
-          </div>
-        </div>
-      </section>
+      <GlobalCta
+        title={"Ready to build your custom solution?"}
+        desc={
+          "Let's discuss how our technology expertise can help you create a powerful, scalable SaaS platform tailored to your industry needs."
+        }
+        mainBtn={{ name: "Explore Plan", link: "/pricing" }}
+        btn={{ name: "Schedule Call", link: "/schedule-call" }}
+      />
     </main>
+  );
+}
+
+function TabCard({ title, description, icon, list }) {
+  return (
+    <Card className="border-indigo-100 hover:border-indigo-300 transition-all duration-300 hover:shadow-md">
+      <CardHeader>
+        {/* <ShieldCheck className="h-10 w-10 text-indigo-600 mb-2" /> */}
+        {icon}
+        <CardTitle className="font-grotesk">{title}</CardTitle>
+        <CardDescription className="font-sans">{description}</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <ul className="space-y-2 font-sans">
+          {list &&
+            list.map((item, index) => (
+              <li key={index} className="flex items-start">
+                <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
+            ))}
+        </ul>
+      </CardContent>
+      {/* <CardFooter>
+        <Link
+          href="/solutions/data-protection"
+          className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center"
+        >
+          Learn more <ChevronRight className="h-4 w-4 ml-1" />
+        </Link>
+      </CardFooter> */}
+    </Card>
   );
 }

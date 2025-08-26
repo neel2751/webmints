@@ -97,7 +97,7 @@ export function SiteHeader() {
   const paraam = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background">
+    <header className="sticky top-0 z-50 w-full border-b bg-background sm:px-0 px-2">
       <div className="max-w-7xl mx-auto flex h-16 items-center">
         <div className="mr-4 flex items-center space-x-2">
           <Link href="/" className="flex items-center space-x-2">
@@ -107,6 +107,7 @@ export function SiteHeader() {
               width={100}
               height={100}
               className="h-10 w-auto"
+              title="webmints logo"
             />
             <span className="text-xl font-semibold text-indigo-600 font-grotesk tracking-tight">
               Webmints
@@ -144,9 +145,20 @@ export function SiteHeader() {
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center space-x-4 ml-auto">
-          <Button className="text-white bg-indigo-600">Book a Call</Button>
-          <Button asChild variant="ghost">
-            <Link href="/auth/login">Login</Link>
+          <Button
+            className="text-white bg-indigo-600 font-grotesk font-medium text-sm hover:bg-indigo-800"
+            asChild
+          >
+            <Link href={"/schedule-call"}>Book a Call</Link>
+          </Button>
+          <Button
+            asChild
+            variant="ghost"
+            className="text-base font-sans hover:text-indigo-600"
+          >
+            <Link href="https://portal.webmints.com" target="_blank">
+              Login
+            </Link>
           </Button>
         </div>
 
@@ -160,61 +172,51 @@ export function SiteHeader() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetHeader>
-                <SheetTitle>Menu</SheetTitle>
+              <SheetHeader className={"flex flex-row gap-4 pb-4"}>
+                <Image
+                  src={"/images/webmints.svg"}
+                  alt="Webmints Logo"
+                  width={100}
+                  height={100}
+                  className="h-10 w-auto"
+                  title="webmints logo"
+                />
+                <div>
+                  <SheetTitle className="text-lg font-semibold text-indigo-600 font-grotesk">
+                    Webmints
+                  </SheetTitle>
+                </div>
               </SheetHeader>
-              <nav className="flex flex-col space-y-4 mt-6">
-                {products.map((product) => (
+              <nav className="flex flex-col space-y-4">
+                <div className="h-px bg-border" />
+                {NAV_ITEMS.map((type) => (
                   <Link
-                    key={product.title}
-                    href="#"
+                    key={type.label}
+                    href={type.link}
                     className="block px-2 py-1 hover:bg-accent rounded-md"
                   >
-                    {product.title}
+                    {type.label}
                   </Link>
                 ))}
                 <div className="h-px bg-border" />
-                {businessTypes.map((type) => (
+                <Button
+                  asChild
+                  className="w-full bg-indigo-600 hover:bg-indigo-700"
+                >
+                  <Link href="/schedule-call">Book a Call</Link>
+                </Button>
+                <Button
+                  asChild
+                  variant={"outline"}
+                  className="border-indigo-600 shadow-none hover:bg-indigo-50 text-indigo-600 font-grotesk font-medium text-sm"
+                >
                   <Link
-                    key={type.title}
                     href="#"
                     className="block px-2 py-1 hover:bg-accent rounded-md"
                   >
-                    {type.title}
+                    Sign In
                   </Link>
-                ))}
-                <div className="h-px bg-border" />
-                <Link
-                  href="#"
-                  className="block px-2 py-1 hover:bg-accent rounded-md"
-                >
-                  Why Us?
-                </Link>
-                <Link
-                  href="#"
-                  className="block px-2 py-1 hover:bg-accent rounded-md"
-                >
-                  Pricing
-                </Link>
-                <Link
-                  href="#"
-                  className="block px-2 py-1 hover:bg-accent rounded-md"
-                >
-                  Resources
-                </Link>
-                <div className="h-px bg-border" />
-                <Link
-                  href="#"
-                  className="block px-2 py-1 hover:bg-accent rounded-md"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="#"
-                  className="block px-2 py-1 hover:bg-accent rounded-md"
-                >
-                  Support
-                </Link>
+                </Button>
               </nav>
             </SheetContent>
           </Sheet>
@@ -442,3 +444,77 @@ const WebminstCard = ({ Icon, title, desc, color }) => (
     <p className="text-gray-600 text-sm">{desc}</p>
   </div>
 );
+
+const links = ["Home", "About", "Services", "Projects", "Contact"];
+
+export function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <motion.nav
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="fixed top-0 w-full z-50 bg-white shadow-sm dark:bg-zinc-900"
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+        {/* Logo */}
+        <Link
+          href="/"
+          className="text-xl font-bold text-gray-800 dark:text-white"
+        >
+          BuildX
+        </Link>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-6">
+          {links.map((link) => (
+            <Link
+              key={link}
+              href={`/${link.toLowerCase()}`}
+              className="relative text-gray-600 dark:text-gray-200 hover:text-black dark:hover:text-white transition"
+            >
+              <span>{link}</span>
+              <motion.span
+                layoutId="underline"
+                className="absolute left-0 -bottom-1 h-[2px] w-full bg-black dark:bg-white"
+                whileHover={{ scaleX: 1 }}
+                initial={{ scaleX: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+            </Link>
+          ))}
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? (
+            <X className="text-black dark:text-white" />
+          ) : (
+            <Menu className="text-black dark:text-white" />
+          )}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="md:hidden bg-white dark:bg-zinc-900 px-4 pb-4"
+        >
+          {links.map((link) => (
+            <Link
+              key={link}
+              href={`/${link.toLowerCase()}`}
+              className="block py-2 text-gray-700 dark:text-gray-200 hover:text-black"
+              onClick={() => setIsOpen(false)}
+            >
+              {link}
+            </Link>
+          ))}
+        </motion.div>
+      )}
+    </motion.nav>
+  );
+}

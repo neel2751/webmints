@@ -86,18 +86,19 @@ const Cta = () => {
                   </div>
                 </div>
                 <div className="space-x-3">
-                  <a
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow px-8 h-12 rounded-full bg-white text-indigo-700 font-medium hover:bg-indigo-600 hover:text-white transition-colors"
-                    href="/team"
+                  <Button
+                    asChild
+                    className="h-10 bg-white text-indigo-700 hover:bg-indigo-600 hover:text-white transition-colors font-grotesk text-base font-semibold tracking-tight"
                   >
-                    Meet Our Team
-                  </a>
-                  <a
-                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input shadow-sm px-8 bg-transparent rounded-full h-12 font-medium text-white hover:bg-white hover:text-indigo-700 transition-colors"
-                    href="#"
+                    <Link href={"/"}>Get Started</Link>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="h-10  hover:bg-indigo-600 hover:border-indigo-600 hover:text-white text-white transition-colors font-grotesk text-base font-semibold tracking-tight bg-transparent"
                   >
-                    Contact Us
-                  </a>
+                    <Link href={"/"}>Contact us</Link>
+                  </Button>
                 </div>
               </div>
               <div className="relative h-full w-full">

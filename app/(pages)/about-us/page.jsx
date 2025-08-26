@@ -1,8 +1,7 @@
-import AboutCta from "@/components/web/aboutus/about-cta";
+import { FeaturesSection } from "@/components/feature-section";
 import Fund from "@/components/web/aboutus/fund";
 import AboutHero from "@/components/web/aboutus/hero";
 import Story from "@/components/web/aboutus/story";
-import React from "react";
 
 const page = () => {
   return (
@@ -10,7 +9,7 @@ const page = () => {
       <Fund />
       <AboutHero />
       <Story />
-      <AboutCta />
+      <FeaturesSection />
     </>
   );
 };

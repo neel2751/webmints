@@ -7,9 +7,6 @@ import { EyeIcon, EyeOffIcon, Minus, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
-import { useDropzone } from "react-dropzone";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import Image from "next/image";
 import FormLabel from "./form-label";
 import {
   MultipleSelectWithSearch,
@@ -19,40 +16,7 @@ import {
 import { SelectDate, SelectDateRange } from "./fields/select-date";
 import { TextareaWithCount } from "./fields/textareawithcount";
 import { Label } from "../ui/label";
-
-// export const FormInput = ({ field, ...props }) => {
-//   const {
-//     control,
-//     formState: { errors },
-//   } = useFormContext();
-
-//   return (
-//     <div className="space-y-2">
-//       <FormLabel name={field.name} labelText={field.labelText} />
-//       <Controller
-//         name={field.name}
-//         control={control}
-//         rules={field.validationOptions}
-//         render={({ field: { onChange, value } }) => (
-//           <InputField
-//             value={value}
-//             onChange={onChange}
-//             field={field}
-//             props={props}
-//           />
-//         )}
-//       />
-//       {field.helperText && (
-//         <p className="text-xs text-muted-foreground">{field.helperText}</p>
-//       )}
-//       {errors[field.name] && (
-//         <p className="text-sm text-destructive">
-//           {errors[field.name]?.message}
-//         </p>
-//       )}
-//     </div>
-//   );
-// };
+import { PrivacyPolicyModal } from "@/app/(pages)/contact-sales/sales-form";
 
 export const FormInputNew = ({ field, ...props }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -67,7 +31,9 @@ export const FormInputNew = ({ field, ...props }) => {
       <div className="relative">
         <Input
           id={field.name}
-          className="h-11 ring-inset focus-visible:ring-1 focus-visible:ring-indigo-600 focus:ring-indigo-600 focus:ring-1 outline-none appearance-none"
+          className={`h-11 ring-inset focus-visible:ring-1 focus-visible:ring-indigo-600 focus:ring-indigo-600 focus:ring-1 outline-none appearance-none font-medium font-grotesk ${
+            errors[field.name] && "border-red-500"
+          }`}
           type={
             field?.type === "password"
               ? showPassword
@@ -103,11 +69,42 @@ export const FormInputNew = ({ field, ...props }) => {
       {field.helperText && (
         <p className="text-xs text-muted-foreground">{field.helperText}</p>
       )}
-      {errors[field.name] && (
-        <p className="text-sm text-destructive">
-          {errors[field.name]?.message}
-        </p>
+      {errors[field.name] && <ErrorText field={field} errors={errors} />}
+    </div>
+  );
+};
+
+export const URLInput = ({ field, ...props }) => {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+
+  return (
+    <div className="space-y-2">
+      <FormLabel name={field.name} labelText={field.labelText} />
+      <div className="flex rounded-lg">
+        <span className="inline-flex items-center rounded-s-md border border-input border-r-0 bg-background px-3 text-sm text-muted-foreground font-grotesk font-medium">
+          https://
+        </span>
+        <Input
+          id={field.name}
+          // className="h-11 ring-inset focus-visible:ring-1 focus-visible:ring-indigo-600 focus:ring-indigo-600 focus:ring-1 outline-none appearance-none"
+          className="h-10 ring-inset focus-visible:ring-1 focus-visible:ring-indigo-600 focus:ring-indigo-600 focus:ring-1 outline-none appearance-none rounded-s-none font-grotesk font-medium text-sm"
+          type="text"
+          placeholder={field.placeholder}
+          {...register(field.name, {
+            ...field.validationOptions,
+            // valueAsNumber: field.type === "number",
+          })}
+          {...props}
+        />
+      </div>
+
+      {field.helperText && (
+        <p className="text-xs text-muted-foreground">{field.helperText}</p>
       )}
+      {errors[field.name] && <ErrorText errors={errors} field={field} />}
     </div>
   );
 };
@@ -133,11 +130,7 @@ export const FormSelect = ({ field }) => {
           />
         )}
       />
-      {errors[field.name] && (
-        <p className="text-sm text-destructive">
-          {errors[field.name]?.message}
-        </p>
-      )}
+      {errors[field.name] && <ErrorText errors={errors} field={field} />}
     </div>
   );
 };
@@ -184,11 +177,7 @@ export const FormRadio = ({ field }) => {
           </div>
         )}
       />
-      {errors[field.name] && (
-        <p className="text-sm text-destructive">
-          {errors[field.name]?.message}
-        </p>
-      )}
+      {errors[field.name] && <ErrorText errors={errors} field={field} />}
     </div>
   );
 };
@@ -198,24 +187,57 @@ export const FormCheckbox = ({ field }) => {
     control,
     formState: { errors },
   } = useFormContext();
+
+  const [open, setOpen] = useState(false);
+  const openModal = () => setOpen(true);
+  const closeModal = () => setOpen(false);
+
+  const labelContent = field.labelJSX
+    ? typeof field.labelJSX === "function"
+      ? field.labelJSX(openModal)
+      : field.labelJSX
+    : field.labelText;
+
   return (
-    <div className="flex items-center space-x-2">
-      <Controller
-        name={field.name}
-        control={control}
-        render={({ field: { onChange, value } }) => (
-          <Checkbox
-            id={field.name}
-            checked={value}
-            onCheckedChange={onChange}
-          />
-        )}
-      />
-      <Label htmlFor={field.name}>{field.labelText}</Label>
-      {errors[field.name] && (
-        <p className="text-sm text-destructive">
-          {errors[field.name]?.message}
-        </p>
+    <div className="space-y-2 mt-0.5">
+      <div className="flex items-center space-x-2">
+        <Controller
+          name={field.name}
+          control={control}
+          rules={field.validationOptions}
+          render={({ field: { onChange, value } }) => (
+            <Checkbox
+              id={field.name}
+              checked={!!value}
+              // onCheckedChange={onChange}
+              onCheckedChange={(checked) => onChange(!!checked)}
+              className="
+              w-4 h-4 
+              border border-indigo-600 
+              rounded 
+              data-[state=checked]:bg-indigo-600 
+              data-[state=checked]:border-indigo-600
+              focus:ring-1 focus:ring-indigo-400
+            "
+            />
+          )}
+        />
+
+        <Label
+          htmlFor={field.name}
+          className="text-sm leading-snug tracking-tight font-grotesk text-slate-700"
+        >
+          {labelContent}
+        </Label>
+      </div>
+      {errors[field.name] && <ErrorText errors={errors} field={field} />}
+      {field.labelJSX && (
+        <PrivacyPolicyModal
+          open={open}
+          onOpenChange={setOpen}
+          title={field.labelText}
+          content={field.modalContent}
+        />
       )}
     </div>
   );
@@ -243,11 +265,7 @@ export const FormDate = ({ field }) => {
           />;
         }}
       />
-      {errors[field.name] && (
-        <p className="text-sm text-destructive">
-          {errors[field.name]?.message}
-        </p>
-      )}
+      {errors[field.name] && <ErrorText errors={errors} field={field} />}
     </div>
   );
 };
@@ -274,11 +292,7 @@ export const FormDateRange = ({ field }) => {
           />;
         }}
       />
-      {errors[field.name] && (
-        <p className="text-sm text-destructive">
-          {errors[field.name]?.message}
-        </p>
-      )}
+      {errors[field.name] && <ErrorText errors={errors} field={field} />}
     </div>
   );
 };
@@ -308,11 +322,7 @@ export const SearchableSelect = ({ field }) => {
           />
         )}
       />
-      {errors[field.name] && (
-        <p className="text-sm text-destructive">
-          {errors[field.name]?.message}
-        </p>
-      )}
+      {errors[field.name] && <ErrorText errors={errors} field={field} />}
     </div>
   );
 };
@@ -342,11 +352,7 @@ export const FormTextarea = ({ field, ...props }) => {
       {field.helperText && (
         <p className="text-sm text-muted-foreground">{field.helperText}</p>
       )}
-      {errors[field.name] && (
-        <p className="text-sm text-destructive">
-          {errors[field.name]?.message}
-        </p>
-      )}
+      {errors[field.name] && <ErrorText errors={errors} field={field} />}
     </div>
   );
 };
@@ -376,129 +382,7 @@ export const FormMultipleSelect = ({ field }) => {
           />
         )}
       />
-      {errors[field.name] && (
-        <p className="text-sm text-destructive">
-          {errors[field.name]?.message}
-        </p>
-      )}
-    </div>
-  );
-};
-
-export const FormImageUpload = ({ field }) => {
-  const {
-    control,
-    formState: { errors },
-  } = useFormContext();
-
-  return (
-    <div className="space-y-2">
-      <FormLabel name={field.name} labelText={field.labelText} />
-      <Controller
-        name={field.name}
-        control={control}
-        rules={field.validationOptions}
-        render={({ field: { onChange, value } }) => (
-          <Dropzone
-            onDrop={(acceptedFiles) => {
-              onChange(field.maxFiles === 1 ? acceptedFiles[0] : acceptedFiles);
-            }}
-            accept={field.acceptedFileTypes}
-            maxSize={field.maxFileSize}
-            maxFiles={field.maxFiles}
-          >
-            {({
-              getRootProps,
-              getInputProps,
-              isDragActive,
-              fileRejections,
-            }) => (
-              <div
-                {...getRootProps()}
-                className={cn(
-                  "border-2 border-dashed rounded-md p-4 text-center cursor-pointer",
-                  isDragActive ? "border-primary" : "border-gray-300"
-                )}
-              >
-                <input {...getInputProps()} />
-                {value ? (
-                  <ImagePreview value={value} maxFiles={field.maxFiles} />
-                ) : (
-                  <p>
-                    {isDragActive
-                      ? "Drop the file here"
-                      : `Drag 'n' drop ${
-                          field.maxFiles > 1 ? "files" : "a file"
-                        } here, or click to select`}
-                  </p>
-                )}
-                {fileRejections?.length > 0 && (
-                  <div className="text-red-500 mt-2">
-                    {fileRejections.map(({ file, errors }) => (
-                      <div key={file.name}>
-                        {errors.map((e) => (
-                          <p key={e.code}>{e.message}</p>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
-          </Dropzone>
-        )}
-      />
-      {errors[field?.name] && (
-        <p className="text-sm text-destructive">
-          {errors[field?.name]?.message}
-        </p>
-      )}
-    </div>
-  );
-};
-
-const ImagePreview = ({ value, maxFiles }) => {
-  if (maxFiles === 1) {
-    const file = value;
-    return (
-      <Avatar className="w-20 h-20 mx-auto">
-        <AvatarImage src={URL.createObjectURL(file)} alt={file.name} />
-        <AvatarFallback>{file.name.charAt(0).toUpperCase()}</AvatarFallback>
-      </Avatar>
-    );
-  } else {
-    const files = value;
-    return (
-      <div className="grid grid-cols-3 gap-2">
-        {files.map((file, index) => (
-          <div key={index} className="relative w-20 h-20">
-            <Image
-              src={URL.createObjectURL(file)}
-              alt={file.name}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-md"
-            />
-          </div>
-        ))}
-      </div>
-    );
-  }
-};
-
-const Dropzone = ({ children, accept, maxSize, maxFiles, onDrop }) => {
-  const { getRootProps, getInputProps, isDragActive, fileRejections } =
-    useDropzone({
-      accept,
-      maxSize,
-      maxFiles,
-      onDrop,
-    });
-
-  return (
-    <div {...getRootProps()}>
-      <input {...getInputProps()} />
-      {children({ getRootProps, getInputProps, isDragActive, fileRejections })}
+      {errors[field.name] && <ErrorText errors={errors} field={field} />}
     </div>
   );
 };
@@ -610,6 +494,66 @@ export const FormMultiInput = ({ field }) => {
             {errors[field?.name].message}
           </p>
         )}
+    </div>
+  );
+};
+
+export const ErrorText = ({ errors, field }) => {
+  return (
+    <p className="text-sm text-destructive font-grotesk tracking-tight font-medium test-sm">
+      {errors[field.name]?.message}
+    </p>
+  );
+};
+
+export const FormImageUpload = ({ field }) => {
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
+
+  return (
+    <div className="space-y-2">
+      <FormLabel name={field.name} labelText={field.labelText} />
+      {/* Image Preview */}
+      <div className="mb-2">
+        <Controller
+          name={`${field.name}Preview`}
+          control={control}
+          render={({ field: { value } }) => {
+            return (
+              value && (
+                <img
+                  src={URL.createObjectURL(value)}
+                  alt="Preview"
+                  className="w-full h-32 object-cover rounded-md mb-2"
+                />
+              )
+            );
+          }}
+        />
+      </div>
+      <Controller
+        name={field.name}
+        control={control}
+        rules={field.validationOptions}
+        render={({ field: { onChange, value } }) => (
+          <Input
+            type="file"
+            accept="image/*"
+            onChange={(e) => {
+              const file = e.target.files[0];
+              if (file) {
+                onChange(file);
+              }
+            }}
+            className={`h-11 ring-inset focus-visible:ring-1 text-center focus-visible:ring-indigo-600 focus:ring-indigo-600 focus:ring-1 outline-none appearance-none font-medium font-grotesk ${
+              errors[field.name] && "border-red-500"
+            }`}
+          />
+        )}
+      />
+      {errors[field.name] && <ErrorText errors={errors} field={field} />}
     </div>
   );
 };

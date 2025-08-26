@@ -1,5 +1,5 @@
+"use client";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,15 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import {
   Search,
   FileText,
@@ -31,8 +23,82 @@ import {
   Clock,
   Users,
 } from "lucide-react";
+import FAQs from "@/components/faq";
+import { GlobalForm } from "@/components/form/globalForm";
 
 export default function HelpSupportPage() {
+  const validationOptions = {
+    minLength: {
+      value: 3,
+      message: "Minimum 3 characters required",
+    },
+    maxLength: {
+      value: 20,
+      message: "Maximum 20 characters allowed",
+    },
+  };
+
+  const emailValidation = {
+    required: "Email is required",
+    pattern: {
+      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+      message: "Invalid email format. Please check and try again.",
+    },
+  };
+  const phoneValidation = {
+    required: "Phone No. is required",
+    pattern: {
+      value: /^\d{10}$/,
+      message: "Must be exactly 10 digits.",
+    },
+  };
+
+  const groupedFields = [
+    {
+      fields: [
+        {
+          name: "name",
+          type: "text",
+          labelText: "Name",
+          size: true,
+          placeholder: "Enter Name",
+          validationOptions: {
+            required: "Name is required",
+            ...validationOptions,
+          },
+        },
+        {
+          name: "email",
+          type: "text",
+          labelText: "Email",
+          placeholder: "Enter Email",
+          validationOptions: emailValidation,
+        },
+
+        {
+          name: "subject",
+          type: "text",
+          size: true,
+          labelText: "Subject",
+          placeholder: "Enter your subject",
+          validationOptions: {
+            required: "Requirement is required",
+            ...validationOptions,
+          },
+        },
+        {
+          name: "message",
+          type: "textarea",
+          size: true,
+          labelText: "Message",
+          placeholder: "Enter your message",
+          validationOptions: {
+            required: "Message is required",
+          },
+        },
+      ],
+    },
+  ];
   return (
     <div className="flex flex-col gap-16 pb-16">
       {/* Hero Section */}
@@ -40,7 +106,7 @@ export default function HelpSupportPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white" />
         <div className="container relative py-24 md:py-32 mx-auto">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-grotesk">
               Help & Support
             </h1>
             <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -52,7 +118,7 @@ export default function HelpSupportPage() {
               <Input
                 type="search"
                 placeholder="Search for help articles, tutorials, and more..."
-                className="pl-10 pr-4 py-6 text-base"
+                className="pl-10 pr-4 py-6 font-grotesk font-medium tracking-wide"
               />
             </div>
           </div>
@@ -71,12 +137,14 @@ export default function HelpSupportPage() {
                 <div className="mb-2 rounded-md bg-indigo-50 p-2 w-fit">
                   {link.icon}
                 </div>
-                <CardTitle>{link.title}</CardTitle>
+                <CardTitle className="font-grotesk">{link.title}</CardTitle>
                 <CardDescription>{link.description}</CardDescription>
               </CardHeader>
               <CardFooter>
                 <Button asChild variant="outline" className="w-full">
-                  <Link href={link.href}>{link.buttonText}</Link>
+                  <Link href={link.href} className="font-grotesk">
+                    {link.buttonText}
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -87,8 +155,8 @@ export default function HelpSupportPage() {
       {/* Support Options Tabs */}
       <section className="bg-indigo-50 py-16">
         <div className="container mx-auto">
-          <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-4 text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
               Support Options
             </h2>
             <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -96,247 +164,227 @@ export default function HelpSupportPage() {
             </p>
           </div>
 
-          <Tabs defaultValue="documentation" className="mx-auto max-w-4xl">
-            <TabsList className="grid w-full grid-cols-1 md:grid-cols-4 mb-8">
-              <TabsTrigger value="documentation">Documentation</TabsTrigger>
-              <TabsTrigger value="tutorials">Tutorials</TabsTrigger>
-              <TabsTrigger value="community">Community</TabsTrigger>
-              <TabsTrigger value="contact">Contact Us</TabsTrigger>
+          <Tabs defaultValue="documentation" className="mt-8">
+            <TabsList className="container flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-10 w-full bg-indigo-50">
+              {[
+                { label: "Documentation", value: "documentation" },
+                { label: "Tutorials", value: "tutorials" },
+                { label: "Community", value: "community" },
+                { label: "Contact Us", value: "contact" },
+              ].map((tab) => (
+                <TabsTrigger
+                  key={tab.value}
+                  value={tab.value}
+                  className="flex items-center justify-center gap-2 rounded-xl py-3 text-base font-semibold text-muted-foreground data-[state=active]:bg-indigo-600 data-[state=active]:text-white bg-gray-200 font-grotesk w-full"
+                >
+                  {tab?.icon} {tab.label}
+                </TabsTrigger>
+              ))}
             </TabsList>
-
-            <TabsContent value="documentation" className="mt-0">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Comprehensive Documentation</CardTitle>
-                  <CardDescription>
-                    Detailed guides and reference materials for every aspect of
-                    your SaaS solution.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid gap-6 md:grid-cols-2">
-                    {documentationLinks.map((doc, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          <FileText className="h-5 w-5 text-indigo-600" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold">{doc.title}</h3>
-                          <p className="text-sm text-muted-foreground">
-                            {doc.description}
-                          </p>
-                          <Link
-                            href={doc.href}
-                            className="mt-1 inline-block text-sm font-medium text-indigo-600 hover:underline"
-                          >
-                            Read Documentation
-                          </Link>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link href="/documentation">View All Documentation</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="tutorials" className="mt-0">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Video & Written Tutorials</CardTitle>
-                  <CardDescription>
-                    Step-by-step guides to help you master every feature of your
-                    custom solution.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid gap-6 md:grid-cols-2">
-                    {tutorialLinks.map((tutorial, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          {tutorial.type === "video" ? (
-                            <Video className="h-5 w-5 text-indigo-600" />
-                          ) : (
+            <div className="mx-auto mt-8 max-w-screen-xl rounded-2xl bg-muted p-10">
+              <TabsContent value="documentation" className="mt-8">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Comprehensive Documentation</CardTitle>
+                    <CardDescription>
+                      Detailed guides and reference materials for every aspect
+                      of your SaaS solution.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid gap-6 md:grid-cols-2">
+                      {documentationLinks.map((doc, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <div className="mt-1 rounded-md bg-indigo-100 p-1">
                             <FileText className="h-5 w-5 text-indigo-600" />
-                          )}
+                          </div>
+                          <div>
+                            <h3 className="font-semibold">{doc.title}</h3>
+                            <p className="text-sm text-muted-foreground">
+                              {doc.description}
+                            </p>
+                            <Link
+                              href={doc.href}
+                              className="mt-1 inline-block text-sm font-medium text-indigo-600 hover:underline"
+                            >
+                              Read Documentation
+                            </Link>
+                          </div>
                         </div>
-                        <div>
-                          <h3 className="font-semibold">{tutorial.title}</h3>
-                          <p className="text-sm text-muted-foreground">
-                            {tutorial.description}
-                          </p>
-                          <Link
-                            href={tutorial.href}
-                            className="mt-1 inline-block text-sm font-medium text-indigo-600 hover:underline"
-                          >
-                            {tutorial.type === "video"
-                              ? "Watch Tutorial"
-                              : "Read Tutorial"}
-                          </Link>
+                      ))}
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild variant="outline" className="w-full">
+                      <Link href="/documentation">View All Documentation</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="tutorials" className="mt-0">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Video & Written Tutorials</CardTitle>
+                    <CardDescription>
+                      Step-by-step guides to help you master every feature of
+                      your custom solution.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid gap-6 md:grid-cols-2">
+                      {tutorialLinks.map((tutorial, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <div className="mt-1 rounded-md bg-indigo-100 p-1">
+                            {tutorial.type === "video" ? (
+                              <Video className="h-5 w-5 text-indigo-600" />
+                            ) : (
+                              <FileText className="h-5 w-5 text-indigo-600" />
+                            )}
+                          </div>
+                          <div>
+                            <h3 className="font-semibold">{tutorial.title}</h3>
+                            <p className="text-sm text-muted-foreground">
+                              {tutorial.description}
+                            </p>
+                            <Link
+                              href={tutorial.href}
+                              className="mt-1 inline-block text-sm font-medium text-indigo-600 hover:underline"
+                            >
+                              {tutorial.type === "video"
+                                ? "Watch Tutorial"
+                                : "Read Tutorial"}
+                            </Link>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild variant="outline" className="w-full">
+                      <Link href="/tutorials">View All Tutorials</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="community" className="mt-0">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Community Support</CardTitle>
+                    <CardDescription>
+                      Connect with other users and our team to get answers and
+                      share best practices.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid gap-6 md:grid-cols-2">
+                      {communityLinks.map((community, index) => (
+                        <div key={index} className="flex items-start gap-3">
+                          <div className="mt-1 rounded-md bg-indigo-100 p-1">
+                            {community.icon}
+                          </div>
+                          <div>
+                            <h3 className="font-semibold">{community.title}</h3>
+                            <p className="text-sm text-muted-foreground">
+                              {community.description}
+                            </p>
+                            <Link
+                              href={community.href}
+                              className="mt-1 inline-block text-sm font-medium text-indigo-600 hover:underline"
+                            >
+                              Join Now
+                            </Link>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button asChild variant="outline" className="w-full">
+                      <Link href="/community">Explore Community</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="contact" className="mt-0">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Contact Our Support Team</CardTitle>
+                    <CardDescription>
+                      Get in touch with our dedicated support team for
+                      personalized assistance.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid gap-6 md:grid-cols-2">
+                      <div className="space-y-4">
+                        <div className="flex items-start gap-3">
+                          <div className="mt-1 rounded-md bg-indigo-100 p-1">
+                            <Mail className="h-5 w-5 text-indigo-600" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold">Email Support</h3>
+                            <p className="text-sm text-muted-foreground">
+                              For general inquiries and non-urgent issues.
+                            </p>
+                            <a
+                              href="mailto:support@saasify.com"
+                              className="mt-1 inline-block text-sm font-medium text-indigo-600 hover:underline"
+                            >
+                              support@saasify.com
+                            </a>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                          <div className="mt-1 rounded-md bg-indigo-100 p-1">
+                            <Phone className="h-5 w-5 text-indigo-600" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold">Phone Support</h3>
+                            <p className="text-sm text-muted-foreground">
+                              For urgent issues requiring immediate assistance.
+                            </p>
+                            <a
+                              href="tel:+18005551234"
+                              className="mt-1 inline-block text-sm font-medium text-indigo-600 hover:underline"
+                            >
+                              +1 (800) 555-1234
+                            </a>
+                          </div>
+                        </div>
+
+                        <div className="flex items-start gap-3">
+                          <div className="mt-1 rounded-md bg-indigo-100 p-1">
+                            <Clock className="h-5 w-5 text-indigo-600" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold">Support Hours</h3>
+                            <p className="text-sm text-muted-foreground">
+                              Monday - Friday: 9:00 AM - 8:00 PM EST
+                              <br />
+                              Saturday: 10:00 AM - 6:00 PM EST
+                              <br />
+                              Sunday: Closed (Email only)
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link href="/tutorials">View All Tutorials</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </TabsContent>
 
-            <TabsContent value="community" className="mt-0">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Community Support</CardTitle>
-                  <CardDescription>
-                    Connect with other users and our team to get answers and
-                    share best practices.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid gap-6 md:grid-cols-2">
-                    {communityLinks.map((community, index) => (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          {community.icon}
-                        </div>
-                        <div>
-                          <h3 className="font-semibold">{community.title}</h3>
-                          <p className="text-sm text-muted-foreground">
-                            {community.description}
-                          </p>
-                          <Link
-                            href={community.href}
-                            className="mt-1 inline-block text-sm font-medium text-indigo-600 hover:underline"
-                          >
-                            Join Now
-                          </Link>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link href="/community">Explore Community</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="contact" className="mt-0">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Contact Our Support Team</CardTitle>
-                  <CardDescription>
-                    Get in touch with our dedicated support team for
-                    personalized assistance.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid gap-6 md:grid-cols-2">
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          <Mail className="h-5 w-5 text-indigo-600" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold">Email Support</h3>
-                          <p className="text-sm text-muted-foreground">
-                            For general inquiries and non-urgent issues.
-                          </p>
-                          <a
-                            href="mailto:support@saasify.com"
-                            className="mt-1 inline-block text-sm font-medium text-indigo-600 hover:underline"
-                          >
-                            support@saasify.com
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          <Phone className="h-5 w-5 text-indigo-600" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold">Phone Support</h3>
-                          <p className="text-sm text-muted-foreground">
-                            For urgent issues requiring immediate assistance.
-                          </p>
-                          <a
-                            href="tel:+18005551234"
-                            className="mt-1 inline-block text-sm font-medium text-indigo-600 hover:underline"
-                          >
-                            +1 (800) 555-1234
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-3">
-                        <div className="mt-1 rounded-md bg-indigo-100 p-1">
-                          <Clock className="h-5 w-5 text-indigo-600" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold">Support Hours</h3>
-                          <p className="text-sm text-muted-foreground">
-                            Monday - Friday: 9:00 AM - 8:00 PM EST
-                            <br />
-                            Saturday: 10:00 AM - 6:00 PM EST
-                            <br />
-                            Sunday: Closed (Email only)
-                          </p>
-                        </div>
+                      <div className="rounded-lg border bg-background p-4">
+                        <h3 className="font-semibold">Send Us a Message</h3>
+                        <GlobalForm
+                          groupedFields={groupedFields}
+                          btnName={"Send Message"}
+                        />
                       </div>
                     </div>
-
-                    <div className="rounded-lg border bg-background p-4">
-                      <h3 className="font-semibold mb-4">Send Us a Message</h3>
-                      <form className="space-y-4">
-                        <div className="space-y-2">
-                          <Label htmlFor="name">Name</Label>
-                          <Input id="name" placeholder="Your name" />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="email">Email</Label>
-                          <Input
-                            id="email"
-                            type="email"
-                            placeholder="Your email"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="subject">Subject</Label>
-                          <Input
-                            id="subject"
-                            placeholder="Support request subject"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <Label htmlFor="message">Message</Label>
-                          <Textarea
-                            id="message"
-                            placeholder="Describe your issue or question"
-                            rows={4}
-                          />
-                        </div>
-                        <Button
-                          type="submit"
-                          className="w-full bg-indigo-600 hover:bg-indigo-700"
-                        >
-                          Send Message
-                        </Button>
-                      </form>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </div>
           </Tabs>
         </div>
       </section>
@@ -344,7 +392,7 @@ export default function HelpSupportPage() {
       {/* FAQ Section */}
       <section className="container mx-auto">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
             Frequently Asked Questions
           </h2>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -354,14 +402,7 @@ export default function HelpSupportPage() {
         </div>
 
         <div className="mx-auto max-w-3xl">
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>{faq.question}</AccordionTrigger>
-                <AccordionContent>{faq.answer}</AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <FAQs faqs={faqs} />
         </div>
       </section>
 
@@ -369,7 +410,7 @@ export default function HelpSupportPage() {
       <section className="bg-indigo-50 py-16">
         <div className="container mx-auto">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
               Support Plans
             </h2>
             <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
@@ -386,7 +427,7 @@ export default function HelpSupportPage() {
                 } transition-all duration-200 hover:shadow-md`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium font-grotesk">
                     Recommended
                   </div>
                 )}
@@ -396,7 +437,9 @@ export default function HelpSupportPage() {
                 </CardHeader>
                 <CardContent className="flex-1">
                   <div className="mb-6">
-                    <span className="text-4xl font-bold">${plan.price}</span>
+                    <span className="text-4xl font-bold font-grotesk">
+                      ${plan.price}
+                    </span>
                     <span className="text-muted-foreground ml-1">/month</span>
                   </div>
                   <ul className="space-y-2 mb-6">
@@ -418,7 +461,7 @@ export default function HelpSupportPage() {
                             <path d="M20 6 9 17l-5-5" />
                           </svg>
                         </div>
-                        <span>{feature}</span>
+                        <span className="font-grotesk">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -441,53 +484,11 @@ export default function HelpSupportPage() {
         </div>
       </section>
 
-      {/* Resources Section */}
-      <section className="container mx-auto">
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Additional Resources
-          </h2>
-          <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            Explore these resources to get the most out of your custom SaaS
-            solution.
-          </p>
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {resources.map((resource, index) => (
-            <Card
-              key={index}
-              className="overflow-hidden transition-all duration-200 hover:shadow-md"
-            >
-              <div className="relative h-48">
-                <Image
-                  src={
-                    resource.image || "/placeholder.svg?height=300&width=400"
-                  }
-                  alt={resource.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>{resource.title}</CardTitle>
-                <CardDescription>{resource.description}</CardDescription>
-              </CardHeader>
-              <CardFooter>
-                <Button asChild variant="outline" className="w-full">
-                  <Link href={resource.href}>{resource.buttonText}</Link>
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="bg-indigo-600 text-white py-16">
         <div className="container mx-auto">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 font-grotesk">
               Can't find what you're looking for?
             </h2>
             <p className="text-xl text-white/80 mb-8">
@@ -504,7 +505,7 @@ export default function HelpSupportPage() {
               <Button
                 asChild
                 variant="outline"
-                className="text-white border-white hover:bg-white/10"
+                className="text-white border-white bg-indigo-600 hover:bg-white/10 hover:text-white"
               >
                 <Link href="/documentation">Browse Documentation</Link>
               </Button>

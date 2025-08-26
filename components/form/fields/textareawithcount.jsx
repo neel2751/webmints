@@ -13,7 +13,7 @@ function TextareaWithCount({ field, label, value, onChange, props }) {
         aria-describedby="characters-left-textarea"
         {...props}
         rows={field?.rows || 4}
-        className="ring-inset focus-visible:ring-1 focus-visible:ring-indigo-600 focus:ring-indigo-600 focus:ring-1 outline-none appearance-none"
+        className="ring-inset focus-visible:ring-1 focus-visible:ring-indigo-600 focus:ring-indigo-600 focus:ring-1 outline-none appearance-none font-grotesk text-sm font-medium"
       />
       <p
         id="characters-left-textarea"

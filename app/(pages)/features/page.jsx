@@ -1,14 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import {
   BarChart2,
   Shield,
@@ -23,7 +14,21 @@ import {
   Heart,
   BarChart,
   TrendingUp,
+  Check,
+  ArrowRight,
 } from "lucide-react";
+import ShinyText from "@/components/animation/shiny-text";
+import { industryTechnologies } from "@/data/data";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import GlobalCta from "@/components/web/cta/global-cta";
+import Bento from "@/components/bento/bento";
 
 export default function FeaturesPage() {
   return (
@@ -32,18 +37,18 @@ export default function FeaturesPage() {
       <section className="py-32">
         <div className="container mx-auto">
           <div className="mx-auto flex max-w-2xl flex-col gap-6 text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl font-grotesk">
               Powerful Experience.
               <br /> Simple Tools.
             </h1>
-            <p className="text-lg">
+            <p className="text-lg font-sans">
               Built with cutting-edge insights, offering a complete perspective
               on the connection between lifestyle, behavior, and health. Our
               platform delivers an all-encompassing health overview.
             </p>
             <div className="flex flex-col justify-center gap-2 sm:flex-row">
               <Button asChild className="bg-indigo-600 hover:bg-indigo-700">
-                <Link href="/signup">Request a Demo</Link>
+                <Link href="/auth/register">Request a Demo</Link>
               </Button>
               <Button variant="outline">
                 <Link href="/solution">See Solution</Link>
@@ -53,30 +58,30 @@ export default function FeaturesPage() {
           <div className="mx-auto mt-20 grid max-w-screen-lg gap-20 md:grid-cols-3">
             <div className="text-center">
               <Heart className="mx-auto h-auto w-7" />
-              <h3 className="mt-4 mb-2 text-xl font-semibold">
+              <h3 className="mt-4 mb-2 text-xl font-semibold font-grotesk">
                 Multi-Tenant Architecture
               </h3>
-              <p>
+              <p className="font-sans">
                 Our platform is built on a multi-tenant architecture, allowing
                 for efficient resource sharing and cost-effective scalability.
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center font-grotesk">
               <BarChart className="mx-auto h-auto w-7" />
               <h3 className="mt-4 mb-2 text-xl font-semibold">
                 White Labeling Support
               </h3>
-              <p>
+              <p className="font-sans">
                 Customize the platform with your branding, colors, and logo to
                 create a unique experience for your customers.
               </p>
             </div>
             <div className="text-center">
               <TrendingUp className="mx-auto h-auto w-7" />
-              <h3 className="mt-4 mb-2 text-xl font-semibold">
+              <h3 className="mt-4 mb-2 text-xl font-semibold font-grotesk">
                 Modular Add-ons
               </h3>
-              <p>
+              <p className="font-sans">
                 Choose from a variety of add-ons to enhance your platform's
                 functionality. Whether it's advanced analytics, AI-driven
                 insights, or custom integrations, we have you covered.
@@ -88,13 +93,13 @@ export default function FeaturesPage() {
 
       {/* New Extra Feature */}
       <div className=" bg-black">
-        <section className="relative isolate mx-auto max-w-[63rem] pb-16 pt-20 md:pt-32 lg:pt-40">
+        <section className="relative isolate mx-auto max-w-[63rem] py-32">
           <div className="absolute left-1/2 top-0 ml-[-50cqw] h-px w-[100cqw] bg-gradient-to-r from-white/0 via-white/15 to-white/0"></div>
           <div className="lg:flex lg:justify-between">
-            <h2 className="max-w-md text-balance text-2xl font-semibold tracking-[-0.02em] text-white sm:text-3xl/9 lg:max-w-sm">
+            <h2 className="max-w-md text-balance text-2xl font-semibold tracking-[-0.02em] text-white sm:text-4xl/9 lg:max-w-sm font-grotesk">
               Billing built for SaaS, with even more features on the way
             </h2>
-            <p className="mt-3 text-pretty text-[0.875rem]/6 text-gray-400 lg:mt-0 lg:max-w-md">
+            <p className="mt-3 text-pretty text-base text-gray-400 lg:mt-0 lg:max-w-md tracking-tight font-sans">
               Having built and scaled SaaS products ourselves, we know firsthand
               how complex billing becomes as you grow. That’s why we built our
               own billing engine from first principles - not just to solve
@@ -103,57 +108,57 @@ export default function FeaturesPage() {
               charge your customers.
             </p>
           </div>
-          <ul
-            role="list"
-            className="mt-20 grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2 md:gap-y-12 lg:gap-y-16 lg:grid-cols-3 lg:gap-x-12"
-            data-sentry-element="InfoBlocks"
-            data-sentry-source-file="InfoBlock.tsx"
-            data-sentry-component="InfoBlocks"
-          >
+          <ul className="mt-32 grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2 md:gap-y-12 lg:gap-y-16 lg:grid-cols-3 lg:gap-x-12">
             {coreFeatures.map((feature, index) => (
-              <li key={index} className="text-sm/5">
-                <h4 className="flex gap-2.5 font-medium text-white">
+              <li key={index}>
+                <h4 className="flex gap-2.5 font-medium text-white text-lg font-grotesk">
                   {feature.title}
                 </h4>
-                <p className="mt-2 text-gray-400">{feature.description}</p>
+                <p className="mt-2 text-gray-400 font-sans text-base">
+                  {feature.description}
+                </p>
               </li>
             ))}
           </ul>
         </section>
       </div>
 
-      {/* Feature Categories Section */}
-      <section className="bg-indigo-50 py-16">
-        <div className="container mx-auto">
-          <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Explore Feature Categories
-            </h2>
-            <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+      {/* New Feature Categoris Section */}
+      <section className="py-32">
+        <div className="border-y">
+          <div className="container flex flex-col gap-4  border-x py-4 max-lg:border-x lg:py-8 px-8 mx-auto">
+            <div>
+              <ShinyText
+                text="How It Works"
+                className="bg-indigo-600 border border-indigo-700 text-white px-2 py-0.5 rounded-full text-xs font-medium cursor-pointer transition-colors"
+              />
+              <h2 className="text-3xl leading-tight tracking-tight md:text-4xl lg:text-6xl font-grotesk">
+                Explore Feature Categories
+              </h2>
+            </div>
+            <p className="max-w-[600px] tracking-[-0.32px] text-muted-foreground font-sans">
               Dive deeper into our feature sets designed to address specific
               business needs.
             </p>
           </div>
-
-          <Tabs defaultValue="productivity" className="w-full">
-            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
-              <TabsTrigger value="productivity">Productivity</TabsTrigger>
-              <TabsTrigger value="security">Security</TabsTrigger>
-              <TabsTrigger value="integration">Integration</TabsTrigger>
-              <TabsTrigger value="analytics">Analytics</TabsTrigger>
-            </TabsList>
-            <TabsContent value="productivity" className="mt-0">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">
-                    Boost Your Team's Productivity
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Our productivity features help your team work more
-                    efficiently, collaborate seamlessly, and accomplish more in
-                    less time.
-                  </p>
-                  <ul className="space-y-2">
+        </div>
+        <div className="container border-x lg:!px-0 mx-auto">
+          <div className="items-center">
+            <div className="grid flex-1 max-lg:divide-y max-lg:border-x lg:grid-cols-3 lg:divide-x">
+              <div className="relative isolate pt-5 text-start lg:pt-10">
+                <div className="px-2 lg:px-8">
+                  <BarChart className="size-10 bg-indigo-600 text-white rounded-full p-2" />
+                </div>
+                <h3 className="mt-2 px-4 text-lg font-semibold tracking-tight lg:px-8 font-grotesk">
+                  Boost Your Team's Productivity
+                </h3>
+                <p className="pt-2 pb-6 text-muted-foreground lg:px-8 font-sans">
+                  Our productivity features help your team work more
+                  efficiently, collaborate seamlessly, and accomplish more in
+                  less time.
+                </p>
+                <div className="border-t py-4 px-8">
+                  <ul className="space-y-6">
                     {productivityFeatures.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <div className="mt-1 text-indigo-600">
@@ -169,28 +174,20 @@ export default function FeaturesPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="relative rounded-lg overflow-hidden border shadow-sm">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt="Productivity Features"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                  />
-                </div>
               </div>
-            </TabsContent>
-            <TabsContent value="security" className="mt-0">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">
-                    Enterprise-Grade Security
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Protect your sensitive data with our comprehensive security
-                    features designed to meet the highest standards.
-                  </p>
-                  <ul className="space-y-2">
+              <div className="relative isolate pt-5 text-start lg:pt-10">
+                <div className="px-2 lg:px-8">
+                  <BarChart className="size-10 bg-indigo-600 text-white rounded-full p-2" />
+                </div>
+                <h3 className="mt-2 px-4 text-lg font-semibold tracking-tight lg:px-8 font-grotesk">
+                  Enterprise-Grade Security
+                </h3>
+                <p className="pt-2 pb-6 text-muted-foreground lg:px-8 font-sans">
+                  Protect your sensitive data with our comprehensive security
+                  features designed to meet the highest standards.
+                </p>
+                <div className="border-t py-4 px-8">
+                  <ul className="space-y-6">
                     {securityFeatures.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <div className="mt-1 text-indigo-600">
@@ -206,28 +203,20 @@ export default function FeaturesPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="relative rounded-lg overflow-hidden border shadow-sm">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt="Security Features"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                  />
-                </div>
               </div>
-            </TabsContent>
-            <TabsContent value="integration" className="mt-0">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">
-                    Seamless Integration Capabilities
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Connect with your existing tools and systems for a unified
-                    workflow and enhanced productivity.
-                  </p>
-                  <ul className="space-y-2">
+              <div className="relative isolate pt-5 text-start lg:pt-10">
+                <div className="px-2 lg:px-8">
+                  <BarChart className="size-10 bg-indigo-600 text-white rounded-full p-2" />
+                </div>
+                <h3 className="mt-2 px-4 text-lg font-semibold tracking-tight lg:px-8 font-grotesk">
+                  Seamless Integration Capabilities
+                </h3>
+                <p className="pt-2 pb-6 text-muted-foreground lg:px-8 font-sans">
+                  Connect with your existing tools and systems for a unified
+                  workflow and enhanced productivity.
+                </p>
+                <div className="border-t py-4 px-8">
+                  <ul className="space-y-6">
                     {integrationFeatures.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <div className="mt-1 text-indigo-600">
@@ -243,60 +232,17 @@ export default function FeaturesPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="relative rounded-lg overflow-hidden border shadow-sm">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt="Integration Features"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                  />
-                </div>
               </div>
-            </TabsContent>
-            <TabsContent value="analytics" className="mt-0">
-              <div className="grid gap-8 md:grid-cols-2">
-                <div className="flex flex-col justify-center space-y-4">
-                  <h3 className="text-2xl font-bold">
-                    Advanced Analytics & Reporting
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Gain valuable insights with powerful analytics tools and
-                    customizable dashboards tailored to your business needs.
-                  </p>
-                  <ul className="space-y-2">
-                    {analyticsFeatures.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <div className="mt-1 text-indigo-600">
-                          {feature.icon}
-                        </div>
-                        <div>
-                          <p className="font-medium">{feature.title}</p>
-                          <p className="text-sm text-muted-foreground">
-                            {feature.description}
-                          </p>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="relative rounded-lg overflow-hidden border shadow-sm">
-                  <Image
-                    src="/placeholder.svg?height=600&width=800"
-                    alt="Analytics Features"
-                    width={800}
-                    height={600}
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </TabsContent>
-          </Tabs>
+            </div>
+          </div>
+        </div>
+        <div className="h-8 w-full border-y md:h-12 lg:h-[112px]">
+          <div className="container h-full w-full border-x"></div>
         </div>
       </section>
 
       {/* Industry-Specific Features */}
-      <section className="container mx-auto">
+      {/* <section className="container mx-auto">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Industry-Specific Features
@@ -308,30 +254,71 @@ export default function FeaturesPage() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {industries.map((industry, index) => (
-            <Card
-              key={index}
-              className="transition-all duration-200 hover:shadow-md"
-            >
-              <CardHeader>
-                <div className="mb-2 text-3xl">{industry.icon}</div>
-                <CardTitle>{industry.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base mb-4">
-                  {industry.description}
-                </CardDescription>
-                <Button asChild variant="outline" className="w-full">
-                  <Link href={`/industries/${industry.id}`}>Learn More</Link>
-                </Button>
-              </CardContent>
-            </Card>
+          {industriesFeature.map((industry, index) => (
+            <IndustryCard key={index} industry={industry} />
           ))}
+        </div>
+      </section> */}
+      {/* Industry-Specific Technologies Section */}
+      <section className="bg-indigo-50 py-16">
+        <div className="container mx-auto">
+          <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl font-grotesk">
+              Industry-Specific Technologies
+            </h2>
+            <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 font-sans">
+              We leverage specialized technologies to address the unique
+              requirements of different industries.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {industryTechnologies.map((industry, index) => (
+              <Card
+                key={index}
+                className="transition-all duration-200 hover:shadow-md"
+              >
+                <CardHeader>
+                  <div className="mb-2 text-3xl">{industry.icon}</div>
+                  <CardTitle className="font-grotesk">
+                    {industry.title}
+                  </CardTitle>
+                  <CardDescription className="font-sans">
+                    {industry.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-2">
+                    {industry.technologies.map((tech, techIndex) => (
+                      <div key={techIndex} className="flex items-start gap-2">
+                        <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
+                        <span className="font-grotesk">{tech}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full border-indigo-600 text-indigo-600 hover:bg-indigo-50"
+                  >
+                    <Link
+                      href={`/industries/${industry.id}`}
+                      className="font-grotesk"
+                    >
+                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Extra Section */}
-      <section className="bg-[#635BFF] text-white py-16">
+      {/* <section className="bg-[#635BFF] text-white py-16">
         <div className="container mx-auto">
           <div className="relative isolate z-30 -mx-6  overflow-hidden  px-6 text-center text-white sm:-mx-px sm:rounded-xl sm:py-16 py-20">
             <p className="text-[0.875rem]/5 font-medium">
@@ -364,30 +351,17 @@ export default function FeaturesPage() {
             <div className="absolute left-1/2 top-full -z-10 -mt-10 ml-[-48.125rem] aspect-[1540/708] w-[96.25rem] sm:-mt-28 md:-mt-20"></div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="container mx-auto">
-        <div className="mx-auto max-w-4xl rounded-lg border bg-background p-8 shadow-sm md:p-12">
-          <div className="flex flex-col items-center justify-center gap-4 text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Ready to experience these features?
-            </h2>
-            <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-              Start your 14-day free trial today and discover how our platform
-              can transform your business.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button asChild className="bg-indigo-600 hover:bg-indigo-700">
-                <Link href="/signup">Start Free Trial</Link>
-              </Button>
-              <Button variant="outline">
-                <Link href="/contact">Schedule a Demo</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GlobalCta
+        title={"Ready to build your custom solution?"}
+        desc={
+          "Let's discuss how our technology expertise can help you create a powerful, scalable SaaS platform tailored to your industry needs."
+        }
+        mainBtn={{ name: "Explore Plan", link: "/pricing" }}
+        btn={{ name: "Schedule Call", link: "/schedule-call" }}
+      />
     </div>
   );
 }
@@ -541,44 +515,5 @@ const analyticsFeatures = [
     description:
       "Track key performance indicators in real-time with automated alerts and notifications.",
     icon: <Clock className="h-5 w-5" />,
-  },
-];
-
-// Industry Data
-const industries = [
-  {
-    id: "enterprise",
-    title: "Enterprise Solutions",
-    description:
-      "Features designed for large organizations to streamline operations and enhance collaboration.",
-    icon: "🏢",
-  },
-  {
-    id: "ecommerce",
-    title: "E-commerce",
-    description:
-      "Tools to optimize your online store, boost sales, and enhance customer experience.",
-    icon: "🛒",
-  },
-  {
-    id: "fintech",
-    title: "Fintech & Banking",
-    description:
-      "Secure, compliant features for financial institutions and fintech companies.",
-    icon: "💰",
-  },
-  {
-    id: "healthcare",
-    title: "Healthcare",
-    description:
-      "HIPAA-compliant tools to improve patient care and streamline administrative tasks.",
-    icon: "🏥",
-  },
-  {
-    id: "construction",
-    title: "Construction",
-    description:
-      "Features to manage projects, resources, and teams efficiently in the field.",
-    icon: "🏗️",
   },
 ];

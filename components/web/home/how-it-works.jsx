@@ -1,24 +1,31 @@
 import React from "react";
+import ShinyText from "@/components/animation/shiny-text";
 
 export default function HowItWorks() {
   const process = [
     {
       id: "01",
-      title: "Create Account",
+      title: "Fill Out the Form",
       description:
-        "Sign up in seconds with just your email. No credit card required to get started.",
+        "Complete our comprehensive onboarding form to tell us about your business and needs.",
     },
     {
       id: "02",
-      title: "Configure Workspace",
+      title: "Meet Your Team",
       description:
-        "Customize your workspace to match your team's unique workflow and requirements.",
+        "Get introduced to your dedicated account manager and technical advisor.",
     },
     {
       id: "03",
-      title: "Boost Productivity",
+      title: "Welcome Call",
       description:
-        "Start using our powerful features to streamline processes and achieve your goals.",
+        "Schedule a personalized welcome call to discuss your goals and next steps.",
+    },
+    {
+      id: "04",
+      title: "Start Your Journey",
+      description:
+        "Access your dashboard and begin your journey with our Webmints family.",
     },
   ];
   return (
@@ -26,21 +33,21 @@ export default function HowItWorks() {
       <div className="absolute inset-0 -z-10 h-full w-full bg-white dark:bg-black bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_40%,transparent_100%)]"></div>
       <div className="container px-4 md:px-6 relative mx-auto">
         <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16">
-          <div
-            className="inline-flex items-center border transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-full px-4 py-1.5 text-sm font-medium"
-            data-v0-t="badge"
-          >
-            How It Works
-          </div>
+          <ShinyText
+            text="How It Works"
+            className="bg-indigo-600 border border-indigo-700 text-white px-4 py-1 rounded-full text-xs sm:text-sm font-medium cursor-pointer transition-colors"
+          />
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight font-grotesk">
             Simple Process, Powerful Results
           </h2>
           <p className="max-w-[800px] text-muted-foreground md:text-lg font-sans">
             Get started in minutes and see the difference our platform can make
-            for your business.
+            for your business.Our simple onboarding process makes it easy to get
+            started with our SaaS solutions and become part of our growing
+            community.
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12 relative">
+        <div className="grid md:grid-cols-4 gap-8 md:gap-12 relative">
           {process.map((step) => (
             <div
               key={step.id}

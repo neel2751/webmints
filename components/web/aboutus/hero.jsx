@@ -7,10 +7,10 @@ export default function AboutHero() {
         <div className="flex flex-col items-center justify-start gap-6 lg:flex-row">
           <div className="flex w-full flex-col items-start justify-start gap-24 lg:w-1/2">
             <div className="pr-6">
-              <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:mb-10 lg:text-6xl">
+              <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:mb-10 lg:text-6xl font-grotesk">
                 Our Story
               </h1>
-              <p className="mb-9 lg:text-xl">
+              <p className="mb-9 lg:text-xl font-sans">
                 Like many growing businesses – perhaps even yours – we
                 experienced firsthand the inefficiencies of juggling multiple
                 software tools. The endless logins, the frustrating search for
@@ -19,7 +19,7 @@ export default function AboutHero() {
                 became a significant drain on our time and resources, pulling
                 our focus away from what truly mattered.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground font-sans">
                 It was this very challenge, the same one you might be facing
                 right now, that sparked our vision: to create a single,
                 adaptable platform that could streamline operations and empower
@@ -69,20 +69,20 @@ export default function AboutHero() {
               </div>
             </div>
             <div className="px-8">
-              <p className="text-indigo-600 font-semibold tracking-tight">
+              <p className="text-indigo-600 font-semibold tracking-tight font-grotesk">
                 Our Workplace
               </p>
-              <h1 className="mb-4 text-2xl font-semibold lg:mb-6 tracking-tight whitespace-nowrap">
+              <h1 className="mb-4 text-2xl font-semibold tracking-tight whitespace-nowrap font-grotesk">
                 Inside Our Innovation Hub: Where Ideas Take Flight
               </h1>
-              <p className="mb-4 lg:text-xl">
+              <p className="mb-4 lg:text-xl font-sans">
                 Just as we believe in creating a seamless experience for our
                 clients, we've cultivated a dynamic and collaborative
                 environment within our own walls. Our workplace is more than
                 just an office; it's a hub where diverse talents converge, ideas
                 are openly shared, and innovation is nurtured.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground font-sans">
                 We foster a culture of continuous learning, where every team
                 member is empowered to contribute their unique perspectives to
                 build the best possible customizable SaaS solutions for you.
