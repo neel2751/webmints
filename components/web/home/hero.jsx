@@ -46,7 +46,7 @@ export default function HomeHero() {
         <div className="relative mx-auto w-full max-w-[72rem] after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:z-20 after:block after:h-[45%] after:w-full after:bg-gradient-to-t after:from-white after:to-transparent after:content-[''] sm:px-0 px-2">
           <div className="mt-14 flex w-full flex-col items-center gap-5 rounded-2xl border border-indigo-200 bg-indigo-100 p-3">
             <p className="text-center text-xs font-medium text-foreground sm:text-sm md:text-lg">
-              Watch how we build an autonomous AI agent in only{" "}
+              See how easy it is to launch your custom SaaS solution in just{" "}
               <span className="underline text-indigo-600">5 minutes</span>.
             </p>
             <div className="relative w-full rounded-xl border border-indigo-200 bg-indigo-50">

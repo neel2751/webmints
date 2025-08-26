@@ -682,8 +682,8 @@ const supportPlans = [
       "Community forum access",
       "Monthly system updates",
     ],
-    buttonText: "Current Plan",
-    href: "#",
+    buttonText: "Get Started",
+    href: "/contact-sales?location=standard-support",
     popular: false,
   },
   {
@@ -698,8 +698,8 @@ const supportPlans = [
       "Bi-weekly system updates",
       "Quarterly strategy sessions",
     ],
-    buttonText: "Upgrade Now",
-    href: "/upgrade-support",
+    buttonText: "Contact Sales",
+    href: "/contact-sales?location=premium-support",
     popular: true,
   },
   {
@@ -716,7 +716,7 @@ const supportPlans = [
       "Custom development hours",
     ],
     buttonText: "Contact Sales",
-    href: "/contact-sales",
+    href: "/contact-sales?location=enterprise-support",
     popular: false,
   },
 ];

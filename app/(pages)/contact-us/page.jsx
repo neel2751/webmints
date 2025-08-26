@@ -555,7 +555,7 @@ export default function ContactPage() {
 
           <div className="mx-auto max-w-3xl">
             <FAQs faqs={faqs} />
-            <div className="mt-8 text-center">
+            {/* <div className="mt-8 text-center">
               <p className="text-muted-foreground mb-4 font-grotesk">
                 Didn't find what you were looking for? Check our comprehensive
                 help center.
@@ -569,7 +569,7 @@ export default function ContactPage() {
                   Visit Help Center <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
