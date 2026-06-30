@@ -1,0 +1,58 @@
+"use client";
+
+import { BarChart3, Shield, Target } from "lucide-react";
+import { CookieConsent } from "./cookie";
+
+export default function UseCookie() {
+  return (
+    <CookieConsent
+      className="custom-cookie-banner" // Custom CSS class
+      cookiePolicyUrl="/privacy-policy" // Custom cookie policy URL
+      // Custom categories with icons
+      categories={[
+        {
+          id: "essential",
+          name: "Essential Cookies",
+          description:
+            "Required for core website functionality, security, and basic operations. These cannot be disabled.",
+          icon: <Shield className="h-4 w-4 text-green-600" />,
+          isEssential: true, // OPIONAL TO MAKE CATEGORY STAY TRUE
+        },
+        {
+          id: "analytics",
+          name: "Analytics & Performance",
+          description:
+            "Help us understand how visitors interact with our website by collecting anonymous usage data.",
+          icon: <BarChart3 className="h-4 w-4 text-blue-600" />,
+        },
+        {
+          id: "marketing",
+          name: "Marketing & Advertising",
+          description:
+            "Enable personalized ads and marketing content across websites and social platforms.",
+          icon: <Target className="h-4 w-4 text-purple-600" />,
+        },
+      ]}
+      // Accept callback with detailed logging
+      onAccept={(preferences) => {
+        console.log("🍪 Cookie preferences breakdown:", {
+          essential: preferences[0] ? "✅ Enabled" : "❌ Disabled",
+          analytics: preferences[1] ? "✅ Enabled" : "❌ Disabled",
+          marketing: preferences[2] ? "✅ Enabled" : "❌ Disabled",
+        });
+        console.log("💾 Stored in localStorage as JSON array");
+
+        // Example: Send to analytics service
+        // analytics.track('cookie_consent_given', { preferences });
+      }}
+      // Decline callback
+      onDecline={() => {
+        console.log("❌ User declined all non-essential cookies");
+        console.log("🔒 Only essential cookies are active");
+
+        // Example: Track decline event
+        // analytics.track('cookie_consent_declined');
+      }}
+    />
+  );
+}

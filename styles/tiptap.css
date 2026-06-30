@@ -1,0 +1,29 @@
+/* Support for frontend rendering without Tiptap library */
+.tiptap.prose h1 {
+  font-size: 2.5rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1.5rem !important;
+  font-weight: 800 !important;
+  display: block !important;
+}
+
+.tiptap.prose h2 {
+  font-size: 2rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  font-weight: 700 !important;
+  display: block !important;
+}
+
+.tiptap.prose p {
+  margin-bottom: 1.25rem !important; /* This adds the missing space between paragraphs */
+  line-height: 1.8 !important;
+  letter-spacing: 0.02em !important;
+  font-weight: 500 !important;
+}
+
+.tiptap.prose ul,
+.tiptap.prose ol {
+  margin-bottom: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
