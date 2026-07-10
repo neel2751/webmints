@@ -16,17 +16,17 @@ const TabFeature = ({
   tabs,
 }) => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white font-grotesk">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center gap-2 text-center mb-16">
           <ShinyText
             text={badge}
             className="bg-indigo-600 border border-indigo-700 text-white px-4 py-1 rounded-full text-xs font-medium cursor-pointer transition-colors"
           />
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-grotesk">
+          <h2 className="font-bold text-black/85 mb-2 text-5xl tracking-tighter">
             {heading}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans -mt-3">
+          <p className="text-lg font-medium leading-snug text-gray-600 mb-8 tracking-tight">
             {description}
           </p>
         </div>
@@ -36,7 +36,7 @@ const TabFeature = ({
               <TabsTrigger
                 key={tab.value}
                 value={tab.value}
-                className="flex items-center justify-center gap-2 rounded-xl py-3 text-base font-semibold text-muted-foreground data-[state=active]:bg-indigo-600 data-[state=active]:text-white bg-gray-200 font-grotesk w-full"
+                className="flex items-center justify-center gap-2 rounded-xl py-3 text-base font-semibold text-muted-foreground data-[state=active]:bg-indigo-600 data-[state=active]:text-white bg-gray-200 w-full"
               >
                 {tab.icon} {tab.label}
               </TabsTrigger>
@@ -67,11 +67,15 @@ function TabCard({ title, description, icon, list }) {
       <CardHeader>
         {/* <ShieldCheck className="h-10 w-10 text-indigo-600 mb-2" /> */}
         {icon}
-        <CardTitle className="font-grotesk">{title}</CardTitle>
-        <CardDescription className="font-sans">{description}</CardDescription>
+        <CardTitle className="text-base xl:md:text-lg font-bold mt-5 tracking-tight text-gray-600 md:text-balance">
+          {title}
+        </CardTitle>
+        <CardDescription className="text-md mt-2 font-medium tracking-tight leading-snug text-gray-500">
+          {description}
+        </CardDescription>
       </CardHeader>
       <CardContent>
-        <ul className="space-y-2 font-sans">
+        <ul class="list-disc space-y-2 list-inside mb-6 font-medium tracking-tight leading-snug text-gray-600">
           {list &&
             list.map((item, index) => (
               <li key={index} className="flex items-start">

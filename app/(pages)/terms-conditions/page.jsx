@@ -1,5 +1,7 @@
-// pages/privacy-policy.tsx
+import { SITE_URL, CONTACT_EMAIL } from "@/lib/site";
+// pages/terms-conditions.tsx
 
+import WebPageSchema from "@/components/seo/webPageSchema";
 import Head from "next/head";
 
 export const metadata = {
@@ -17,9 +19,15 @@ export const metadata = {
   },
 };
 
-export default function PrivacyPolicy() {
+export default function TermsAndConditions() {
   return (
     <>
+      <WebPageSchema
+        pageUrl={`${SITE_URL}/terms-conditions`}
+        pageName="Terms & Conditions | WebMints"
+        description="Review the user guidelines, licensing rules, and legal agreements for using WebMints platform services."
+        dateModified="2025-07-01"
+      />
       <Head>
         <title>TERMS AND CONDITIONS - Webmints</title>
         <meta
@@ -56,16 +64,16 @@ export default function PrivacyPolicy() {
                 These Terms of Use constitute a legally binding agreement made
                 between you, whether personally or on behalf of an entity
                 (“you”) and Webmints ("Company," “we," “us," or “our”),
-                concerning your access to and use of the https://www.webmints.in/
-                website as well as any other media form, media channel, mobile
-                website or mobile application related, linked, or otherwise
-                connected thereto (collectively, the “Site”). We are registered
-                in India and have our registered office at Gana, Gana, Gujarat
-                388345. You agree that by accessing the Site, you have read,
-                understood, and agreed to be bound by all of these Terms of Use.
-                IF YOU DO NOT AGREE WITH ALL OF THESE TERMS OF USE, THEN YOU ARE
-                EXPRESSLY PROHIBITED FROM USING THE SITE AND YOU MUST
-                DISCONTINUE USE IMMEDIATELY.
+                concerning your access to and use of the {SITE_URL}/ website
+                as well as any other media
+                form, media channel, mobile website or mobile application
+                related, linked, or otherwise connected thereto (collectively,
+                the “Site”). We are registered in India and have our registered
+                office at Gana, Gana, Gujarat 388345. You agree that by
+                accessing the Site, you have read, understood, and agreed to be
+                bound by all of these Terms of Use. IF YOU DO NOT AGREE WITH ALL
+                OF THESE TERMS OF USE, THEN YOU ARE EXPRESSLY PROHIBITED FROM
+                USING THE SITE AND YOU MUST DISCONTINUE USE IMMEDIATELY.
                 <br />
                 <br />
                 Supplemental terms and conditions or documents that may be
@@ -707,7 +715,7 @@ export default function PrivacyPolicy() {
               <ul className="space-y-2 font-medium tracking-tight mb-8 text-neutral-900">
                 <li>Webmints</li>
                 <li className="text-indigo-600 cursor-pointer hover:underline">
-                  hello@webmints.in
+                  {CONTACT_EMAIL}
                 </li>
               </ul>
             </div>

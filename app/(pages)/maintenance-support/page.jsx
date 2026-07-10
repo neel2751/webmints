@@ -6,6 +6,7 @@ import { WhoNeeds } from "@/components/maintenance/who-needs";
 import { ReliableSupport } from "@/components/maintenance/reliable-support";
 import { MaintenanceFaq } from "@/components/maintenance/faq-section";
 import { MaintenanceCta } from "@/components/maintenance/cta-section";
+import MaintenanceSupportSchema from "@/components/seo/matinaceSchema";
 
 export const metadata = {
   title: "SaaS Maintenance & Support",
@@ -25,6 +26,7 @@ export const metadata = {
 export default function MaintenanceSupportPage() {
   return (
     <main className="min-h-screen font-grotesk">
+      <MaintenanceSupportSchema />
       <MaintenanceHero />
       <WhyCritical />
       <ServicesSection />

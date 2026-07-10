@@ -1855,7 +1855,7 @@ export const SERVICES = [
   // },
   {
     id: "custom-saas-platform-development",
-    title: "Custome SaaS platform development",
+    title: "Custom SaaS platform development",
     description:
       "Tailored SaaS solutions built to fit your unique business needs.",
     imgSrc: "/images/services/custom.webp",

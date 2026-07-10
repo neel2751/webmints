@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
@@ -313,8 +314,8 @@ export default async function JobDetailPage({ params }) {
               hiringOrganization: {
                 "@type": "Organization",
                 name: "WebMints",
-                sameAs: "https://www.webmints.in",
-                logo: "https://www.webmints.in/images/webmints.svg",
+                sameAs: SITE_URL,
+                logo: `${SITE_URL}/images/webmints.svg`,
               },
               jobLocation: {
                 "@type": "Place",
@@ -334,19 +335,19 @@ export default async function JobDetailPage({ params }) {
                   "@type": "ListItem",
                   position: 1,
                   name: "Home",
-                  item: "https://www.webmints.in",
+                  item: SITE_URL,
                 },
                 {
                   "@type": "ListItem",
                   position: 2,
                   name: "Careers",
-                  item: "https://www.webmints.in/careers",
+                  item: `${SITE_URL}/careers`,
                 },
                 {
                   "@type": "ListItem",
                   position: 3,
                   name: jobData.title,
-                  item: `https://www.webmints.in/careers/${job}`,
+                  item: `${SITE_URL}/careers/${job}`,
                 },
               ],
             }}

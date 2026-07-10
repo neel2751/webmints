@@ -8,6 +8,7 @@ import {
   BarChart3,
   Zap,
   BarChart,
+  PhoneCall,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -24,6 +25,7 @@ import Text from "@/components/animation/text";
 import { SolutionsTab } from "@/data/data";
 import TabFeature from "@/components/tab-feature";
 import GlobalCta from "@/components/web/cta/global-cta";
+import SolutionsSchema from "@/components/seo/solutionsSchema";
 
 export const metadata = {
   title: "Custom SaaS Solutions for UK Businesses",
@@ -42,18 +44,19 @@ export const metadata = {
 
 export default function SolutionsPage() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-screen font-grotesk">
+      <SolutionsSchema />
       {/* Hero Section */}
       <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge
               variant="outline"
-              className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm font-grotesk"
+              className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm"
             >
               Enterprise-Grade Solutions
             </Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-grotesk">
+            <h1 className="font-bold text-black/85 mb-2 text-6xl tracking-tighter">
               Built to Solve Real Business
               <span className="text-indigo-600">
                 <Text
@@ -62,29 +65,19 @@ export default function SolutionsPage() {
                 />
               </span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 font-sans">
+            <p className="text-lg font-medium leading-snug text-gray-600 tracking-tight max-w-3xl mx-auto mb-8">
               Discover our comprehensive suite of SaaS solutions designed to
               transform your business operations, enhance productivity, and
               drive growth across industries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-indigo-600 hover:bg-indigo-700"
-                asChild
+              <Link
+                href={"/schedule-call"}
+                className="flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white text-base font-semibold h-10 px-4 rounded-md gap-2 group"
               >
-                <Link href={"/features"}>
-                  Explore Feature <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                asChild
-                className="border-indigo-600 text-indigo-600 hover:bg-indigo-50"
-              >
-                <Link href={"schedule-call"}>Schedule a Call</Link>
-              </Button>
+                <PhoneCall className="group-hover:animate-pulse size-4" />
+                Schedule a Free Consultation
+              </Link>
             </div>
           </div>
 
@@ -112,14 +105,14 @@ export default function SolutionsPage() {
             <div>
               <Badge
                 variant="outline"
-                className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm font-grotesk"
+                className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm"
               >
                 Featured Solution
               </Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-grotesk">
+              <h2 className="font-bold text-black/85 mb-2 text-5xl tracking-tighter">
                 Enterprise Resource Planning
               </h2>
-              <p className="text-lg text-gray-600 mb-6 font-sans">
+              <p className="text-lg font-medium leading-snug text-gray-600 mb-8 tracking-tight">
                 Our flagship ERP solution integrates all core processes needed
                 to run a company – finance, HR, manufacturing, supply chain,
                 services, procurement, and more – into a single system.
@@ -131,10 +124,10 @@ export default function SolutionsPage() {
                     <Globe className="h-6 w-6 text-indigo-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 font-grotesk">
+                    <h3 className="text-xl font-bold tracking-tight text-gray-700">
                       Unified Operations
                     </h3>
-                    <p className="text-gray-600 font-sans">
+                    <p className="text-base mb-4 font-medium tracking-tight leading-snug text-gray-600">
                       Seamlessly connect all departments and functions across
                       your organization.
                     </p>
@@ -146,10 +139,10 @@ export default function SolutionsPage() {
                     <BarChart3 className="h-6 w-6 text-indigo-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 font-grotesk">
+                    <h3 className="text-xl font-bold tracking-tight text-gray-700">
                       Real-time Analytics
                     </h3>
-                    <p className="text-gray-600 font-sans">
+                    <p className="text-base mb-4 font-medium tracking-tight leading-snug text-gray-600">
                       Make informed decisions with instant access to critical
                       business data.
                     </p>
@@ -161,26 +154,23 @@ export default function SolutionsPage() {
                     <Zap className="h-6 w-6 text-indigo-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 font-grotesk">
+                    <h3 className="text-xl font-bold tracking-tight text-gray-700">
                       Process Automation
                     </h3>
-                    <p className="text-gray-600 font-sans">
+                    <p className="text-base mb-4 font-medium tracking-tight leading-snug text-gray-600">
                       Automate routine tasks and workflows to increase
                       efficiency.
                     </p>
                   </div>
                 </div>
               </div>
-
-              <Button
-                size="lg"
-                className="bg-indigo-600 hover:bg-indigo-700"
-                asChild
+              <Link
+                href={"/industries"}
+                className="flex items-center justify-center bg-indigo-600 hover:bg-indigo-700 text-white text-base font-semibold h-10 px-4 rounded-md gap-2 group max-w-max"
               >
-                <Link href={"/industries"}>
-                  Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
+                Learn More
+                <ArrowRight className="group-hover:animate-pulse size-4" />
+              </Link>
             </div>
 
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg bg-white px-4">
@@ -199,10 +189,10 @@ export default function SolutionsPage() {
       <section id="adaptive-workflows" className="mt-12">
         <div className="border-y">
           <div className="container flex flex-col gap-4  border-x py-4 max-lg:border-x lg:py-8 px-8 mx-auto">
-            <h2 className="text-3xl leading-tight tracking-tight md:text-4xl lg:text-6xl font-grotesk">
+            <h2 className="font-bold text-black/85 mb-2 text-5xl tracking-tight">
               Stay agile with adaptive workflows
             </h2>
-            <p className="text-muted-foreground max-w-[600px] tracking-[-0.32px]">
+            <p className="text-lg font-medium leading-snug text-gray-600 mb-4 tracking-tight">
               AI streamlines your processes to adjust as priorities shift.
             </p>
           </div>
@@ -214,10 +204,10 @@ export default function SolutionsPage() {
                 <div className="px-2 lg:px-8">
                   <BarChart className="size-10 bg-indigo-600 text-white rounded-full p-2" />
                 </div>
-                <h3 className="mt-2 px-1 text-lg tracking-[-0.36px] lg:px-8">
+                <h3 className="text-xl font-bold mb-2 tracking-tight text-gray-700 mt-2 px-1 lg:px-8">
                   Unified Scheduling
                 </h3>
-                <p className="text-muted-foreground px-1 py-4 tracking-[-0.32px] lg:px-8">
+                <p className="text-base font-medium tracking-tight leading-snug text-gray-600 px-1 py-4 lg:px-8">
                   Keep all your appointments and events in sync with seamless
                   cross-platform calendar connectivity.
                 </p>
@@ -235,10 +225,10 @@ export default function SolutionsPage() {
                 <div className="px-2 lg:px-8">
                   <BarChart className="size-10 bg-indigo-600 text-white rounded-full p-2" />
                 </div>
-                <h3 className="mt-2 px-1 text-lg tracking-[-0.36px] lg:px-8">
+                <h3 className="text-xl font-bold mb-2 tracking-tight text-gray-700 mt-2 px-1 lg:px-8">
                   Insightful Performance
                 </h3>
-                <p className="text-muted-foreground px-1 py-4 tracking-[-0.32px] lg:px-8">
+                <p className="text-base font-medium tracking-tight leading-snug text-gray-600 px-1 py-4 lg:px-8">
                   Get clear, real-time analytics tracking your progress, key
                   milestones, focus hours, and completed tasks.
                 </p>
@@ -256,10 +246,10 @@ export default function SolutionsPage() {
                 <div className="px-2 lg:px-8">
                   <BarChart className="size-10 bg-indigo-600 text-white rounded-full p-2" />
                 </div>
-                <h3 className="mt-2 px-1 text-lg tracking-[-0.36px] lg:px-8">
+                <h3 className="text-xl font-bold mb-2 tracking-tight text-gray-700 mt-2 px-1 lg:px-8">
                   Effortless Tool Integrations
                 </h3>
-                <p className="text-muted-foreground px-1 py-4 tracking-[-0.32px] lg:px-8">
+                <p className="text-base font-medium tracking-tight leading-snug text-gray-600 px-1 py-4 lg:px-8">
                   Link your favorite apps and services to streamline work
                   without switching between platforms.
                 </p>
@@ -287,14 +277,14 @@ export default function SolutionsPage() {
           <div className="text-center mb-16">
             <Badge
               variant="outline"
-              className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm font-grotesk"
+              className="bg-indigo-100 text-indigo-800 mb-4 px-3 py-1 text-sm "
             >
               Success Stories
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-grotesk">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 ">
               Transforming Businesses Across Industries
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-sans">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto ">
               See how our SaaS solutions have helped organizations overcome
               challenges and achieve their goals.
             </p>
@@ -313,19 +303,17 @@ export default function SolutionsPage() {
               </div>
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
-                  <Badge className="bg-green-100 text-green-800 hover:bg-green-100 font-grotesk">
+                  <Badge className="bg-green-100 text-green-800 hover:bg-green-100 ">
                     Enterprise
                   </Badge>
-                  <span className="text-sm text-gray-500 font-sans">
-                    Case Study
-                  </span>
+                  <span className="text-sm text-gray-500 ">Case Study</span>
                 </div>
-                <CardTitle className="font-grotesk">
+                <CardTitle className="">
                   🧑‍💼Smart HR Management Platform
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 font-sans">
+                <p className="text-gray-600 ">
                   Empowering teams with seamless employee management, leave
                   tracking, and rota scheduling We built a custom HR solution
                   designed to streamline workforce operations for teams. From
@@ -338,7 +326,7 @@ export default function SolutionsPage() {
               <CardFooter>
                 <Link
                   href="#"
-                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center text-sm font-grotesk"
+                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center text-sm "
                 >
                   Comming Soon <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
@@ -356,19 +344,17 @@ export default function SolutionsPage() {
               </div>
               <CardHeader>
                 <div className="mb-2 flex items-center justify-between">
-                  <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 font-grotesk">
+                  <Badge className="bg-blue-100 text-blue-800 hover:bg-blue-100 ">
                     Finance
                   </Badge>
-                  <span className="text-sm text-gray-500 font-sans">
-                    Case Study
-                  </span>
+                  <span className="text-sm text-gray-500 ">Case Study</span>
                 </div>
-                <CardTitle className="mt-2 font-grotesk">
+                <CardTitle className="mt-2 ">
                   💰AI-Powered Finance Management Software
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 font-sans">
+                <p className="text-gray-600 ">
                   Simplify payroll, invoicing, and communications with
                   intelligent automation This financial platform handles
                   everything from payroll processing to invoice generation and
@@ -381,7 +367,7 @@ export default function SolutionsPage() {
               <CardFooter>
                 <Link
                   href="#"
-                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center text-sm font-grotesk"
+                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center text-sm "
                 >
                   Comming Soon <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
@@ -399,19 +385,17 @@ export default function SolutionsPage() {
               </div>
               <CardHeader>
                 <div className="mb-2 flex items-center justify-between">
-                  <Badge className="bg-amber-100 text-amber-800 hover:bg-amber-100 font-grotesk">
+                  <Badge className="bg-amber-100 text-amber-800 hover:bg-amber-100 ">
                     Construction
                   </Badge>
-                  <span className="text-sm text-gray-500 font-sans">
-                    Case Study
-                  </span>
+                  <span className="text-sm text-gray-500 ">Case Study</span>
                 </div>
-                <CardTitle className="font-grotesk">
+                <CardTitle className="">
                   🏗️ Construction Project Management Tool
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 font-sans">
+                <p className="text-gray-600 ">
                   Track budgets, manage site expenses, documents and monitor
                   real-time costs with confidence Designed for the fast-paced
                   construction industry, this platform centralizes budgeting,
@@ -424,7 +408,7 @@ export default function SolutionsPage() {
               <CardFooter>
                 <Link
                   href="#"
-                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center text-sm font-grotesk"
+                  className="text-indigo-600 font-medium hover:text-indigo-800 flex items-center text-sm "
                 >
                   Comming Soon <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
@@ -444,14 +428,16 @@ export default function SolutionsPage() {
       </section>
 
       {/* CTA Section */}
-      <GlobalCta
-        title={"Ready to build your custom solution?"}
-        desc={
-          "Let's discuss how our technology expertise can help you create a powerful, scalable SaaS platform tailored to your industry needs."
-        }
-        mainBtn={{ name: "Explore Plan", link: "/pricing" }}
-        btn={{ name: "Schedule Call", link: "/schedule-call" }}
-      />
+      <div className="bg-indigo-50 py-20 px-4 sm:px-6 lg:px-8">
+        <GlobalCta
+          title={"Ready to build your custom solution?"}
+          desc={
+            "Let's discuss how our technology expertise can help you create a powerful, scalable SaaS platform tailored to your industry needs."
+          }
+          mainBtn={{ name: "Explore Plan", link: "/pricing" }}
+          btn={{ name: "Schedule Call", link: "/schedule-call" }}
+        />
+      </div>
     </main>
   );
 }
@@ -462,11 +448,11 @@ function TabCard({ title, description, icon, list }) {
       <CardHeader>
         {/* <ShieldCheck className="h-10 w-10 text-indigo-600 mb-2" /> */}
         {icon}
-        <CardTitle className="font-grotesk">{title}</CardTitle>
-        <CardDescription className="font-sans">{description}</CardDescription>
+        <CardTitle className="">{title}</CardTitle>
+        <CardDescription className="">{description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <ul className="space-y-2 font-sans">
+        <ul className="space-y-2 ">
           {list &&
             list.map((item, index) => (
               <li key={index} className="flex items-start">

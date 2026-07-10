@@ -1,5 +1,4 @@
 import { ArrowRight, Layers, Settings, Zap } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export function HeroSection() {

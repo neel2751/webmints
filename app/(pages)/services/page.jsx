@@ -19,6 +19,7 @@ import { SERVICE_FEATURES, SERVICES } from "@/data/data";
 import { HowItWorksNew } from "../home/home";
 import FeatureCard from "@/components/feature-card";
 import { CTANEW } from "@/components/web/cta";
+import ServicesSchema from "@/components/seo/servicesSchema";
 
 export const metadata = {
   title: "Our Services",
@@ -40,6 +41,7 @@ export default function ServicesPage() {
 
   return (
     <main className="flex flex-col font-grotesk overflow-hidden">
+      <ServicesSchema />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
@@ -324,7 +326,6 @@ export default function ServicesPage() {
               to <strong>Ongoing Support</strong>, we manage every aspect of
               your software journey.
               <Link className="font-bold" href="/contact-us">
-                {" "}
                 Get in touch to learn more.
               </Link>
             </div>

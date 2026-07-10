@@ -10,12 +10,10 @@ import {
   Layers,
   Settings,
   FileText,
-  BarChart,
   Lock,
   PhoneCall,
   Headphones,
 } from "lucide-react";
-import ShinyText from "@/components/animation/shiny-text";
 import {
   Section1,
   Section2,
@@ -24,6 +22,7 @@ import {
 import { CTANEW } from "@/components/web/cta";
 import Image from "next/image";
 import { HowItWorksNew } from "../home/home";
+import FeaturesSchema from "@/components/seo/featureSchema";
 
 export const metadata = {
   title: "Custom SaaS Features: Security, Billing & Integrations",
@@ -42,7 +41,8 @@ export const metadata = {
 
 export default function FeaturesPage() {
   return (
-    <div className="flex flex-col gap-16 pb-16">
+    <main className="flex flex-col gap-16 pb-16">
+      <FeaturesSchema />
       {/* Hero Section */}
       <section className="py-32 font-grotesk">
         <div className="container mx-auto">
@@ -802,7 +802,7 @@ export default function FeaturesPage() {
 
       {/* CTA Section */}
       <CTANEW />
-    </div>
+    </main>
   );
 }
 

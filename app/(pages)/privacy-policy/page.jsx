@@ -1,5 +1,7 @@
+import { SITE_URL, CONTACT_EMAIL } from "@/lib/site";
 // pages/privacy-policy.tsx
 
+import WebPageSchema from "@/components/seo/webPageSchema";
 import Head from "next/head";
 
 export const metadata = {
@@ -20,6 +22,12 @@ export const metadata = {
 export default function PrivacyPolicy() {
   return (
     <>
+      <WebPageSchema
+        pageUrl={`${SITE_URL}/privacy-policy`}
+        pageName="Privacy Policy | WebMints"
+        description="How WebMints collects, uses, and protects your personal information across our website and SaaS portal."
+        dateModified="2025-07-01"
+      />
       <Head>
         <title>Privacy Policy - Webmints</title>
         <meta
@@ -175,7 +183,7 @@ export default function PrivacyPolicy() {
               <p className="mb-8 font-grotesk tracking-tight">
                 To exercise these rights, email us at{" "}
                 <span className="font-medium text-indigo-600">
-                  hello@webmints.in
+                  {CONTACT_EMAIL}
                 </span>
                 .
               </p>
@@ -224,7 +232,7 @@ export default function PrivacyPolicy() {
               </p>
               <ul className="list-disc ml-5 space-y-2 font-medium tracking-tight mb-8">
                 <li>Webmints</li>
-                <li>hello@webmints.in</li>
+                <li>{CONTACT_EMAIL}</li>
               </ul>
 
               {/* 12 */}

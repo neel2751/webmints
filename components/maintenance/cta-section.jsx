@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { ArrowRight, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -35,14 +36,14 @@ export function MaintenanceCta() {
                   hover:shadow-indigo-600/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 w-full justify-center
                  tracking-tight
                   "
-                href="https://www.webmints.in"
+                href={SITE_URL}
               >
                 Request Maintenance Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
               <Link
                 className="inline-flex items-center gap-2 rounded-lg border border-indigo-600 px-5 py-3 text-sm font-medium text-indigo-600 hover:bg-indigo-50 transition-colors w-full justify-center"
-                href="https://www.webmints.in"
+                href={SITE_URL}
               >
                 <MessageSquare className="mr-2 h-4 w-4" />
                 Talk to Our Support Team

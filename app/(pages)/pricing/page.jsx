@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/pricing/hero-section";
 import { HowItWorks } from "@/components/pricing/how-pricing-work";
 import { ProjectCategories } from "@/components/pricing/project-categories";
 import { WhatsIncluded } from "@/components/pricing/whats-include";
+import PricingSchema from "@/components/seo/pricingSchema";
 import React from "react";
 
 // metadata
@@ -26,6 +27,7 @@ export const metadata = {
 export default function PricingPage() {
   return (
     <main className="font-grotesk bg-white ">
+      <PricingSchema />
       <HeroSection />
       <HowItWorks />
       <EngagementModels />

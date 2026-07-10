@@ -1,3 +1,4 @@
+import { CONTACT_EMAIL } from "@/lib/site";
 import { ArrowLeft, Check, Info, Phone, Users, Video } from "lucide-react";
 import Link from "next/link";
 import {
@@ -135,10 +136,10 @@ export default async function page({ searchParams }) {
                         <p className="text-sm font-grotesk">
                           <span className="font-medium">Email:</span>{" "}
                           <Link
-                            href={"mailto:hello@webmints.in"}
+                            href={`mailto:${CONTACT_EMAIL}`}
                             className="text-indigo-600 hover:text-indigo-800"
                           >
-                            hello@webmints.in
+                            {CONTACT_EMAIL}
                           </Link>
                         </p>
                       </div>

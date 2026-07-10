@@ -3,6 +3,7 @@ import { IndustyCta } from "@/components/web/industy-cta";
 import { Services } from "../home/home";
 import { BadgeAlertIcon } from "@/components/animation/currency/currency";
 import Link from "next/link";
+import IndustrySchema from "@/components/seo/industrySchema";
 
 export const metadata = {
   title: "Industry-Specific SaaS Solutions for UK Businesses",
@@ -22,6 +23,7 @@ export const metadata = {
 export default function IndustriesPage() {
   return (
     <main className="font-grotesk">
+      <IndustrySchema />
       <div className="container bg-white  2xl:max-w-[1400px] mx-auto p-4 relative py-12 lg:pt-24 overflow-hidden">
         <div className="relative text-center">
           <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-6xl mt-8 font-bold tracking-tighter text-black/85 lg:text-balance">

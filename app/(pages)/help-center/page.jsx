@@ -13,6 +13,7 @@ import {
   Star,
 } from "lucide-react";
 import FAQs from "@/components/faq";
+import SupportFaqSchema from "@/components/seo/supportFaqSchema";
 
 export const metadata = {
   title: "Help & Support Centre | Webmints SaaS Platform Users",
@@ -31,7 +32,8 @@ export const metadata = {
 
 export default function HelpSupportPage() {
   return (
-    <div className="flex flex-col gap-16 pb-16 font-grotesk">
+    <main className="flex flex-col gap-16 pb-16 font-grotesk">
+      <SupportFaqSchema />
       <section>
         <div className="container bg-white  2xl:max-w-[1400px] mx-auto p-4 relative py-32 lg:pb-60 overflow-hidden">
           <div className="relative">
@@ -596,7 +598,7 @@ export default function HelpSupportPage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 

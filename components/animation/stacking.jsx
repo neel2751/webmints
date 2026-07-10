@@ -51,7 +51,7 @@ export default function Stacking({ items }) {
                   <g clipPath="url(#:S1:-clip)" className="group">
                     <g className="origin-center scale-100 transition duration-500 motion-safe:group-hover:scale-105">
                       <foreignObject width="1000" height="1000">
-                        <img src={items.imgSrc} />
+                        <img src={items.imgSrc} alt={items.title} />
                       </foreignObject>
                     </g>
                     <use

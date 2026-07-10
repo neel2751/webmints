@@ -1,4 +1,5 @@
 "use client";
+import { CONTACT_EMAIL } from "@/lib/site";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -19,8 +20,8 @@ import { GlobalForm } from "@/components/form/globalForm";
 import FAQs from "@/components/faq";
 import { toast } from "sonner";
 import { useState } from "react";
-import WhereToFindUs from "@/components/where-to-find-us";
 import { AnimatedFeatureSpotlight } from "@/components/animation/cta";
+import ContactSchema from "@/components/seo/contactSchema";
 // import SimpleChat from "@/components/ai-chat";
 
 // export const metadata = {
@@ -120,7 +121,7 @@ export default function ContactPage() {
           name: "companyName",
           type: "text",
           labelText: "Company Name",
-          placeholder: "Enter Compnay Name",
+          placeholder: "Enter Company Name",
           size: true,
           validationOptions: {
             required: "Company Name is required",
@@ -212,7 +213,8 @@ export default function ContactPage() {
     },
   ];
   return (
-    <div className="flex flex-col gap-16 pb-16 font-grotesk">
+    <main className="flex flex-col gap-16 pb-16 font-grotesk">
+      <ContactSchema />
       {/* Hero Section */}
       <section className="relative">
         <div className="absolute inset-0" />
@@ -512,7 +514,7 @@ export default function ContactPage() {
                   </dd>
                   <Link
                     className="text-base flex items-center mx-auto mt-4 font-medium text-indigo-600 gap-2 hover:text-indigo-900"
-                    href="mailto:hello@webmints.in"
+                    href={`mailto:${CONTACT_EMAIL}`}
                   >
                     Talk to support
                     <svg
@@ -623,7 +625,7 @@ export default function ContactPage() {
                   </div>
                   <Link
                     className="text-base flex items-center mx-auto mt-4 font-medium text-indigo-600 gap-2 hover:text-indigo-900"
-                    href="mailto:hello@webmints.in"
+                    href={`mailto:${CONTACT_EMAIL}`}
                   >
                     Partner with us
                     <svg
@@ -759,7 +761,7 @@ export default function ContactPage() {
         buttonProps={{ href: "/schedule-call" }}
         imageUrl="/images/t.png"
       />
-    </div>
+    </main>
   );
 }
 

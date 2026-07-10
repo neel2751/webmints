@@ -1,7 +1,7 @@
 import { BadgeAlertIcon } from "@/components/animation/currency/currency";
 import { UniqueAccordion } from "@/components/animation/interactive-accordion";
-import SaasPricingCalculator from "@/components/calculator-saas";
-import Cta, { CTANew } from "@/components/web/cta";
+import HomeSchema from "@/components/seo/homeSchema";
+import Cta from "@/components/web/cta";
 import Footer from "@/components/web/footer";
 import HomeHero from "@/components/web/home/hero";
 import Industry from "@/components/web/home/industry";
@@ -14,6 +14,7 @@ import Link from "next/link";
 const HomePage = () => {
   return (
     <>
+      <HomeSchema />
       <SiteHeader />
       <HomeHero />
       <KeyFeature />
@@ -236,8 +237,8 @@ export function HowItWorksNew() {
           </svg>
           <div className="text-sm font-medium text-black/50 tracking-tight">
             Want to learn more about our process?{" "}
-            <Link className="font-bold" href="/docs">
-              Read more
+            <Link className="font-bold" href="/schedule-call">
+              Contact us
             </Link>
             .
           </div>
@@ -510,7 +511,7 @@ function FeatureCard({ title, description, imgSrc, index }) {
           }}
         ></div>
         <Image
-          alt="faster tests"
+          alt={title}
           loading="lazy"
           width="240"
           height="187"

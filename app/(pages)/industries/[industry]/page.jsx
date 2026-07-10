@@ -1,9 +1,11 @@
+import { SITE_URL } from "@/lib/site";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { HomePageIndustries } from "@/data/data";
 import { IndustryDetailCta } from "@/components/web/industy-cta";
 import { FAQ1 } from "@/components/animation/animation-faqs";
 import JsonLd from "@/components/seo/JsonLd";
+import IndustriesSchema from "@/components/seo/industriesSchema";
 
 export async function generateMetadata({ params }) {
   const { industry } = await params;
@@ -39,7 +41,7 @@ export default async function IndustryPage({ params }) {
 
   return (
     <div className="flex flex-col pb-16 font-grotesk">
-      <JsonLd
+      {/* <JsonLd
         data={{
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
@@ -48,22 +50,37 @@ export default async function IndustryPage({ params }) {
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://www.webmints.in",
+              item: SITE_URL,
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Industries",
-              item: "https://www.webmints.in/industries",
+              item: `${SITE_URL}/industries`,
             },
             {
               "@type": "ListItem",
               position: 3,
               name: industryData?.title,
-              item: `https://www.webmints.in/industries/${industry}`,
+              item: `${SITE_URL}/industries/${industry}`,
             },
           ],
         }}
+      /> */}
+      <IndustriesSchema
+        pageUrl={`${SITE_URL}/industries/${industry}`}
+        pageName={industryData?.title}
+        serviceName={industryData?.title}
+        serviceDescription={industryData?.description}
+        breadcrumbs={[
+          { name: "Home", url: SITE_URL },
+          { name: "Industries", url: `${SITE_URL}/industries` },
+          {
+            name: industryData?.title,
+            url: `${SITE_URL}/industries/${industry}`,
+          },
+        ]}
+        faqs={industryData?.faqs || []}
       />
       {/* Hero Section */}
       <section className={`relative ${industryData?.bg} pb-16 lg:pb-20`}>

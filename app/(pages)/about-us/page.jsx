@@ -1,6 +1,6 @@
 import { BadgeAlertIcon } from "@/components/animation/currency/currency";
 import FeatureCard from "@/components/feature-card";
-import { FeaturesSection } from "@/components/feature-section";
+import AboutSchema from "@/components/seo/aboutSchema";
 import Fund from "@/components/web/aboutus/fund";
 import AboutHero from "@/components/web/aboutus/hero";
 import Story from "@/components/web/aboutus/story";
@@ -26,6 +26,7 @@ export const metadata = {
 const page = () => {
   return (
     <>
+      <AboutSchema />
       <Fund />
       <AboutHero />
       <Story />

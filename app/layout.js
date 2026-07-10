@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/lib/site";
 import { Space_Grotesk, Work_Sans } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
@@ -18,7 +19,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://www.webmints.in"),
+  metadataBase: new URL(SITE_URL),
   title: {
     template: "%s | WebMints",
     default: "Custom SaaS Development Company in the UK | Webmints",
@@ -28,7 +29,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     siteName: "WebMints",
-    url: "https://www.webmints.in",
+    url: SITE_URL,
     images: [
       {
         url: "/opengraph-image.png",
@@ -41,7 +42,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     creator: "@webmints",
-    site: "https://www.webmints.in",
+    site: SITE_URL,
     images: ["/opengraph-image.png"],
   },
   robots: {

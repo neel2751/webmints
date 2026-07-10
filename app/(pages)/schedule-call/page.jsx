@@ -6,6 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import CalForm from "./schedule-form";
+import ScheduleCallSchema from "@/components/seo/scheduleSchema";
 
 export const metadata = {
   title: "Schedule a Call",
@@ -24,7 +25,8 @@ export const metadata = {
 
 export default function ScheduleCallPage() {
   return (
-    <div className="flex flex-col pb-16 font-grotesk">
+    <main className="flex flex-col pb-16 font-grotesk">
+      <ScheduleCallSchema />
       {/* Hero Section */}
       <section className="relative">
         {/* <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white" /> */}
@@ -61,6 +63,6 @@ export default function ScheduleCallPage() {
         </div>
       </section>
       <div className="px-32"></div>
-    </div>
+    </main>
   );
 }
