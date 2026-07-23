@@ -69,10 +69,9 @@ export default function HelpSupportPage() {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <div className="container bg-white  2xl:max-w-[1400px] mx-auto p-4 py-4">
           <div className="items-start grid grid-cols-1 gap-2 lg:grid-cols-4 -mt-20 lg:-mt-40 z-20">
-            {/* Cards */}
             {helpLinks.map((link, index) => (
               <div
                 key={index}
@@ -120,7 +119,7 @@ export default function HelpSupportPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section style={{ backgroundColor: "#f9fafb" }}>
         <div className="container 2xl:max-w-[1400px] mx-auto p-4 py-12 lg:py-24">

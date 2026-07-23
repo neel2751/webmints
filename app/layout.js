@@ -54,7 +54,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
-      <GoogleTagManager gtmId="GTM-M79C75BG" />
+      {/* <GoogleTagManager gtmId="GTM-M79C75BG" /> */}
+      <GoogleTagManager gtmId="GTM-W3BRW698" />
       <body className="antialiased font-sans">
         <OrganizationSchema />
         {children}
