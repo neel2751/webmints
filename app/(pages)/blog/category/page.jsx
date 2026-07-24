@@ -1,5 +1,6 @@
 import BlogCTA from "@/components/blog/blog-cta";
 import BlogHero from "@/components/blog/blog-hero";
+import EmptyState from "@/components/blog/empty-state";
 import TagCard from "@/components/blog/tag-card";
 import { getCategories } from "@/lib/getBlogs";
 import React from "react";
@@ -8,20 +9,23 @@ export const dynamic = "force-dynamic";
 
 export default async function TagPage() {
   const allCategories = await getCategories();
-  const categories = allCategories?.categories?.categories || [
-    "Technology",
-    "Programming",
-    "Web Development",
-    "AI",
-    "Data Science",
-    "Cloud Computing",
-    "Cybersecurity",
-    "DevOps",
-    "Mobile Development",
-    "Software Engineering",
-    "Tutorials",
-    "Industry News",
-  ];
+  // Real categories from the portal — may be empty when nothing is published
+  // for this website. We show a notice rather than placeholder tags.
+  const categories = allCategories?.categories?.categories || [];
+
+  if (categories.length === 0) {
+    return (
+      <main className="grow font-grotesk pb-10">
+        <BlogHero />
+        <EmptyState
+          title="No categories yet"
+          message="Categories appear here once articles are published. We're working on it — check back soon."
+        />
+        <BlogCTA />
+      </main>
+    );
+  }
+
   return (
     <main className="grow font-grotesk pb-10">
       <BlogHero />
