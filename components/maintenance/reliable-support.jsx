@@ -8,7 +8,7 @@ const qualities = [
     id: "ticketing",
     title: "Structured Ticketing & Issue Tracking",
     description:
-      "Every request is logged, prioritized, and tracked through a transparent system with full visibility for your team.",
+      "Every request is logged, prioritised, and tracked through a transparent system with full visibility for your team.",
   },
   {
     id: "communication",

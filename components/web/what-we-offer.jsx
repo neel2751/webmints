@@ -20,7 +20,7 @@ export default function WhatWeOffer() {
                 Solutions Designed for Your Success
               </h2>
               <p className="text-center text-white/80 lg:text-left lg:text-lg">
-                We provide a uniquely customizable SaaS platform that adapts to
+                We provide a uniquely customisable SaaS platform that adapts to
                 your exact business needs. Our modular design and flexible
                 architecture empower you to build the perfect solution,
                 unlocking efficiency, driving growth, and providing a
@@ -31,7 +31,7 @@ export default function WhatWeOffer() {
                 <div className="flex justify-between gap-6">
                   <div className="mx-auto">
                     <p className="mb-1.5 text-3xl font-bold">98%</p>
-                    <p className="text-white/80">Customization Capabilities</p>
+                    <p className="text-white/80">Customisation Capabilities</p>
                   </div>
                   <div
                     data-orientation="vertical"

@@ -8,7 +8,7 @@ export default function Solution() {
           <div className="absolute right-0 -left-px -z-20 h-full w-full bg-[linear-gradient(90deg,var(--muted-foreground)_1px,transparent_1px)] [background-size:calc(100%_/_16)_100%] opacity-20 [-webkit-mask-image:linear-gradient(transparent_25%,black_25%,black_75%,transparent_75%)] [-webkit-mask-size:100%_16px] [mask-image:linear-gradient(transparent_25%,black_25%,black_75%,transparent_75%)] [mask-size:100%_16px]"></div>
           <div>
             <h2 className="mb-16 max-w-3xl text-3xl leading-10 font-semibold sm:mb-24 md:mx-10">
-              Revolutionizing healthcare with AI technology.
+              Revolutionising healthcare with AI technology.
               <span className="font-medium text-primary/50">
                 Our advanced diagnostic platform helps doctors make accurate
                 diagnoses in seconds.

@@ -23,7 +23,7 @@ const factors = [
     icon: Cloud,
     title: "Scalability & Infrastructure",
     description:
-      "Cloud architecture, performance optimization, and growth-ready infrastructure.",
+      "Cloud architecture, performance optimisation, and growth-ready infrastructure.",
   },
   {
     icon: Clock,

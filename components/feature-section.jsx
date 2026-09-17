@@ -57,7 +57,7 @@ export function FeaturesSection() {
       icon: <Zap className="h-8 w-8" />,
       title: "Lightning Performance",
       description:
-        "Optimized for speed with advanced caching, CDN integration, and performance monitoring.",
+        "Optimised for speed with advanced caching, CDN integration, and performance monitoring.",
       badge: "High Performance",
       color: "from-yellow-500 to-orange-600",
     },
@@ -73,7 +73,7 @@ export function FeaturesSection() {
       icon: <BarChart3 className="h-8 w-8" />,
       title: "Advanced Analytics",
       description:
-        "Comprehensive dashboards and reporting with real-time insights and data visualization.",
+        "Comprehensive dashboards and reporting with real-time insights and data visualisation.",
       badge: "Data Driven",
       color: "from-purple-500 to-indigo-600",
     },

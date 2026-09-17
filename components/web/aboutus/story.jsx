@@ -12,7 +12,7 @@ export default function Story() {
             from the agency
           </h1>
           <p className="text-lg font-medium leading-snug text-gray-600 tracking-tight max-w-3xl mt-4">
-            Beyond Bespoke Services: The Power of Customizable SaaS
+            Beyond Bespoke Services: The Power of Customisable SaaS
           </p>
         </div>
         <div className="absolute inset-0 z-[-1] -translate-y-1/2 blur-[100px] will-change-transform">
@@ -104,7 +104,7 @@ export default function Story() {
           <div className="max-w-2xl space-y-5 md:space-y-8 lg:space-y-10">
             <p className="text-lg font-medium leading-snug text-gray-600 tracking-tight max-w-3xl mt-4">
               Unlike an agency that typically delivers project-based services,
-              we empower you with a customizable SaaS platform that becomes an
+              we empower you with a customisable SaaS platform that becomes an
               integral part of your operational infrastructure. You're not just
               paying for our time; you're investing in a long-term solution that
               you can own and adapt as your business evolves. Our research and
@@ -121,7 +121,7 @@ export default function Story() {
               expertise; we've built a robust and adaptable SaaS platform that
               serves as the foundation for your unique solution. This means you
               benefit from the scalability, efficiency, and ongoing evolution of
-              a software product, combined with the precise customization you
+              a software product, combined with the precise customisation you
               need – a powerful synergy that traditional agencies often can't
               provide.
             </p>
@@ -145,7 +145,7 @@ export default function Story() {
         />
         <div className="mr-0 ml-auto max-w-2xl space-y-5 md:space-y-8 lg:space-y-10">
           <p className="text-lg font-medium leading-snug text-gray-600 tracking-tight max-w-3xl">
-            Our unique approach centers on uderstanding individual needs,
+            Our unique approach centres on uderstanding individual needs,
             building from the ground up to create truly tailored experiences.and
             We're forging our own path, to deliver solutions that go beyond
             standard tech offerings.

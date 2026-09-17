@@ -51,7 +51,7 @@ export default function Benifit() {
     {
       title: "Competitive benefits",
       description:
-        "Health insurance, equity options, generous PTO, and home office setup allowance.",
+        "Private medical insurance, equity options, generous paid holiday, and home office setup allowance.",
       icon: HeartPulse,
       iconBg: "bg-indigo-500",
       gradientFrom: "indigo-50",

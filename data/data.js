@@ -48,8 +48,8 @@ const enterprise = [
     icon: <Globe className="h-10 w-10 text-indigo-600 mb-2" />,
     list: [
       "Integrated modules for finance, HR, and operations",
-      "Real-time data synchronization across departments",
-      "Customizable workflows and approval processes",
+      "Real-time data synchronisation across departments",
+      "Customisable workflows and approval processes",
     ],
   },
   {
@@ -64,12 +64,12 @@ const enterprise = [
   },
   {
     title: "Supply Chain Management",
-    description: "End-to-end supply chain visibility and optimization",
+    description: "End-to-end supply chain visibility and optimisation",
     icon: <Clock className="h-10 w-10 text-indigo-600 mb-2" />,
     list: [
       "Inventory management and demand forecasting",
       "Supplier relationship and performance tracking",
-      "Logistics optimization and route planning",
+      "Logistics optimisation and route planning",
     ],
   },
 ];
@@ -81,7 +81,7 @@ const productivity = [
     list: [
       "Task management with dependencies and milestones",
       "Resource allocation and capacity planning",
-      "Gantt charts and timeline visualization",
+      "Gantt charts and timeline visualisation",
     ],
   },
   {
@@ -96,11 +96,11 @@ const productivity = [
   },
   {
     title: "Time & Resource Management",
-    description: "Optimize time tracking and resource allocation",
+    description: "Optimise time tracking and resource allocation",
     icon: <Clock className="h-10 w-10 text-indigo-600 mb-2" />,
     list: [
       "Automated time tracking and reporting",
-      "Resource utilization and availability monitoring",
+      "Resource utilisation and availability monitoring",
       "Workload balancing and capacity planning",
     ],
   },
@@ -111,19 +111,19 @@ const analytics = [
     description: "Transform data into actionable insights",
     icon: <BarChart3 className="h-10 w-10 text-indigo-600 mb-2" />,
     list: [
-      "Interactive dashboards and data visualization",
+      "Interactive dashboards and data visualisation",
       "Predictive analytics and trend forecasting",
       "Custom reporting and KPI tracking",
     ],
   },
   {
-    title: "Data Visualization",
+    title: "Data Visualisation",
     description: "Convert complex data into intuitive visuals",
     icon: <BarChart3 className="h-10 w-10 text-indigo-600 mb-2" />,
     list: [
       "Interactive charts and graphical representations",
-      "Real-time data streaming and visualization",
-      "Customizable dashboards for different stakeholders",
+      "Real-time data streaming and visualisation",
+      "Customisable dashboards for different stakeholders",
     ],
   },
   {
@@ -133,7 +133,7 @@ const analytics = [
     list: [
       "Machine learning algorithms for trend prediction",
       "Anomaly detection and pattern recognition",
-      "Scenario modeling and what-if analysis",
+      "Scenario modelling and what-if analysis",
     ],
   },
 ];
@@ -305,7 +305,7 @@ const cloud = {
     {
       name: "Docker & Kubernetes",
       description:
-        "We containerize applications with Docker and orchestrate them with Kubernetes for consistent deployment and scaling.",
+        "We containerise applications with Docker and orchestrate them with Kubernetes for consistent deployment and scaling.",
     },
     {
       name: "Terraform & Infrastructure as Code",
@@ -330,9 +330,9 @@ const securityTech = {
     "We implement robust security measures to protect your data and ensure compliance with industry standards.",
   frontendTechnologies: [
     {
-      name: "Authentication & Authorization",
+      name: "Authentication & Authorisation",
       description:
-        "We implement OAuth 2.0, JWT, and role-based access control for secure user authentication and authorization.",
+        "We implement OAuth 2.0, JWT, and role-based access control for secure user authentication and authorisation.",
     },
     {
       name: "Data Encryption",
@@ -400,14 +400,14 @@ export const industriesFeature = [
     id: "enterprise",
     title: "Enterprise Solutions",
     description:
-      "Features designed for large organizations to streamline operations and enhance collaboration.",
+      "Features designed for large organisations to streamline operations and enhance collaboration.",
     icon: "🏢",
   },
   {
     id: "ecommerce",
     title: "E-commerce",
     description:
-      "Tools to optimize your online store, boost sales, and enhance customer experience.",
+      "Tools to optimise your online store, boost sales, and enhance customer experience.",
     icon: "🛒",
   },
   {
@@ -436,7 +436,7 @@ export const industriesPricing = [
   {
     id: "enterprise",
     title: "Enterprise Solutions",
-    description: "Custom SaaS for large organizations with complex needs.",
+    description: "Custom SaaS for large organisations with complex needs.",
     icon: "🏢",
     pricingNote:
       "Enterprise solutions typically start at $100,000+ due to complex requirements, integrations, and security needs.",
@@ -446,7 +446,7 @@ export const industriesPricing = [
     id: "ecommerce",
     title: "E-commerce",
     description:
-      "Specialized solutions for online retailers and e-commerce businesses.",
+      "Specialised solutions for online retailers and e-commerce businesses.",
     icon: "🛒",
     pricingNote:
       "E-commerce solutions range from $50,000 to $200,000+ depending on complexity, integrations, and scale.",
@@ -504,9 +504,9 @@ export const HomePageIndustries = [
       color: "indigo",
       title: "Healthcare SaaS Solutions",
       shortDescription:
-        "Secure, Scalable & Compliant SaaS Solutions for Healthcare Organizations",
+        "Secure, Scalable & Compliant SaaS Solutions for Healthcare Organisations",
       description:
-        "Healthcare organizations require software that is reliable, secure, and designed around patient care and operational efficiency. At WebMints, we build custom Healthcare SaaS solutions that help providers streamline workflows, automate processes, and manage sensitive data securely. Healthcare organizations require software that is reliable, secure, and designed around patient care and operational efficiency. At WebMints, we build custom Healthcare SaaS solutions that help providers streamline workflows, automate processes, and manage sensitive data securely.",
+        "Healthcare organisations require software that is reliable, secure, and designed around patient care and operational efficiency. At WebMints, we build custom Healthcare SaaS solutions that help providers streamline workflows, automate processes, and manage sensitive data securely. Healthcare organisations require software that is reliable, secure, and designed around patient care and operational efficiency. At WebMints, we build custom Healthcare SaaS solutions that help providers streamline workflows, automate processes, and manage sensitive data securely.",
       solveChallenges: {
         title: "How We Solve Healthcare Industry Challenges",
         description:
@@ -598,13 +598,13 @@ export const HomePageIndustries = [
             {
               title: "Industry-focused SaaS development",
               description:
-                "We specialize in healthcare software, understanding the unique needs and challenges of the industry.",
+                "We specialise in healthcare software, understanding the unique needs and challenges of the industry.",
               icon: <CalendarCheck className="h-5 w-5 text-indigo-600" />,
             },
             {
               title: "Secure and scalable architecture",
               description:
-                "Our solutions are built with security and scalability in mind, ensuring they can grow with your organization.",
+                "Our solutions are built with security and scalability in mind, ensuring they can grow with your organisation.",
               icon: <ShieldCheck className="h-5 w-5 text-indigo-600" />,
             },
             {
@@ -642,7 +642,7 @@ export const HomePageIndustries = [
           name: "WhoWeWorkWith",
           title: "Who We Work With in Healthcare Industry",
           description:
-            "We partner with a variety of healthcare organizations to deliver tailored SaaS solutions, including:",
+            "We partner with a variety of healthcare organisations to deliver tailored SaaS solutions, including:",
           points: [
             {
               title: "Hospital and large healthcare systems",
@@ -651,7 +651,7 @@ export const HomePageIndustries = [
               icon: <Hospital className="h-5 w-5 text-indigo-600" />,
             },
             {
-              title: "Clinics and outpatient centers",
+              title: "Clinics and outpatient centres",
               description:
                 "Our solutions help streamline workflows and improve patient management in smaller healthcare settings.",
               icon: <ClipboardPenIcon className="h-5 w-5 text-indigo-600" />,
@@ -727,12 +727,12 @@ export const HomePageIndustries = [
         {
           question: "How can SaaS solutions improve healthcare operations?",
           answer:
-            "SaaS solutions help healthcare organizations automate administrative tasks, streamline patient management, and centralize data. This improves efficiency, reduces manual errors, and allows healthcare teams to focus more on patient care.",
+            "SaaS solutions help healthcare organisations automate administrative tasks, streamline patient management, and centralise data. This improves efficiency, reduces manual errors, and allows healthcare teams to focus more on patient care.",
         },
         {
           question: "Are your healthcare SaaS solutions secure and compliant?",
           answer:
-            "Yes. Our healthcare SaaS platforms are built with strong security practices, including role-based access, secure authentication, and data protection measures. Solutions can be designed to support industry compliance requirements based on organizational needs.",
+            "Yes. Our healthcare SaaS platforms are built with strong security practices, including role-based access, secure authentication, and data protection measures. Solutions can be designed to support industry compliance requirements based on organisational needs.",
         },
         {
           question:
@@ -750,7 +750,7 @@ export const HomePageIndustries = [
       cta: {
         title: "Build Healthcare SaaS Solution That Fits Your Needs",
         description:
-          "If you are looking to build or modernize a healthcare SaaS platform, our team is ready to help you design a solution tailored to your worklflows and compliance needs.",
+          "If you are looking to build or modernise a healthcare SaaS platform, our team is ready to help you design a solution tailored to your worklflows and compliance needs.",
         buttonText: "Schedule a Free Consultation",
         buttonLink: "/contact-us",
       },
@@ -760,7 +760,7 @@ export const HomePageIndustries = [
     id: "enterprise",
     title: "Enterprise Solutions",
     description:
-      "Our enterprise solutions are designed to scale with your business, providing robust features that enhance productivity and streamline operations. We focus on delivering high-quality, customizable solutions that meet the unique needs of large organizations.",
+      "Our enterprise solutions are designed to scale with your business, providing robust features that enhance productivity and streamline operations. We focus on delivering high-quality, customisable solutions that meet the unique needs of large organisations.",
     icon: "🏢",
     image: "/images/industries/sol.svg",
     link: "/industries/enterprise",
@@ -775,9 +775,9 @@ export const HomePageIndustries = [
       color: "purple",
       title: "Enterprise SaaS Solutions",
       shortDescription:
-        "Scalable & Customizable SaaS Solutions for Large Enterprises",
+        "Scalable & Customisable SaaS Solutions for Large Enterprises",
       description:
-        "Large enterprises require software solutions that can handle complex workflows, integrate with existing systems, and scale with their growth. At WebMints, we specialize in building custom Enterprise SaaS solutions that meet these demands. Our platforms are designed to enhance productivity, streamline operations, and provide robust security features.",
+        "Large enterprises require software solutions that can handle complex workflows, integrate with existing systems, and scale with their growth. At WebMints, we specialise in building custom Enterprise SaaS solutions that meet these demands. Our platforms are designed to enhance productivity, streamline operations, and provide robust security features.",
       solveChallenges: {
         title: "How We Solve Enterprise Industry Challenges",
         description:
@@ -786,7 +786,7 @@ export const HomePageIndustries = [
           {
             title: "Complex workflows and processes",
             description:
-              "We design customizable workflows that align with your business processes.",
+              "We design customisable workflows that align with your business processes.",
             icon: <Layout className="h-5 w-5 text-purple-600" />,
           },
           {
@@ -819,10 +819,10 @@ export const HomePageIndustries = [
         {
           title: "Enterprise SaaS Capabilities",
           description:
-            " Our Enterprise SaaS solutions include a range of capabilities tailored to the needs of large organizations:",
+            " Our Enterprise SaaS solutions include a range of capabilities tailored to the needs of large organisations:",
           points: [
             {
-              title: "Customizable workflows",
+              title: "Customisable workflows",
               description:
                 "We design workflows that can be tailored to your specific business processes.",
               icon: <Layout className="h-5 w-5 text-purple-600" />,
@@ -842,7 +842,7 @@ export const HomePageIndustries = [
             {
               title: "Scalable architecture",
               description:
-                "Our solutions are built to scale with your organization’s growth.",
+                "Our solutions are built to scale with your organisation’s growth.",
               icon: <Globe className="h-5 w-5 text-purple-600" />,
             },
             {
@@ -868,13 +868,13 @@ export const HomePageIndustries = [
             {
               title: "Industry-focused SaaS development",
               description:
-                "We specialize in enterprise software, understanding the unique needs and challenges of large organizations.",
+                "We specialise in enterprise software, understanding the unique needs and challenges of large organisations.",
               icon: <Layout className="h-5 w-5 text-purple-600" />,
             },
             {
               title: "Secure and scalable architecture",
               description:
-                "Our solutions are built with security and scalability in mind, ensuring they can grow with your organization.",
+                "Our solutions are built with security and scalability in mind, ensuring they can grow with your organisation.",
               icon: <ShieldCheck className="h-5 w-5 text-purple-600" />,
             },
             {
@@ -907,7 +907,7 @@ export const HomePageIndustries = [
           name: "WhoWeWorkWith",
           title: "Who We Work With in Enterprise Industry",
           description:
-            "We partner with a variety of large organizations to deliver tailored SaaS solutions, including:",
+            "We partner with a variety of large organisations to deliver tailored SaaS solutions, including:",
           points: [
             {
               title: "Fortune 500 companies",
@@ -924,13 +924,13 @@ export const HomePageIndustries = [
             {
               title: "Large non-profits and NGOs",
               description:
-                "We build scalable platforms to support mission-driven organizations.",
+                "We build scalable platforms to support mission-driven organisations.",
               icon: <Heart className="h-5 w-5 text-purple-600" />,
             },
             {
               title: "Government agencies",
               description:
-                "We develop secure, compliant solutions for public sector organizations.",
+                "We develop secure, compliant solutions for public sector organisations.",
               icon: <ShieldCheck className="h-5 w-5 text-purple-600" />,
             },
             {
@@ -969,7 +969,7 @@ export const HomePageIndustries = [
         },
         {
           title: "Scalable Architecture",
-          description: "Built to grow with your organization’s evolving needs.",
+          description: "Built to grow with your organisation’s evolving needs.",
           icon: <Globe className="h-6 w-6 text-purple-600" />,
         },
       ],
@@ -977,13 +977,13 @@ export const HomePageIndustries = [
         {
           question: "Q1. How do SaaS solutions help enterprise businesses?",
           answer:
-            "Enterprise SaaS solutions streamline complex workflows, centralize data, and improve operational efficiency across departments and teams.",
+            "Enterprise SaaS solutions streamline complex workflows, centralise data, and improve operational efficiency across departments and teams.",
         },
         {
           question:
             "Q2. Can your SaaS platforms handle complex enterprise workflows?",
           answer:
-            "Yes, our platforms are designed to support complex, multi-step workflows with role-based access, automation, and customization.",
+            "Yes, our platforms are designed to support complex, multi-step workflows with role-based access, automation, and customisation.",
         },
         {
           question: "Q3. Do you support enterprise system integrations?",
@@ -991,7 +991,7 @@ export const HomePageIndustries = [
             "We build enterprise SaaS platforms with robust API integration capabilities to connect ERP systems, CRMs, analytics tools, and internal software.",
         },
         {
-          question: "Q4. Are your solutions scalable for large organizations?",
+          question: "Q4. Are your solutions scalable for large organisations?",
           answer:
             "Our SaaS solutions are built with scalability and performance in mind, making them suitable for large teams, high data volumes, and long-term growth.",
         },
@@ -999,7 +999,7 @@ export const HomePageIndustries = [
       cta: {
         title: "Build Enterprise SaaS Solution That Fits Your Needs",
         description:
-          "If you are looking to build or modernize an enterprise SaaS platform, our team is ready to help you design a solution tailored to your complex workflows and integration needs.",
+          "If you are looking to build or modernise an enterprise SaaS platform, our team is ready to help you design a solution tailored to your complex workflows and integration needs.",
         buttonText: "Schedule a Free Consultation",
         buttonLink: "/contact-us",
       },
@@ -1009,7 +1009,7 @@ export const HomePageIndustries = [
     id: "ecommerce",
     title: "E-commerce",
     description:
-      "We specialize in building e-commerce platforms that drive sales and enhance customer experiences. Our solutions include advanced payment integrations, inventory management, and personalized shopping experiences to help you succeed in the online retail space.",
+      "We specialise in building e-commerce platforms that drive sales and enhance customer experiences. Our solutions include advanced payment integrations, inventory management, and personalised shopping experiences to help you succeed in the online retail space.",
     icon: "🛒",
     image: "/images/industries/ecom.svg",
     link: "/industries/ecommerce",
@@ -1033,7 +1033,7 @@ export const HomePageIndustries = [
           "We understand the unique challenges faced by e-commerce businesses, from managing inventory to providing seamless shopping experiences. Our solutions are designed to address these challenges head-on, providing tools that enhance customer satisfaction and drive revenue growth.",
         points: [
           {
-            title: "Complex product catalogs",
+            title: "Complex product catalogues",
             description:
               "We design intuitive navigation and filtering systems to help customers find products easily.",
             icon: <Layout className="h-5 w-5 text-green-600" />,
@@ -1051,9 +1051,9 @@ export const HomePageIndustries = [
             icon: <Box className="h-5 w-5 text-green-600" />,
           },
           {
-            title: "Customer experience optimization",
+            title: "Customer experience optimisation",
             description:
-              "We create personalized shopping experiences through recommendations and targeted marketing.",
+              "We create personalised shopping experiences through recommendations and targeted marketing.",
             icon: <Heart className="h-5 w-5 text-green-600" />,
           },
           {
@@ -1083,7 +1083,7 @@ export const HomePageIndustries = [
               icon: <Box className="h-5 w-5 text-green-600" />,
             },
             {
-              title: "Personalized shopping experiences",
+              title: "Personalised shopping experiences",
               description:
                 "We create recommendation engines and targeted marketing features.",
               icon: <Heart className="h-5 w-5 text-green-600" />,
@@ -1097,7 +1097,7 @@ export const HomePageIndustries = [
             {
               title: "Analytics and reporting",
               description:
-                "We provide insights into customer behavior and sales performance.",
+                "We provide insights into customer behaviour and sales performance.",
               icon: <BarChart className="h-5 w-5 text-green-600" />,
             },
             {
@@ -1117,7 +1117,7 @@ export const HomePageIndustries = [
             {
               title: "Industry-focused SaaS development",
               description:
-                "We specialize in e-commerce software, understanding the unique needs and challenges of online retailers.",
+                "We specialise in e-commerce software, understanding the unique needs and challenges of online retailers.",
               icon: <Layout className="h-5 w-5 text-green-600" />,
             },
             {
@@ -1127,7 +1127,7 @@ export const HomePageIndustries = [
               icon: <ShieldCheck className="h-5 w-5 text-green-600" />,
             },
             {
-              title: "Optimized for customer experience",
+              title: "Optimised for customer experience",
               description:
                 "We design user-centric platforms that enhance the shopping experience and drive conversions.",
               icon: <Heart className="h-5 w-5 text-green-600" />,
@@ -1209,7 +1209,7 @@ export const HomePageIndustries = [
           icon: <Box className="h-8 w-8 text-green-600" />,
         },
         {
-          title: "Personalized Shopping",
+          title: "Personalised Shopping",
           description:
             "Recommendation engines and targeted marketing features.",
           icon: <Heart className="h-8 w-8 text-green-600" />,
@@ -1239,15 +1239,15 @@ export const HomePageIndustries = [
             "Our cloud-based SaaS architecture is designed to handle traffic spikes and growing transaction volumes without performance issues.",
         },
         {
-          question: "Q4. Can you modernize existing e-commerce systems?",
+          question: "Q4. Can you modernise existing e-commerce systems?",
           answer:
-            "Yes, we help businesses modernize legacy e-commerce software into scalable, cloud-based SaaS platforms with improved performance and flexibility.",
+            "Yes, we help businesses modernise legacy e-commerce software into scalable, cloud-based SaaS platforms with improved performance and flexibility.",
         },
       ],
       cta: {
         title: "Build E-commerce SaaS Solution That Fits Your Needs",
         description:
-          "If you are looking to build or modernize an e-commerce SaaS platform, our team is ready to help you design a solution tailored to your business goals and customer needs.",
+          "If you are looking to build or modernise an e-commerce SaaS platform, our team is ready to help you design a solution tailored to your business goals and customer needs.",
         buttonText: "Schedule a Free Consultation",
         buttonLink: "/contact-us",
       },
@@ -1366,7 +1366,7 @@ export const HomePageIndustries = [
             {
               title: "Industry-focused SaaS development",
               description:
-                "We specialize in education software, understanding the unique needs and challenges of educational institutions.",
+                "We specialise in education software, understanding the unique needs and challenges of educational institutions.",
               icon: <Lightbulb className="h-5 w-5 text-yellow-600" />,
             },
             {
@@ -1416,11 +1416,11 @@ export const HomePageIndustries = [
             {
               title: "Online learning platforms",
               description:
-                "We build scalable platforms for delivering online courses and training programs.",
+                "We build scalable platforms for delivering online courses and training programmes.",
               icon: <Laptop className="h-5 w-5 text-yellow-600" />,
             },
             {
-              title: "Training and development organizations",
+              title: "Training and development organisations",
               description:
                 "Our software solutions facilitate corporate training and professional development.",
               icon: <Briefcase className="h-5 w-5 text-yellow-600" />,
@@ -1432,9 +1432,9 @@ export const HomePageIndustries = [
               icon: <BookOpen className="h-5 w-5 text-yellow-600" />,
             },
             {
-              title: "Non-profit educational organizations",
+              title: "Non-profit educational organisations",
               description:
-                "We assist non-profits in delivering educational programs and managing operations.",
+                "We assist non-profits in delivering educational programmes and managing operations.",
               icon: <Heart className="h-5 w-5 text-yellow-600" />,
             },
           ],
@@ -1467,7 +1467,7 @@ export const HomePageIndustries = [
         {
           question: "How can SaaS solutions support educational institutions?",
           answer:
-            "SaaS platforms help educational institutions manage learning processes, automate administrative workflows, and centralize data for students, staff, and operations.",
+            "SaaS platforms help educational institutions manage learning processes, automate administrative workflows, and centralise data for students, staff, and operations.",
         },
         {
           question:
@@ -1490,7 +1490,7 @@ export const HomePageIndustries = [
       cta: {
         title: "Build Education SaaS Solution That Fits Your Needs",
         description:
-          "If you are looking to build or modernize an education SaaS platform, our team is ready to help you design a solution tailored to your institution's goals and student needs.",
+          "If you are looking to build or modernise an education SaaS platform, our team is ready to help you design a solution tailored to your institution's goals and student needs.",
         buttonText: "Schedule a Free Consultation",
         buttonLink: "/contact-us",
       },
@@ -1611,7 +1611,7 @@ export const HomePageIndustries = [
             {
               title: "Industry-focused SaaS development",
               description:
-                "We specialize in construction software, understanding the unique needs and challenges of construction companies.",
+                "We specialise in construction software, understanding the unique needs and challenges of construction companies.",
               icon: <Calendar className="h-5 w-5 text-gray-600" />,
             },
             {
@@ -1655,7 +1655,7 @@ export const HomePageIndustries = [
             {
               title: "Specialty contractors",
               description:
-                "Our solutions support specialized construction services in managing projects and resources.",
+                "Our solutions support specialised construction services in managing projects and resources.",
               icon: <Hammer className="h-5 w-5 text-gray-600" />,
             },
             {
@@ -1736,7 +1736,7 @@ export const HomePageIndustries = [
       cta: {
         title: "Build Construction SaaS Solution That Fits Your Needs",
         description:
-          "If you are looking to build or modernize a construction SaaS platform, our team is ready to help you design a solution tailored to your business goals and operational needs.",
+          "If you are looking to build or modernise a construction SaaS platform, our team is ready to help you design a solution tailored to your business goals and operational needs.",
         buttonText: "Schedule a Free Consultation",
         buttonLink: "/contact-us",
       },
@@ -1750,7 +1750,7 @@ export const industryTechnologies = [
     id: "enterprise",
     title: "Enterprise Solutions",
     description:
-      "Technologies tailored for large organizations with complex needs.",
+      "Technologies tailored for large organisations with complex needs.",
     icon: "🏢",
     technologies: [
       "Enterprise Service Bus (ESB) for system integration",
@@ -1764,14 +1764,14 @@ export const industryTechnologies = [
     id: "ecommerce",
     title: "E-commerce",
     description:
-      "Specialized technologies for online retail and e-commerce businesses.",
+      "Specialised technologies for online retail and e-commerce businesses.",
     icon: "🛒",
     technologies: [
       "Payment gateway integrations",
       "Inventory management systems",
       "Product recommendation engines",
-      "Shopping cart optimization",
-      "Order fulfillment automation",
+      "Shopping cart optimisation",
+      "Order fulfilment automation",
     ],
   },
   {
@@ -1804,10 +1804,10 @@ export const industryTechnologies = [
   {
     id: "construction",
     title: "Construction",
-    description: "Specialized technologies for construction companies.",
+    description: "Specialised technologies for construction companies.",
     icon: "🏗️",
     technologies: [
-      "BIM (Building Information Modeling) integration",
+      "BIM (Building Information Modelling) integration",
       "Project management tools",
       "Field data collection systems",
       "Equipment tracking solutions",
@@ -1896,15 +1896,15 @@ export const SERVICES = [
       "Streamline operations and improve efficiency with automated workflows.",
     imgSrc: "/images/services/business.webp",
     // "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXV0b21hdGlvbiUyMHNvZnR3YXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-    keywords: ["Workflow Automation", "Process Optimization", "RPA"],
+    keywords: ["Workflow Automation", "Process Optimisation", "RPA"],
     longDescription:
-      "Our business process automation services help you identify and automate repetitive tasks within your organization, allowing you to focus on strategic initiatives. By implementing automated workflows, we enhance operational efficiency, reduce errors, and improve overall productivity.",
+      "Our business process automation services help you identify and automate repetitive tasks within your organisation, allowing you to focus on strategic initiatives. By implementing automated workflows, we enhance operational efficiency, reduce errors, and improve overall productivity.",
     detailsHtml: `
       <h3 class="text-2xl font-bold mb-3 text-gray-700">
         Automate Repetitive Tasks
       </h3>
       <ul class="list-disc list-inside mb-6 font-medium tracking-tight leading-snug text-gray-600">
-        <li>Identify and analyze repetitive tasks within your business processes.</li>
+        <li>Identify and analyse repetitive tasks within your business processes.</li>
         <li>Design and implement automated workflows to handle these tasks efficiently.</li>
         <li>Integrate automation tools with existing systems for seamless operation.</li>
       </ul>
@@ -1941,14 +1941,14 @@ export const SERVICES = [
       <ul class="list-disc list-inside mb-6 font-medium tracking-tight leading-snug text-gray-600">
         <li>Design and implement CRM systems tailored to your business needs.</li>
         <li>Integrate CRM with other business applications for a unified experience.</li>
-        <li>Enable real-time data synchronization across platforms.</li>
+        <li>Enable real-time data synchronisation across platforms.</li>
       </ul>
       <h3 class="text-2xl font-bold mb-3 text-gray-700">
         Workflow Automation Features
       </h3>
       <ul class="list-disc list-inside mb-6 font-medium tracking-tight leading-snug text-gray-600">
         <li>Automated lead management and follow-up processes</li>
-        <li>Customizable sales pipelines and reporting</li>
+        <li>Customisable sales pipelines and reporting</li>
         <li>Integration with marketing automation tools</li>
       </ul>
     `,
@@ -1973,9 +1973,9 @@ export const SERVICES = [
         Cloud-Native Application Development
       </h3>
       <ul class="list-disc list-inside mb-6 font-medium tracking-tight leading-snug text-gray-600">
-        <li>Design and build applications optimized for cloud environments.</li>
+        <li>Design and build applications optimised for cloud environments.</li>
         <li>Implement microservices architecture for scalability and maintainability.</li>
-        <li>Utilize serverless computing for cost-effective resource management.</li>
+        <li>Utilise serverless computing for cost-effective resource management.</li>
       </ul>
       <h3 class="text-2xl font-bold mb-3 text-gray-700">
         Benefits of Cloud-Based Solutions
@@ -1991,21 +1991,21 @@ export const SERVICES = [
   {
     id: "saas-product-modernization",
     link: "/services/#saas-product-modernization",
-    title: "SaaS product modernization",
+    title: "SaaS product modernisation",
     description:
       "Update and enhance existing SaaS products to improve performance and user experience.",
     imgSrc:
       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2Fhc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
     keywords: [
-      "SaaS Modernization",
+      "SaaS Modernisation",
       "Application Upgrade",
       "Legacy System Upgrade",
     ],
     longDescription:
-      "Our SaaS product modernization services focus on updating and enhancing your existing software applications to meet current market demands. We improve performance, security, and user experience by leveraging the latest technologies and best practices.",
+      "Our SaaS product modernisation services focus on updating and enhancing your existing software applications to meet current market demands. We improve performance, security, and user experience by leveraging the latest technologies and best practices.",
     detailsHtml: `
       <h3 class="text-2xl font-bold mb-3 text-gray-700">
-        Modernization Strategies
+        Modernisation Strategies
       </h3>
       <ul class="list-disc list-inside mb-6 font-medium tracking-tight leading-snug text-gray-600">
         <li>Refactor legacy codebases for improved maintainability.</li>
@@ -2065,7 +2065,7 @@ export const SERVICE_FEATURES = [
   {
     title: "Task Management",
     description:
-      "Organize, prioritize, and track tasks with ease using our intuitive task management features.",
+      "Organise, prioritise, and track tasks with ease using our intuitive task management features.",
     bgColor: "bg-red-100",
     icon: <Square className="w-5 h-5 text-red-600" />,
   },
@@ -2105,7 +2105,7 @@ export const SERVICE_FEATURES = [
   {
     title: "Resource Management",
     description:
-      "Optimize resource allocation and utilization with comprehensive resource management.",
+      "Optimise resource allocation and utilisation with comprehensive resource management.",
     bgColor: "bg-amber-100",
     icon: <CalendarCheck className="w-5 h-5 text-amber-600" />,
   },
@@ -2174,7 +2174,7 @@ export const helpLinks = [
         Step 3: Navigate the Dashboard
       </h3>
       <p class="mb-4 text-gray-600">
-        Familiarize yourself with the dashboard, where you can access all the features and tools available on our platform.
+        Familiarise yourself with the dashboard, where you can access all the features and tools available on our platform.
       </p>
       <ul class="list-decimal list-inside mb-6 font-medium tracking-tight leading-snug text-gray-600">
         <li>Explore the main menu to see available features.</li>

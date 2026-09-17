@@ -42,7 +42,7 @@ export default function OurApproach() {
                     Market Research and Analysis:
                   </span>
                   Identify your target audience and understand their needs,
-                  preferences, and behaviors.
+                  preferences, and behaviours.
                 </p>
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function OurApproach() {
               </div>
               <div className="grow pt-0.5 pb-8 sm:pb-12">
                 <p className="text-sm md:text-base text-neutral-400">
-                  <span className="text-white">Launch and Optimization:</span>
+                  <span className="text-white">Launch and Optimisation:</span>
                   Launch your digital products or services to the market,
                   closely monitoring their performance and user feedback.
                 </p>

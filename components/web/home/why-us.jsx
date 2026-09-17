@@ -106,7 +106,7 @@ export default function WhyUs() {
               </h2>
               <p className="text-gray-800 mb-6 font-sans text-lg tracking-tight">
                 Stop settling for off-the-shelf solutions. We empower your
-                business with a fully customizable SaaS platform, providing the
+                business with a fully customisable SaaS platform, providing the
                 exact tools and flexibility you need to thrive in today's
                 dynamic environment. Discover why choosing us means choosing a
                 solution as unique as your business.
@@ -118,7 +118,7 @@ export default function WhyUs() {
                     <strong className="text-gray-900 font-semibold text-lg font-grotesk">
                       Data-Driven Decisions
                     </strong>{" "}
-                    Leverage personalized dashboards and customizable reports to
+                    Leverage personalised dashboards and customisable reports to
                     gain clear visibility into your key metrics and make
                     informed, confident business decisions.
                   </p>

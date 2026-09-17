@@ -11,7 +11,7 @@ import MaintenanceSupportSchema from "@/components/seo/matinaceSchema";
 export const metadata = {
   title: "SaaS Maintenance & Support",
   description:
-    "Reliable ongoing support for your SaaS platform. Technical support, performance optimization, security updates, and cloud infrastructure management by WebMints.",
+    "Reliable ongoing support for your SaaS platform. Technical support, performance optimisation, security updates, and cloud infrastructure management by WebMints.",
   alternates: {
     canonical: "/maintenance-support",
   },

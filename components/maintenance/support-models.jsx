@@ -25,7 +25,7 @@ const models = [
     features: [
       "Proactive monitoring",
       "Regular security patches",
-      "Performance optimization",
+      "Performance optimisation",
       "Monthly reports & reviews",
     ],
     featured: true,
@@ -35,10 +35,10 @@ const models = [
     title: "Dedicated Support Team",
     subtitle: "For enterprise platforms requiring ongoing development.",
     description:
-      "A fully embedded team focused on your platform, providing continuous development, optimization, and support aligned with your product roadmap.",
+      "A fully embedded team focused on your platform, providing continuous development, optimisation, and support aligned with your product roadmap.",
     features: [
       "Dedicated technical resources",
-      "Ongoing development & optimization",
+      "Ongoing development & optimisation",
       "Strategic roadmap alignment",
       "Extended coverage options",
     ],

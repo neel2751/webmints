@@ -50,7 +50,7 @@ export function CtaSection() {
               </span>
               <span className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-indigo-600" />
-                Customized Solutions
+                Customised Solutions
               </span>
               <span className="flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-indigo-600" />

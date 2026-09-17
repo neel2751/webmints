@@ -43,7 +43,7 @@ export default function ContactSchema() {
                   name: "What types of businesses do you typically work with?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "We work with businesses of all sizes across various industries, including enterprise, e-commerce, fintech, healthcare, and construction. Our solutions are scalable and can be customized to meet the specific needs of your organization, whether you're a startup or an established enterprise.",
+                    text: "We work with businesses of all sizes across various industries, including enterprise, e-commerce, fintech, healthcare, and construction. Our solutions are scalable and can be customised to meet the specific needs of your organisation, whether you're a startup or an established enterprise.",
                   },
                 },
                 {
@@ -91,7 +91,7 @@ export default function ContactSchema() {
                   name: "Do you offer training for our team?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, we offer comprehensive training programs to ensure your team can effectively use and manage our solutions.",
+                    text: "Yes, we offer comprehensive training programmes to ensure your team can effectively use and manage our solutions.",
                   },
                 },
               ],

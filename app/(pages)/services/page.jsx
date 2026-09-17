@@ -598,7 +598,7 @@ export default function ServicesPage() {
                 Color Contrast Check
               </div>
               <div className="text-muted-foreground max-w-lg text-center text-base">
-                Maintain strong color contrast between text and background to
+                Maintain strong colour contrast between text and background to
                 support users with low vision and improve readability across
                 different lighting conditions.
               </div>
@@ -615,12 +615,12 @@ const processSteps = [
   {
     title: "Discovery & Planning",
     description:
-      "We analyze your requirements, define project scope, and create a detailed roadmap for success.",
+      "We analyse your requirements, define project scope, and create a detailed roadmap for success.",
   },
   {
     title: "Design & Prototyping",
     description:
-      "Our team creates intuitive designs and interactive prototypes to visualize your solution.",
+      "Our team creates intuitive designs and interactive prototypes to visualise your solution.",
   },
   {
     title: "Development & Testing",
@@ -686,7 +686,7 @@ const servicesOffered = [
   {
     title: "Design & Prototyping",
     description:
-      "User-centric UI/UX designs and interactive prototypes to visualize your solution.",
+      "User-centric UI/UX designs and interactive prototypes to visualise your solution.",
     icon: Star,
     slug: "design-prototyping",
     timeline: "4-6 weeks",
@@ -715,7 +715,7 @@ const servicesOffered = [
       "Frontend & Backend Development",
       "Responsive Design",
       "API Integration",
-      "Performance Optimization",
+      "Performance Optimisation",
     ],
     deliverables: [
       "Fully functional web application",
@@ -772,7 +772,7 @@ const servicesOffered = [
     timeline: "Ongoing",
     price: "Custom Pricing",
     features: [
-      "SEO Optimization",
+      "SEO Optimisation",
       "Content Marketing",
       "Social Media Management",
       "Performance Analytics",

@@ -10,11 +10,11 @@ export default function RequestCustomQuoteForm() {
           <div className="mx-auto grid max-w-7xl gap-y-6 lg:grid-cols-2">
             <div className="rounded-md border p-6 md:p-10 lg:rounded-l-md lg:rounded-r-none lg:border-y lg:border-r-0 lg:border-l bg-black text-white">
               <h2 className="mb-6 text-3xl font-semibold md:text-4xl font-grotesk">
-                Make your organization truly customer-centric
+                Make your organisation truly customer-centric
               </h2>
               <p className="mb-6 text-lg text-white/70">
                 Connect with a Webmints expert on an initial call to discuss how
-                Webmints Organization can help:
+                Webmints Organisation can help:
               </p>
               <div className="flex flex-col gap-4">
                 <Link
@@ -49,7 +49,7 @@ export default function RequestCustomQuoteForm() {
                 <div className="flex items-center gap-7 py-6">
                   <Atom className="h-auto w-8 shrink-0" />
                   <p className="font-grotesk">
-                    Enhance user engagement and reduce churn with optimized
+                    Enhance user engagement and reduce churn with optimised
                     solutions and workflows.
                   </p>
                 </div>

@@ -1,9 +1,9 @@
 import HomePage from "./(pages)/home/home";
 
 export const metadata = {
-  title: "Custom SaaS & Business Automation Solutions",
+  title: "Custom SaaS & Business Automation for UK Businesses",
   description:
-    "We design and develop custom SaaS platforms and business automation software tailored to your workflows. Scale faster with WebMints.",
+    "Bespoke SaaS platforms, business automation and cloud software for UK businesses, tailored to your processes so you can optimise, automate and scale.",
   alternates: {
     canonical: "/",
   },

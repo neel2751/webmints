@@ -21,7 +21,7 @@ export function MaintenanceCta() {
                 <span className="text-indigo-600">Peak Performance</span>
               </h2>
               <p className="mt-5 text-base font-medium tracking-tight text-black/65 leading-relaxed">
-                Whether you need ongoing monitoring, performance optimization,
+                Whether you need ongoing monitoring, performance optimisation,
                 or long-term technical partnership, our team is ready to support
                 your platform{"'"}s growth.
               </p>

@@ -13,7 +13,7 @@ export default function Feature() {
     {
       title: "Advanced Analytics",
       description:
-        "Gain valuable insights with real-time data visualization and reporting.",
+        "Gain valuable insights with real-time data visualisation and reporting.",
       icon: <BarChart className="w-6 text-indigo-600" />,
     },
     {
@@ -31,7 +31,7 @@ export default function Feature() {
     {
       title: "Seamless Integration",
       description:
-        "Connect with your favorite tools through our extensive API ecosystem.",
+        "Connect with your favourite tools through our extensive API ecosystem.",
       icon: <Layers className="w-6 text-indigo-600" />,
     },
     {

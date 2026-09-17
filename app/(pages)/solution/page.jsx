@@ -129,7 +129,7 @@ export default function SolutionsPage() {
                     </h3>
                     <p className="text-base mb-4 font-medium tracking-tight leading-snug text-gray-600">
                       Seamlessly connect all departments and functions across
-                      your organization.
+                      your organisation.
                     </p>
                   </div>
                 </div>
@@ -250,7 +250,7 @@ export default function SolutionsPage() {
                   Effortless Tool Integrations
                 </h3>
                 <p className="text-base font-medium tracking-tight leading-snug text-gray-600 px-1 py-4 lg:px-8">
-                  Link your favorite apps and services to streamline work
+                  Link your favourite apps and services to streamline work
                   without switching between platforms.
                 </p>
                 <div className="border-t py-4 lg:px-2">
@@ -285,7 +285,7 @@ export default function SolutionsPage() {
               Transforming Businesses Across Industries
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto ">
-              See how our SaaS solutions have helped organizations overcome
+              See how our SaaS solutions have helped organisations overcome
               challenges and achieve their goals.
             </p>
           </div>
@@ -317,7 +317,7 @@ export default function SolutionsPage() {
                   Empowering teams with seamless employee management, leave
                   tracking, and rota scheduling We built a custom HR solution
                   designed to streamline workforce operations for teams. From
-                  centralized records to AI-assisted weekly rota creation and
+                  centralised records to AI-assisted weekly rota creation and
                   leave approvals, the platform boosts efficiency and keeps your
                   team aligned. A complete dashboard ensures clear oversight of
                   employee activity and availability.
@@ -398,7 +398,7 @@ export default function SolutionsPage() {
                 <p className="text-gray-600 ">
                   Track budgets, manage site expenses, documents and monitor
                   real-time costs with confidence Designed for the fast-paced
-                  construction industry, this platform centralizes budgeting,
+                  construction industry, this platform centralises budgeting,
                   site cost tracking, and financial forecasting—enhanced by AI
                   for pattern detection and over-budget alerts. Intuitive
                   dashboards give both field teams and managers full control,

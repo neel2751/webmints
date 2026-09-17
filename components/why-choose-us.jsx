@@ -8,7 +8,7 @@ import Image from "next/image";
 const features = [
   {
     id: 1,
-    title: "Fully Customized",
+    title: "Fully Customised",
     subtitle: "SaaS Platforms",
     description:
       "Built around your unique business processes, not generic templates",
@@ -24,7 +24,7 @@ const features = [
   {
     id: 3,
     title: "Secure &",
-    subtitle: "Performance Optimized",
+    subtitle: "Performance Optimised",
     description: "Enterprise-grade security with lightning-fast performance",
     image: "/security-shield-lock.png",
   },

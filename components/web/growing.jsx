@@ -107,7 +107,7 @@ export default function Growing() {
                 <h3 className="text-sm text-white">High Performance</h3>
               </div>
               <p className="mt-4 text-sm text-gray-400">
-                Our SaaS platform is optimized for speed and efficiency,
+                Our SaaS platform is optimised for speed and efficiency,
                 allowing you to serve your customers without delay.
                 {/* Our dedicated support team is available 24/7 to help you with
                 any questions or concerns. */}
@@ -135,7 +135,7 @@ export default function Growing() {
               </div>
               <p className="mt-4 text-sm text-gray-400">
                 Our dedicated support team is always ready to assist you with
-                any issues or inquiries you may have, ensuring a smooth
+                any issues or enquiries you may have, ensuring a smooth
                 experience.
               </p>
             </div>

@@ -206,7 +206,7 @@ export default function RequestCustomQuote({ params }) {
             Tell us a bit about yourself
           </h2>
           <p className="text-muted-foreground font-sans">
-            Fill out the form below, and our team will prepare a personalized
+            Fill out the form below, and our team will prepare a personalised
             quote based on your specific requirements.
           </p>
         </div>

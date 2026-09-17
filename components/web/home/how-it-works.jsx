@@ -19,7 +19,7 @@ export default function HowItWorks() {
       id: "03",
       title: "Welcome Call",
       description:
-        "Schedule a personalized welcome call to discuss your goals and next steps.",
+        "Schedule a personalised welcome call to discuss your goals and next steps.",
     },
     {
       id: "04",

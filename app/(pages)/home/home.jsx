@@ -1,6 +1,7 @@
 import { BadgeAlertIcon } from "@/components/animation/currency/currency";
 import { UniqueAccordion } from "@/components/animation/interactive-accordion";
 import HomeSchema from "@/components/seo/homeSchema";
+import FAQs from "@/components/faq";
 import Cta from "@/components/web/cta";
 import Footer from "@/components/web/footer";
 import HomeHero from "@/components/web/home/hero";
@@ -19,13 +20,22 @@ const HomePage = () => {
       <HomeHero />
       <KeyFeature />
       <WhyChooseWebMintsNew />
-      <Services />
+      <Services
+        heading={
+          <>
+            Our Custom SaaS{" "}
+            <span className="text-indigo-600">Development Services</span>
+          </>
+        }
+        items={HOME_SERVICES}
+      />
       <Industry />
       <FeaturesShowcase />
       <HowItWorksNew />
       {/* <SaasPricingCalculator /> */}
       <Cta />
-      <Footer /> {/* Footer Section finalized */}
+      <HomeFaq />
+      <Footer /> {/* Footer Section finalised */}
     </>
   );
 };
@@ -37,6 +47,8 @@ export function HowItWorksNew() {
     {
       title: "Fill Out the",
       description: "Form",
+      details:
+        "Tell us about your business, software requirements and the challenges you want to solve.",
       // description: "Provide us with your business details and requirements.",
       imgSrc: "/images/step/form.webp",
       // "https://images.unsplash.com/photo-1506765515384-028b60a970df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9ybXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
@@ -44,14 +56,18 @@ export function HowItWorksNew() {
     {
       title: "Meet Our",
       description: "Team",
+      details:
+        "Discuss your requirements with our team and explore the most suitable technology and development approach.",
       // description:
       //   "Discuss your needs and goals with our expert SaaS developers.",
       imgSrc: "/images/step/team.webp",
       // "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhbXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
     },
     {
-      title: "Launch and",
-      description: "Optimize",
+      title: "Launch &",
+      description: "Optimise",
+      details:
+        "Develop and launch your custom SaaS platform, then continuously improve the solution based on your business needs.",
       // description:
       //   "We develop, deploy, and fine-tune your custom SaaS solution.",
       imgSrc:
@@ -60,6 +76,8 @@ export function HowItWorksNew() {
     {
       title: "Scale Your",
       description: "Success",
+      details:
+        "Expand your platform, automate additional processes and add new capabilities as your business grows.",
       // description:
       //   "Grow your business with our scalable and reliable SaaS platform.",
       imgSrc: "/images/step/success.webp",
@@ -79,8 +97,8 @@ export function HowItWorksNew() {
             <span className="text-indigo-600 whitespace-nowrap">Results</span>
           </h2>
           <p className="text-lg font-medium leading-snug text-gray-600 mb-8 tracking-tight">
-            Our simple onboarding process makes it easy to get started with our
-            SaaS solutions and become part of our growing community.
+            Our simple onboarding process will help you get started with your
+            custom SaaS software development or business automation project.
           </p>
         </div>
         <div className="mt-[40px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 gap-8">
@@ -248,7 +266,12 @@ export function HowItWorksNew() {
   );
 }
 
-export function Services({ heading, description, supportingText }) {
+export function Services({
+  heading,
+  description,
+  supportingText,
+  items = SERVICES,
+}) {
   return (
     <section
       className="pt-8 pb-16 sm:pt-16 font-grotesk"
@@ -301,7 +324,7 @@ export function Services({ heading, description, supportingText }) {
           support, we handle every aspect of your SaaS journey. */}
         </p>
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((item, index) => (
+          {items.map((item, index) => (
             <WhychooseCard key={index} {...item} />
           ))}
         </div>
@@ -327,37 +350,37 @@ export function Services({ heading, description, supportingText }) {
 function WhyChooseWebMintsNew() {
   const WhyChoose = [
     {
-      title: "Fully customized SaaS platform",
+      title: "Built around your business",
       description:
-        "Our platform is built from the ground up to deliver exceptional performance for your workloads, with low-latency networking and high-throughput storage.",
+        "We will design the SaaS applications based on your business needs, processes, and end-users. In this way, we provide more flexibility to our solution compared to any off-the-shelf applications, and allow your application to grow together with your business.",
       imgSrc: "/images/why/1.webp",
       // "https://i.pinimg.com/1200x/99/ca/5c/99ca5cf82cf12df8801f7b2bef38d325.jpg",
     },
     {
       title: "Scalable cloud-based architecture",
       description:
-        "Our SaaS solutions are built on a scalable cloud-based architecture that can easily handle increasing workloads as your business grows.",
+        "All cloud-based software solutions developed by us are designed for scalability and performance. We develop applications that will be able to handle fluctuating load and meet future business needs.",
       imgSrc: "/images/why/2.webp",
       // "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdWR8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
     },
     {
       title: "Robust security & compliance",
       description:
-        "Security is our top priority. Our platform is designed with robust security features to protect your data and ensure compliance with industry regulations.",
+        "The security measures are implemented throughout the development process. We develop applications that have proper security architecture.",
       imgSrc: "/images/why/3.webp",
       // "https://images.unsplash.com/photo-1508780709619-79562169bc64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2xvdWQgc2VjdXJpdHl8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
     },
     {
       title: "Industry-specific solutions",
       description:
-        "We understand that different industries have unique requirements. That's why we offer industry-specific SaaS solutions tailored to your business needs.",
+        "Each industry has its workflow and difficulties. Our customised software development service makes it possible for us to design software that is appropriate for your industry and meets your needs.",
       imgSrc: "/images/why/4.webp",
       // "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29uc3VsdGFudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
     },
     {
       title: "Transparent pricing & expert support",
       description:
-        "We offer transparent pricing with no hidden fees, so you can budget effectively. Our expert support team is always available to assist you.",
+        "We specialise in good communication and realistic planning of development. Our specialists assist you in understanding the scope, technical requirements and development process before starting the project.",
       imgSrc: "/images/why/5.webp",
       // "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3VzdG9tZXJ8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
     },
@@ -373,14 +396,16 @@ function WhyChooseWebMintsNew() {
                 What sets us apart
               </div>
               <h2 className="text-5xl font-bold text-gray-900 mb-6 tracking-tighter">
-                Why Business Choose Webmints
+                Why Choose WebMints for Custom SaaS Development?
               </h2>
               <p className="text-lg text-gray-600 font-medium tracking-tight">
-                Off-the-shelf software rarely fits real business needs. That's
-                why we focus on{" "}
-                <span className="text-indigo-500">Custom SaaS Development</span>{" "}
-                solutions designed around your processes, not the other way
-                around.
+                Sometimes, pre-made software doesn’t match how the business
+                works. WebMints offers{" "}
+                <span className="text-indigo-500">
+                  customised SaaS development
+                </span>{" "}
+                and business automation services based on your business
+                processes, objectives, and customers.
               </p>
               <Link
                 href="/contact-us"
@@ -390,8 +415,10 @@ function WhyChooseWebMintsNew() {
               </Link>
               <div className="flex mt-6 max-w-[1200px] items-start space-x-1.5">
                 <div className="text-sm font-medium text-black/50 tracking-tight">
-                  Our team works closely with you from idea to launch, ensuring
-                  your SaaS product is built for long-term success.
+                  From startups who are developing their first SaaS solution to
+                  existing UK businesses that want to bring their processes
+                  up-to-date, we work together with you throughout the whole
+                  process of discovery and development.
                 </div>
               </div>
             </div>
@@ -421,8 +448,14 @@ function FeaturesShowcase() {
           How We Build
         </div>
         <h2 className="text-5xl font-bold text-black/85 tracking-tighter">
-          Custom SaaS Solutions Tailored to Your&nbsp;Needs
+          Custom SaaS Solutions Tailored to Your Business&nbsp;Needs
         </h2>
+        <p className="mt-4 text-lg font-medium leading-snug text-gray-600 max-w-3xl tracking-tight">
+          Our development process is built on understanding your company&apos;s
+          needs prior to implementing technology. Strategic planning, bespoke
+          software development, and optimisation are combined to deliver a SaaS
+          solution that helps you achieve your future objectives.
+        </p>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center lg:p-8 lg:bg-white lg:shadow-lg lg:border lg:border-gray-200 lg:rounded-3xl lg:mt-12 mt-8">
           <div className="relative h-[500px] overflow-hidden">
@@ -485,7 +518,7 @@ function WhychooseCard({ title, description, imgSrc, link }) {
     </Link>
   );
 }
-function FeatureCard({ title, description, imgSrc, index }) {
+function FeatureCard({ title, description, details, imgSrc, index }) {
   return (
     <div className="flex flex-col xl:col-span-2">
       <div className="flex items-center space-x-2 mb-4">
@@ -500,6 +533,11 @@ function FeatureCard({ title, description, imgSrc, index }) {
           .
         </h3>
       </div>
+      {details && (
+        <p className="mb-4 text-md font-medium tracking-tight leading-snug text-gray-600">
+          {details}
+        </p>
+      )}
       <div className="group flex flex-col bg-white border transition-all hover:translate-y-[-6px] hover:relative hover:z-10 hover:shadow-lg relative overflow-hidden rounded-tl-lg h-[12.5rem] w-full">
         <div
           className="absolute inset-0 "
@@ -523,5 +561,94 @@ function FeatureCard({ title, description, imgSrc, index }) {
         />
       </div>
     </div>
+  );
+}
+
+const HOME_SERVICE_DESCRIPTIONS = {
+  "custom-saas-platform-development":
+    "Create a scalable SaaS product based on your business model and the workflow and client needs. Custom SaaS platforms development for startups, medium enterprises, and large businesses throughout the UK.",
+  "business-process-automation":
+    "Automate recurring business processes, eliminate manual effort, and increase efficiency through workflow automation.",
+  "crm-and-workflow-automation":
+    "Integrate CRM systems into your business process and automate your recurring workflows. Enhance customer management, lead management, internal processes and workflow across your organisation.",
+  "cloud-based-software-solutions":
+    "Design secure and scalable cloud-based software solutions that provide your team access to software solutions while helping your business grow and become flexible and remote.",
+  "saas-product-modernization":
+    "Modernise existing SaaS product or legacy applications by improving its architecture, performance, integrations and user experience.",
+  "api-integration-and-third-party-tools":
+    "Integrate your software with the payment solutions, CRM systems, accounting services, analytics solutions, and other third party apps.",
+};
+
+const HOME_SERVICE_TITLES = {
+  "saas-product-modernization": "SaaS product modernisation",
+};
+
+const HOME_SERVICES = SERVICES.map((service) => ({
+  ...service,
+  title: HOME_SERVICE_TITLES[service.id] || service.title,
+  description: HOME_SERVICE_DESCRIPTIONS[service.id] || service.description,
+}));
+
+const HOME_FAQS = [
+  {
+    question: "What is custom SaaS development?",
+    answer:
+      "Custom SaaS development involves designing and building cloud-based software specifically around a business's requirements, workflows and users rather than using a generic off-the-shelf platform.",
+  },
+  {
+    question: "How much does custom SaaS development cost?",
+    answer:
+      "The cost depends on the platform's features, integrations, complexity, security requirements and development timeline. We assess your requirements before providing a tailored estimate.",
+  },
+  {
+    question: "How long does it take to build a SaaS platform?",
+    answer:
+      "Development time depends on the scope and complexity of the product. A focused MVP can be developed more quickly than a large enterprise SaaS platform with multiple integrations and advanced workflows.",
+  },
+  {
+    question: "Do you develop SaaS platforms for startups?",
+    answer:
+      "Yes. We work with startups and growing businesses to develop scalable SaaS products, MVPs and custom software solutions that can evolve as the business grows.",
+  },
+  {
+    question: "Can you automate our existing business processes?",
+    answer:
+      "Yes. We can analyse repetitive workflows and develop automation solutions that connect your existing systems and reduce manual tasks.",
+  },
+  {
+    question: "Can you integrate our SaaS platform with existing software?",
+    answer:
+      "Yes. We develop API and third-party integrations to connect SaaS platforms with CRM systems, payment providers, analytics tools and other business applications.",
+  },
+  {
+    question: "Do you provide SaaS maintenance and support after launch?",
+    answer:
+      "Yes. We provide ongoing technical support, security updates, performance optimisation, feature enhancements and infrastructure support.",
+  },
+  {
+    question: "Do you work with UK businesses?",
+    answer:
+      "Yes. WebMints provides custom SaaS development and business automation solutions for businesses looking for scalable, tailored software solutions.",
+  },
+];
+
+function HomeFaq() {
+  return (
+    <section
+      className="py-16 lg:py-24 px-6 font-grotesk"
+      style={{ backgroundColor: "rgb(250,250,250)" }}
+    >
+      <div className="container mx-auto">
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
+          <div className="text-sm font-semibold text-indigo-600">FAQs</div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tighter">
+            Frequently Asked Questions About SaaS Development
+          </h2>
+        </div>
+        <div className="mx-auto max-w-3xl">
+          <FAQs faqs={HOME_FAQS} />
+        </div>
+      </div>
+    </section>
   );
 }

@@ -19,10 +19,10 @@ const faqs = [
   {
     question: "Do you work with startups as well as enterprises?",
     answer:
-      "Yes, we work with startups building MVPs, growing SaaS businesses, and enterprises requiring scalable automation and modernization solutions.",
+      "Yes, we work with startups building MVPs, growing SaaS businesses, and enterprises requiring scalable automation and modernisation solutions.",
   },
   {
-    question: "What industries do you specialize in?",
+    question: "What industries do you specialise in?",
     answer:
       "We have experience across healthcare, e-commerce, education, construction, finance, and more — bringing cross-sector expertise to build platforms that understand your landscape.",
   },

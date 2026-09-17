@@ -14,7 +14,7 @@ export default function LimitedSeat() {
               Limited Availability
             </h3>
             <p className="mt-2 text-muted-foreground font-sans">
-              Due to our commitment to quality and personalized service, we only
+              Due to our commitment to quality and personalised service, we only
               take on a limited number of custom projects each month.
             </p>
           </div>

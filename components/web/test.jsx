@@ -53,7 +53,7 @@ const Test = () => {
                     ></path>
                   </svg>
                   <span className="text-base leading-normal">
-                    Revolutionizing communication
+                    Revolutionising communication
                   </span>
                 </div>
               </li>

@@ -27,11 +27,11 @@ const services = [
   {
     id: "performance",
     icon: Gauge,
-    title: "Performance Optimization",
+    title: "Performance Optimisation",
     description:
       "Systematic tuning to maintain blazing-fast performance as your user base grows.",
     items: [
-      "Database optimization",
+      "Database optimisation",
       "Code refinement",
       "Infrastructure scaling",
       "Load performance improvements",

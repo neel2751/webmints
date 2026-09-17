@@ -53,16 +53,16 @@ export default function HelpSupportPage() {
                 <path d="M12 9h.01"></path>
                 <path d="M11 12h1v4h1"></path>
               </svg>
-              Help center
+              Help centre
             </span>
             <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tighter text-black/90 lg:text-balance mt-8">
-              Explore our Help Center for answers to your questions and
+              Explore our Help Centre for answers to your questions and
               assistance.
             </h1>
             <p className="mt-4 max-w-3xl text-lg font-medium tracking-tight leading-snug text-gray-600">
               Find comprehensive resources, guides, and support options to help
               you get the most out of our SaaS solutions. Check out our FAQs,
-              tutorials, and contact our support team for personalized
+              tutorials, and contact our support team for personalised
               assistance.
             </p>
           </div>
@@ -144,10 +144,10 @@ export default function HelpSupportPage() {
                 Submit a ticket
               </p>
               <h2 className="text-5xl font-bold mt-2 text-gray-900 mb-6 tracking-tighter">
-                Are you looking for personalized assistance?
+                Are you looking for personalised assistance?
               </h2>
               <p className="text-lg text-gray-600 font-medium tracking-tight mt-2">
-                If you need personalized assistance, we're here to help. Our
+                If you need personalised assistance, we're here to help. Our
                 support team is ready to assist you with any questions or
                 concerns you may have. Submit a ticket and we'll get back to you
                 as soon as possible.
@@ -196,7 +196,7 @@ export default function HelpSupportPage() {
           </h2>
           <p className="text-lg text-gray-600 font-medium tracking-tight max-w-3xl">
             Have questions? We're here to help. Explore our FAQs to find answers
-            to common inquiries about our services and solutions.
+            to common enquiries about our services and solutions.
           </p>
         </div>
         <div className="mx-auto max-w-3xl">
@@ -417,7 +417,7 @@ export default function HelpSupportPage() {
                     <CardTitle>Contact Our Support Team</CardTitle>
                     <CardDescription>
                       Get in touch with our dedicated support team for
-                      personalized assistance.
+                      personalised assistance.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -430,7 +430,7 @@ export default function HelpSupportPage() {
                           <div>
                             <h3 className="font-semibold">Email Support</h3>
                             <p className="text-sm text-muted-foreground">
-                              For general inquiries and non-urgent issues.
+                              For general enquiries and non-urgent issues.
                             </p>
                             <a
                               href="mailto:support@saasify.com"
@@ -677,7 +677,7 @@ const tutorialLinks = [
   },
   {
     title: "Reporting & Analytics",
-    description: "How to create custom reports and analyze your business data.",
+    description: "How to create custom reports and analyse your business data.",
     type: "video",
     href: "/tutorials/reporting-analytics",
   },
@@ -729,7 +729,7 @@ const faqs = [
   {
     question: "Can I add more users to my account?",
     answer:
-      "Yes, you can add additional users based on your subscription plan. Navigate to the User Management section in your dashboard, click 'Add User', and follow the prompts. If you need more user licenses than your current plan allows, please contact our sales team.",
+      "Yes, you can add additional users based on your subscription plan. Navigate to the User Management section in your dashboard, click 'Add User', and follow the prompts. If you need more user licences than your current plan allows, please contact our sales team.",
   },
   {
     question: "How do I integrate with my existing systems?",
@@ -788,7 +788,7 @@ const supportPlans = [
   },
   {
     name: "Enterprise Support",
-    description: "Comprehensive support for large organizations",
+    description: "Comprehensive support for large organisations",
     price: 999,
     features: [
       "24/7 email and phone support",
@@ -810,7 +810,7 @@ const resources = [
   {
     title: "Implementation Guide",
     description:
-      "A comprehensive guide to implementing your custom SaaS solution across your organization.",
+      "A comprehensive guide to implementing your custom SaaS solution across your organisation.",
     image: "/placeholder.svg?height=300&width=400",
     href: "/resources/implementation-guide",
     buttonText: "Download Guide",

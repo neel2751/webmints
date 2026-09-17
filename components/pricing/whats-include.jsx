@@ -35,7 +35,7 @@ const inclusions = [
     icon: Rocket,
     title: "Deployment Support",
     description:
-      "Seamless deployment to production with monitoring and optimization.",
+      "Seamless deployment to production with monitoring and optimisation.",
   },
   {
     icon: MessageSquare,

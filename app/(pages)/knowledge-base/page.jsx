@@ -104,7 +104,7 @@ export default function Page() {
                     <path d="M12 19l0 .01"></path>
                   </svg>
                   <h3 className="text-lg font-semibold tracking-tight text-gray-800">
-                    Help Center
+                    Help Centre
                   </h3>
                 </dt>
                 <dd className="mt-2">
@@ -118,7 +118,7 @@ export default function Page() {
                 className="text-sm flex items-center font-medium gap-2 text-black/80 tracking-tight group"
                 href="/helpcenter"
               >
-                Visit Help Center
+                Visit Help Centre
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"

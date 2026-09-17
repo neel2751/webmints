@@ -73,7 +73,7 @@ export default function MaintenancePage() {
                 Limited Availability
               </h3>
               <p className="mt-2 text-muted-foreground font-sans">
-                Due to our commitment to quality and personalized service, we
+                Due to our commitment to quality and personalised service, we
                 only take on a limited number of custom projects each month.
               </p>
             </div>
@@ -523,7 +523,7 @@ const supportChannels = [
   {
     title: "Email Support",
     description:
-      "Available during business hours for issue reporting and inquiries. We aim to respond to all emails within our SLA timeframes.",
+      "Available during business hours for issue reporting and enquiries. We aim to respond to all emails within our SLA timeframes.",
     icon: <Mail className="h-6 w-6 text-indigo-600" />,
   },
   {
@@ -564,7 +564,7 @@ const slaData = [
     severity: "Low",
     description: "Suggestions, minor improvements",
     responseTime: "Within 2 working days",
-    resolutionTarget: "Based on roadmap/prioritization",
+    resolutionTarget: "Based on roadmap/prioritisation",
   },
 ];
 
@@ -636,7 +636,7 @@ const maintenancePlans = [
   },
   {
     name: "Enterprise Maintenance",
-    description: "Premium maintenance for large organizations",
+    description: "Premium maintenance for large organisations",
     monthlyPrice: 1999,
     slug: "enterprise",
     features: [
@@ -660,7 +660,7 @@ const maintenancePlans = [
 // Maintenance Benefits Data
 const maintenanceBenefits = [
   {
-    title: "Maximized Uptime",
+    title: "Maximised Uptime",
     description:
       "Proactive monitoring and quick issue resolution ensure your system remains available to users at all times.",
   },
@@ -672,7 +672,7 @@ const maintenanceBenefits = [
   {
     title: "Improved Performance",
     description:
-      "Ongoing optimizations keep your application running smoothly, even as your user base and data grow.",
+      "Ongoing optimisations keep your application running smoothly, even as your user base and data grow.",
   },
   {
     title: "Reduced Technical Debt",

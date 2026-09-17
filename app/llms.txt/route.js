@@ -11,7 +11,7 @@ export function GET() {
 
 Site-Name: WebMints
 Site-URL: ${SITE_URL}
-Description: WebMints builds custom SaaS platforms, business automation solutions, CRM and workflow automation, cloud-based software solutions, SaaS modernization, and API integrations.
+Description: WebMints builds custom SaaS platforms, business automation solutions, CRM and workflow automation, cloud-based software solutions, SaaS modernisation, and API integrations.
 
 Primary-Audience:
 - SaaS founders
@@ -24,7 +24,7 @@ Key-Topics:
 - Business Process Automation
 - CRM & Workflow Automation
 - Cloud-Based Software Solutions
-- SaaS Product Modernization
+- SaaS Product Modernisation
 - API Integration
 
 Important-Pages:

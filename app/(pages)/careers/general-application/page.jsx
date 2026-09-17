@@ -37,7 +37,7 @@ export default function BenefitsAndPerks() {
           </h1>
           <p className="text-lg max-w-3xl font-medium leading-snug text-gray-600 mb-8 tracking-tight">
             Whether you're planning a new Saas Platform or Software Project,
-            automating business processes, or modernizing existing software, our
+            automating business processes, or modernising existing software, our
             team is here to help you turn into scalable solutions the vision you
             have for your business.
             <span className="text-base block font-medium text-black/60 tracking-tight mt-2">
@@ -162,7 +162,7 @@ export default function BenefitsAndPerks() {
               </div>
               <dd>
                 <p className="text-md mb-4 font-medium tracking-tight leading-snug text-gray-600">
-                  View and pick color values directly within your autocomplete
+                  View and pick colour values directly within your autocomplete
                   menu.
                 </p>
               </dd>
@@ -187,11 +187,11 @@ export default function BenefitsAndPerks() {
                 <Heart className="w-12 h-12 stroke-1 text-indigo-600" />
               </div>
               <h3 className="text-2xl font-bold mb-2 tracking-tight text-gray-800">
-                Health & Retirement
+                Health & Pension
               </h3>
               <p className="text-lg font-medium leading-snug text-gray-600 max-w-3xl mb-8 tracking-tight">
-                Comprehensive health, dental, and vision insurance, plus 401(k)
-                matching and financial wellness programs
+                Private medical, dental, and optical cover, plus workplace
+                pension contributions and financial wellness programmes
               </p>
             </div>
 
@@ -220,7 +220,7 @@ export default function BenefitsAndPerks() {
               <p className="text-lg font-medium leading-snug text-gray-600 max-w-3xl mb-8 tracking-tight">
                 {/* write 150 words */}
                 Access to mental health resources, counselling services, and
-                wellness programs to support your mental well-being
+                wellness programmes to support your mental well-being
               </p>
             </div>
 
@@ -248,7 +248,7 @@ export default function BenefitsAndPerks() {
               </h3>
               <p className="text-lg font-medium leading-snug text-gray-600 max-w-3xl mb-8 tracking-tight">
                 Ongoing professional development opportunities, training
-                programs, and online courses to help you grow in your career
+                programmes, and online courses to help you grow in your career
               </p>
             </div>
 

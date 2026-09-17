@@ -12,7 +12,7 @@ const reasons = [
     icon: Activity,
     title: "Performance Monitoring",
     description:
-      "Continuous tracking of system health, response times, and resource utilization to prevent degradation.",
+      "Continuous tracking of system health, response times, and resource utilisation to prevent degradation.",
   },
   {
     icon: ShieldCheck,
@@ -28,7 +28,7 @@ const reasons = [
   },
   {
     icon: Server,
-    title: "Infrastructure Optimization",
+    title: "Infrastructure Optimisation",
     description:
       "Fine-tuning cloud resources, databases, and server configurations for optimal efficiency.",
   },

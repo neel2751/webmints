@@ -194,7 +194,7 @@ const groupedFields = [
       {
         name: "System Modernization",
         type: "checkbox",
-        labelText: "System Modernization",
+        labelText: "System Modernisation",
       },
       {
         name: "Consulting Services",
@@ -378,7 +378,7 @@ export default function SalesForm({ params }) {
       <GlobalForm
         groupedFields={groupedFields}
         onSubmit={handleSubmit}
-        btnName={"Submit Sales Inquiry"}
+        btnName={"Submit Sales Enquiry"}
         resetForm={resetForm}
       />
     </div>

@@ -114,7 +114,7 @@ export default function Bento() {
               <div className="flex flex-col gap-1">
                 <h3 className="font-medium md:text-lg">Smart Alerts</h3>
                 <p className="text-sm text-muted-foreground md:text-base">
-                  Get timely updates to stay organized and ahead.
+                  Get timely updates to stay organised and ahead.
                 </p>
               </div>
               <span className="flex size-10 shrink-0 items-center justify-center rounded-full border">

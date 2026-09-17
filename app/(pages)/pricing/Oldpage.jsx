@@ -574,7 +574,7 @@ const investmentRanges = [
   },
   {
     name: "Enterprise Solution",
-    description: "For large organizations with complex requirements",
+    description: "For large organisations with complex requirements",
     priceRange: "$150,000+",
     slug: "enterprise",
     timeframe: "8+ months development time",

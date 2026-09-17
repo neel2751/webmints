@@ -12,7 +12,7 @@ export default function Benifits() {
     {
       title: "Industry Recognition",
       description:
-        "We are proud of our team's achievements and regularly recognize and reward outstanding performance through awards, bonuses, and public acknowledgment.",
+        "We are proud of our team's achievements and regularly recognise and reward outstanding performance through awards, bonuses, and public acknowledgement.",
       image: "/benefits/industry-recognition.svg",
     },
     {
@@ -36,7 +36,7 @@ export default function Benifits() {
     {
       title: "Annual Team Retreats",
       description:
-        "We organize annual team retreats to foster team bonding, celebrate achievements, and provide opportunities for relaxation and rejuvenation.",
+        "We organise annual team retreats to foster team bonding, celebrate achievements, and provide opportunities for relaxation and rejuvenation.",
       image: "/benefits/annual-team-retreats.svg",
     },
   ];

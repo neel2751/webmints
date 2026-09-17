@@ -66,7 +66,7 @@ export default function ServicesSchema() {
             },
             {
               "@type": "Service",
-              name: "SaaS product modernization",
+              name: "SaaS product modernisation",
               description:
                 "Update and enhance existing SaaS products to improve performance and user experience.",
               provider: {

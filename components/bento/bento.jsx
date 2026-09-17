@@ -27,7 +27,7 @@ export default function Bento() {
           <div className="flex flex-col justify-between gap-8 p-10 h-auto lg:w-1/2 bg-[#fafafa] rounded-xl">
             <div>
               <h2 className="font-bold text-2xl text-[#222222] font-grotesk">
-                Presents a consolidated view of your organization security
+                Presents a consolidated view of your organisation security
                 posture
               </h2>
               <p className="text-muted-foreground mt-2 text-lg">

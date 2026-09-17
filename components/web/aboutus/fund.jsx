@@ -13,7 +13,7 @@ export default function Fund() {
             <p className="text-lg font-medium leading-snug text-gray-600 tracking-tight max-w-3xl mx-auto mt-4">
               Our journey began with a simple yet powerful vision: to empower
               businesses with tailor-made software solutions that truly address
-              their unique challenges. As a customizable SaaS provider, we go
+              their unique challenges. As a customisable SaaS provider, we go
               beyond off-the-shelf offerings. Our USP lies in our dedicated
               research and build process. We delve deep to understand your
               specific needs, enabling us to make informed decisions and craft a
@@ -22,7 +22,7 @@ export default function Fund() {
               <br />
               We believed there was a better way – a way to provide businesses
               with the exact tools they need, without compromise.That's why we
-              established ourselves as a customizable SaaS provider.
+              established ourselves as a customisable SaaS provider.
               <br />
               <br />
               What sets us apart is our commitment to research and collaborative

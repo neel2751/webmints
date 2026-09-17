@@ -160,7 +160,7 @@ export default function TechnologiesPage() {
               Industry-Specific Technologies
             </h2>
             <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 font-sans">
-              We leverage specialized technologies to address the unique
+              We leverage specialised technologies to address the unique
               requirements of different industries.
             </p>
           </div>
@@ -348,7 +348,7 @@ const techCategories = [
     ],
   },
   {
-    title: "Performance Optimization",
+    title: "Performance Optimisation",
     description:
       "Tools and techniques to ensure your SaaS solution performs at its best under any load.",
     icon: <Zap className="h-6 w-6 text-indigo-600" />,
@@ -358,7 +358,7 @@ const techCategories = [
       "Load Balancing",
       "Microservices",
       "Serverless",
-      "Optimization",
+      "Optimisation",
     ],
   },
 ];
@@ -460,7 +460,7 @@ const cloudTechnologies = [
   {
     name: "Docker & Kubernetes",
     description:
-      "We containerize applications with Docker and orchestrate them with Kubernetes for consistent deployment and scaling.",
+      "We containerise applications with Docker and orchestrate them with Kubernetes for consistent deployment and scaling.",
   },
   {
     name: "Terraform & Infrastructure as Code",
@@ -482,9 +482,9 @@ const cloudTechnologies = [
 // Security Technologies Data
 const securityTechnologies = [
   {
-    name: "Authentication & Authorization",
+    name: "Authentication & Authorisation",
     description:
-      "We implement OAuth 2.0, JWT, and role-based access control for secure user authentication and authorization.",
+      "We implement OAuth 2.0, JWT, and role-based access control for secure user authentication and authorisation.",
   },
   {
     name: "Data Encryption",
@@ -518,7 +518,7 @@ const techBenefits = [
   {
     title: "Performance",
     description:
-      "We optimize every layer of the stack to deliver fast load times, responsive interfaces, and efficient data processing.",
+      "We optimise every layer of the stack to deliver fast load times, responsive interfaces, and efficient data processing.",
   },
   {
     title: "Security",
@@ -533,7 +533,7 @@ const techBenefits = [
   {
     title: "Cost Efficiency",
     description:
-      "Our cloud-native approach and infrastructure optimization help minimize operational costs while maximizing performance.",
+      "Our cloud-native approach and infrastructure optimisation help minimise operational costs while maximising performance.",
   },
   {
     title: "Future-Proof",
@@ -548,7 +548,7 @@ const industryTechnologies = [
     id: "enterprise",
     title: "Enterprise Solutions",
     description:
-      "Technologies tailored for large organizations with complex needs.",
+      "Technologies tailored for large organisations with complex needs.",
     icon: "🏢",
     technologies: [
       "Enterprise Service Bus (ESB) for system integration",
@@ -562,14 +562,14 @@ const industryTechnologies = [
     id: "ecommerce",
     title: "E-commerce",
     description:
-      "Specialized technologies for online retail and e-commerce businesses.",
+      "Specialised technologies for online retail and e-commerce businesses.",
     icon: "🛒",
     technologies: [
       "Payment gateway integrations",
       "Inventory management systems",
       "Product recommendation engines",
-      "Shopping cart optimization",
-      "Order fulfillment automation",
+      "Shopping cart optimisation",
+      "Order fulfilment automation",
     ],
   },
   {
@@ -602,10 +602,10 @@ const industryTechnologies = [
   {
     id: "construction",
     title: "Construction",
-    description: "Specialized technologies for construction companies.",
+    description: "Specialised technologies for construction companies.",
     icon: "🏗️",
     technologies: [
-      "BIM (Building Information Modeling) integration",
+      "BIM (Building Information Modelling) integration",
       "Project management tools",
       "Field data collection systems",
       "Equipment tracking solutions",

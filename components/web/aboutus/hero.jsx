@@ -25,7 +25,7 @@ export default function AboutHero() {
                 right now, that sparked our vision: to create a single,
                 adaptable platform that could streamline operations and empower
                 teams like yours to thrive. This is the story of how that shared
-                frustration led us to build the customizable SaaS solution we
+                frustration led us to build the customisable SaaS solution we
                 offer today.
               </p>
             </div>
@@ -98,7 +98,7 @@ export default function AboutHero() {
               <p className="text-lg font-medium leading-snug text-gray-500 tracking-tight max-w-3xl mx-auto">
                 We foster a culture of continuous learning, where every team
                 member is empowered to contribute their unique perspectives to
-                build the best possible customizable SaaS solutions for you.
+                build the best possible customisable SaaS solutions for you.
               </p>
             </div>
           </div>

@@ -90,7 +90,7 @@ export function HeroSectionNew() {
             Solutions for Business Growth
           </h1>
           <p className="max-w-[25rem] md:max-w-[43.75rem] text-center text-base text-primary/70 lg:text-lg">
-            We provide fully customizable SaaS platforms to scale your business
+            We provide fully customisable SaaS platforms to scale your business
             with flexibility and efficiency. Our solutions are tailored to meet
             your specific needs, ensuring seamless integration and maximum ROI.
           </p>

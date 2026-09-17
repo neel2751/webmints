@@ -41,7 +41,7 @@ const services = [
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-amber-400">•</span>
-                  <span>Color palette development</span>
+                  <span>Colour palette development</span>
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-amber-400">•</span>
@@ -146,7 +146,7 @@ const services = [
                 </div>
                 <p className="text-gray-400 text-sm pl-10">
                   Real-time insights into your platform performance with
-                  automated scaling and optimization recommendations.
+                  automated scaling and optimisation recommendations.
                 </p>
               </div>
             </div>
@@ -170,7 +170,7 @@ const services = [
     ),
     details: {
       description:
-        "Automate repetitive tasks and optimize your business workflows. Then, focus on what matters most while automation handles the rest.",
+        "Automate repetitive tasks and optimise your business workflows. Then, focus on what matters most while automation handles the rest.",
       sections: [
         {
           title: "Design custom automations",
@@ -194,7 +194,7 @@ const services = [
                 <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500">
                   <div className="flex items-center gap-2 text-white font-medium">
                     <span className="text-lg">🔄</span>
-                    <span>Data synchronization across platforms</span>
+                    <span>Data synchronisation across platforms</span>
                   </div>
                 </div>
                 <div className="bg-gray-800 p-4 rounded-lg border-l-4 border-blue-500">
@@ -208,7 +208,7 @@ const services = [
           ),
         },
         {
-          title: "Monitor and optimize",
+          title: "Monitor and optimise",
           content: (
             <div className="bg-gray-900 rounded-lg p-6 space-y-4">
               <div className="text-white space-y-3">
@@ -249,7 +249,7 @@ const services = [
         "Transform raw data into actionable insights with powerful analytics tools. Then, make informed decisions based on real-time data.",
       sections: [
         {
-          title: "Collect and visualize data",
+          title: "Collect and visualise data",
           content: (
             <div className="bg-gray-900 rounded-lg p-6 space-y-4">
               <div className="flex items-center gap-3">
@@ -407,7 +407,7 @@ const services = [
                 </div>
                 <div className="flex items-start gap-2">
                   <span className="text-purple-400">•</span>
-                  <span>Real-time data synchronization</span>
+                  <span>Real-time data synchronisation</span>
                 </div>
               </div>
             </div>

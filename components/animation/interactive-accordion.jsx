@@ -9,35 +9,35 @@ const items = [
     number: "01",
     title: "Discovery & Strategy",
     content:
-      "Comprehensive research and strategic planning to align your business goals with effective digital solutions.",
+      "We get to know your business, users, workflows, and technical requirements prior to developing the optimal SaaS strategy for you.",
   },
   {
     id: "development",
     number: "02",
     title: "UI/UX Design",
     content:
-      "Innovative design solutions that prioritize user experience and brand identity for maximum engagement.",
+      "We deliver intuitive user interfaces that take into consideration your business, its users, and application needs.",
   },
   {
     id: "strategy",
     number: "03",
     title: "Agile Development",
     content:
-      "Flexible and iterative development processes that adapt to your evolving business needs and market demands.",
+      "By utilising our agile development technique, we help you develop and enhance your SaaS platform via development cycles.",
   },
   {
     id: "growth",
     number: "04",
     title: "Testing & Deployment",
     content:
-      "Rigorous testing and seamless deployment strategies to ensure reliable and efficient digital solutions.",
+      "We will test your application to discover problems and deploy your SaaS platform.",
   },
   {
     id: "support",
-    title: "Ongoing support & Scaling",
+    title: "Ongoing Support & Scaling",
     number: "05",
     content:
-      "Continuous support and optimization to ensure your digital solutions evolve with your business needs.",
+      "We can provide ongoing support and scaling after you launch your software product.",
   },
 ];
 

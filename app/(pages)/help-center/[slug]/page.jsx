@@ -30,7 +30,7 @@ export default async function Page({ params }) {
                     href="/helpcenter"
                     className="hover:text-indigo-700 font-medium text-sm text-gray-800 tracking-tight"
                   >
-                    Help Center
+                    Help Centre
                   </Link>
                 </li>
                 <li className="text-base-400">

@@ -141,7 +141,7 @@ export default function PrivacyPolicy() {
                 4. Data Retention
               </h2>
               <p className="mb-8 dark:text-neutral-400 font-medium tracking-tight">
-                We retain your data only for as long as necessary to fulfill the
+                We retain your data only for as long as necessary to fulfil the
                 purposes outlined in this Privacy Policy or to comply with legal
                 obligations.
               </p>

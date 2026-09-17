@@ -22,9 +22,12 @@ export default function HomeSchema() {
               provider: {
                 "@id": `${SITE_URL}/#organization`,
               },
-              areaServed: "IN",
+              areaServed: {
+                "@type": "Country",
+                name: "United Kingdom",
+              },
               description:
-                "Custom SaaS platform development, business process automation, CRM & workflow automation, cloud-based software solutions, SaaS product modernization, and API integration for startups and enterprises.",
+                "Custom SaaS platform development, business process automation, CRM & workflow automation, cloud-based software solutions, SaaS product modernisation, and API integration for startups and enterprises.",
               url: `${SITE_URL}/services`,
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
@@ -62,7 +65,7 @@ export default function HomeSchema() {
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name: "SaaS product modernization",
+                      name: "SaaS product modernisation",
                     },
                   },
                   {

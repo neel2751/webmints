@@ -6,7 +6,7 @@ const data = [
   {
     index: "01",
     title: "Tailored to Your Needs",
-    desc: " Stop fitting your business into rigid software. Our platform is built for customization, adapting precisely to your unique workflows and goals.",
+    desc: " Stop fitting your business into rigid software. Our platform is built for customisation, adapting precisely to your unique workflows and goals.",
   },
   {
     index: "02",
@@ -21,7 +21,7 @@ const data = [
   {
     index: "04",
     title: "Data-Driven Insights",
-    desc: "Leverage personalized dashboards and customizable reports to gain clear visibility into your key metrics and make informed decisions.",
+    desc: "Leverage personalised dashboards and customisable reports to gain clear visibility into your key metrics and make informed decisions.",
   },
   {
     index: "05",
@@ -41,7 +41,7 @@ const data = [
   {
     index: "08",
     title: "Intuitive and User-Friendly",
-    desc: "Empower your team with an easy-to-navigate platform that requires minimal training and maximizes user adoption from day one.",
+    desc: "Empower your team with an easy-to-navigate platform that requires minimal training and maximises user adoption from day one.",
   },
 ];
 

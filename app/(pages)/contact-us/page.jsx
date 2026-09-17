@@ -27,7 +27,7 @@ import ContactSchema from "@/components/seo/contactSchema";
 // export const metadata = {
 //   title: "Contact Us | SaaSify",
 //   description:
-//     "Get in touch with our team for any inquiries, support, or sales questions.",
+//     "Get in touch with our team for any enquiries, support, or sales questions.",
 // };
 
 export default function ContactPage() {
@@ -163,7 +163,7 @@ export default function ContactPage() {
               value: "crm_workflow_automation",
             },
             {
-              label: "Software Modernization",
+              label: "Software Modernisation",
               value: "software_modernization",
             },
             { label: "Cloud-Based Solutions", value: "cloud_based_solutions" },
@@ -202,7 +202,7 @@ export default function ContactPage() {
               >
                 Privacy Policy
               </a>{" "}
-              and consent to begin contacted regarding my inquiry.
+              and consent to begin contacted regarding my enquiry.
             </>
           ),
           validationOptions: {
@@ -225,7 +225,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-lg max-w-3xl font-medium leading-snug text-gray-600 mb-8 tracking-tight">
               Whether you're planning a new Saas Platform or Software Project,
-              automating business processes, or modernizing existing software,
+              automating business processes, or modernising existing software,
               our team is here to help you turn into scalable solutions the
               vision you have for your business.
               <span className="text-base block font-medium text-black/60 tracking-tight mt-2">
@@ -241,7 +241,7 @@ export default function ContactPage() {
               </h1>
               <p className="text-lg max-w-3xl font-medium leading-snug text-gray-600 mb-8 tracking-tight">
                 Whether you're planning a new Saas Platform or Software Project,
-                automating business processes, or modernizing existing software,
+                automating business processes, or modernising existing software,
                 our team is here to help you turn into scalable solutions the
                 vision you have for your business.
                 <span className="text-base block font-medium text-black/60 tracking-tight mt-2">
@@ -367,7 +367,7 @@ export default function ContactPage() {
                   </div>
                   <dd>
                     <p className="text-md mb-4 font-medium tracking-tight leading-snug text-gray-600">
-                      View and pick color values directly within your
+                      View and pick colour values directly within your
                       autocomplete menu.
                     </p>
                   </dd>
@@ -450,7 +450,7 @@ export default function ContactPage() {
                     <dd>
                       <p className="text-base mt-2 font-medium text-black/75 tracking-tight">
                         Interested in our services? Our sales team is ready to
-                        assist you with inquiries, pricing, and tailored
+                        assist you with enquiries, pricing, and tailored
                         solutions for your business needs.
                       </p>
                     </dd>
@@ -563,7 +563,7 @@ export default function ContactPage() {
                       <p className="text-base mt-2 font-medium text-black/75 tracking-tight">
                         Looking for ongoing support? Our maintenance team
                         ensures your software remains up-to-date, secure, and
-                        optimized for peak performance.
+                        optimised for peak performance.
                       </p>
                     </dd>
                   </div>
@@ -726,7 +726,7 @@ export default function ContactPage() {
             </h2>
             <p className="text-lg text-gray-600 font-medium tracking-tight max-w-3xl">
               Have questions? We're here to help. Explore our FAQs to find
-              answers to common inquiries about our services and solutions.
+              answers to common enquiries about our services and solutions.
             </p>
           </div>
 
@@ -735,7 +735,7 @@ export default function ContactPage() {
             {/* <div className="mt-8 text-center">
               <p className="text-muted-foreground mb-4">
                 Didn't find what you were looking for? Check our comprehensive
-                help center.
+                help centre.
               </p>
               <Button
                 asChild
@@ -755,8 +755,8 @@ export default function ContactPage() {
       <AnimatedFeatureSpotlight
         preheaderIcon={<ArrowRight className="w-4 h-4 text-indigo-600" />}
         preheaderText="Ready to Transform Your Business?"
-        heading="Schedule a Personalized Demo Today"
-        description="See how our SaaS solutions can transform your business with a customized demonstration tailored to your specific needs."
+        heading="Schedule a Personalised Demo Today"
+        description="See how our SaaS solutions can transform your business with a customised demonstration tailored to your specific needs."
         buttonText="Get a Free Consultation"
         buttonProps={{ href: "/schedule-call" }}
         imageUrl="/images/t.png"
@@ -769,7 +769,7 @@ const faqs = [
   {
     question: "What happens after I submit the form?",
     answer:
-      "Once you submit the form, our team will review your inquiry and get back to you within one business day. We may reach out to gather more information or to schedule a consultation to better understand your needs.",
+      "Once you submit the form, our team will review your enquiry and get back to you within one business day. We may reach out to gather more information or to schedule a consultation to better understand your needs.",
   },
   {
     question: "Do your offer free consultations?",
@@ -779,12 +779,12 @@ const faqs = [
   {
     question: "Do you work with startups and enterprises?",
     answer:
-      "Yes, we work with startups, growing businesses, and enterprises across various industries. Our solutions are scalable and can be customized to meet the specific needs of your organization, regardless of its size.",
+      "Yes, we work with startups, growing businesses, and enterprises across various industries. Our solutions are scalable and can be customised to meet the specific needs of your organisation, regardless of its size.",
   },
   {
     question: "What is your typical response time?",
     answer:
-      "Our typical response time is within one business day. However, during peak times, it may take up to 48 hours. We prioritize all inquiries and strive to provide timely and helpful responses.",
+      "Our typical response time is within one business day. However, during peak times, it may take up to 48 hours. We prioritise all enquiries and strive to provide timely and helpful responses.",
   },
   {
     question: "Do you sign NDAs?",
@@ -799,7 +799,7 @@ const faqsOld = [
   {
     question: "What types of businesses do you typically work with?",
     answer:
-      "We work with businesses of all sizes across various industries, including enterprise, e-commerce, fintech, healthcare, and construction. Our solutions are scalable and can be customized to meet the specific needs of your organization, whether you're a startup or an established enterprise.",
+      "We work with businesses of all sizes across various industries, including enterprise, e-commerce, fintech, healthcare, and construction. Our solutions are scalable and can be customised to meet the specific needs of your organisation, whether you're a startup or an established enterprise.",
   },
   {
     question: "How long does implementation typically take?",
@@ -819,7 +819,7 @@ const faqsOld = [
   {
     question: "Can your solutions integrate with our existing systems?",
     answer:
-      "Yes, our solutions are designed with integration capabilities in mind. We support integration with most popular business systems, including CRM, ERP, accounting software, and marketing platforms. We also offer custom API development for specialized integration needs.",
+      "Yes, our solutions are designed with integration capabilities in mind. We support integration with most popular business systems, including CRM, ERP, accounting software, and marketing platforms. We also offer custom API development for specialised integration needs.",
   },
   {
     question:
@@ -830,6 +830,6 @@ const faqsOld = [
   {
     question: "Do you offer training for our team?",
     answer:
-      "Yes, we provide comprehensive training options for your team. This includes standard onboarding training, detailed documentation, video tutorials, and optional advanced training sessions. For enterprise clients, we offer customized training programs tailored to different user roles within your organization.",
+      "Yes, we provide comprehensive training options for your team. This includes standard onboarding training, detailed documentation, video tutorials, and optional advanced training sessions. For enterprise clients, we offer customised training programmes tailored to different user roles within your organisation.",
   },
 ];

@@ -135,7 +135,7 @@ export default function TermsAndConditions() {
                 <br />
                 <br />
                 Provided that you are eligible to use the Site, you are granted
-                a limited license to access and use the Site and to download or
+                a limited licence to access and use the Site and to download or
                 print a copy of any portion of the Content to which you have
                 properly gained access solely for your personal, non-commercial
                 use. We reserve all rights not expressly granted to you in and
@@ -171,7 +171,7 @@ export default function TermsAndConditions() {
               <p className="mb-4 dark:text-neutral-400 font-medium tracking-tight">
                 You may not access or use the Site for any purpose other than
                 that for which we make the Site available. The Site may not be
-                used in connection with any commercial endeavors except those
+                used in connection with any commercial endeavours except those
                 that are specifically endorsed or approved by us.
               </p>
               <p className="mb-3 font-grotesk tracking-tight">
@@ -290,7 +290,7 @@ export default function TermsAndConditions() {
                 <li>
                   Use the Site as part of any effort to compete with us or
                   otherwise use the Site and/or the Content for any
-                  revenue-generating endeavor or commercial enterprise.
+                  revenue-generating endeavour or commercial enterprise.
                 </li>
               </ul>
               {/* 5 */}
@@ -324,8 +324,8 @@ export default function TermsAndConditions() {
                 </li>
                 <li>
                   You are the creator and owner of or have the necessary
-                  licenses, rights, consents, releases, and permissions to use
-                  and to authorize us, the Site, and other users of the Site to
+                  licences, rights, consents, releases, and permissions to use
+                  and to authorise us, the Site, and other users of the Site to
                   use your Contributions in any manner contemplated by the Site
                   and these Terms of Use.
                 </li>
@@ -389,7 +389,7 @@ export default function TermsAndConditions() {
 
               {/* 5 */}
               <h2 className="text-xl font-semibold mb-2 dark:text-white font-grotesk tracking-tight">
-                6. CONTRIBUTION LICENSE
+                6. CONTRIBUTION LICENCE
               </h2>
               <p className="mb-8 dark:text-neutral-400 font-medium tracking-tight">
                 You agree that we may access, store, process, and use any
@@ -426,7 +426,7 @@ export default function TermsAndConditions() {
                 rights, including all intellectual property rights, and shall be
                 entitled to the unrestricted use and dissemination of these
                 Submissions for any lawful purpose, commercial or otherwise,
-                without acknowledgment or compensation to you. You hereby waive
+                without acknowledgement or compensation to you. You hereby waive
                 all moral rights to any such Submissions, and you hereby warrant
                 that any such Submissions are original with you or that you have
                 the right to submit such Submissions. You agree there shall be
@@ -601,7 +601,7 @@ export default function TermsAndConditions() {
                 BE RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND
                 ANY THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES. AS WITH THE
                 PURCHASE OF A PRODUCT OR SERVICE THROUGH ANY MEDIUM OR IN ANY
-                ENVIRONMENT, YOU SHOULD USE YOUR BEST JUDGMENT AND EXERCISE
+                ENVIRONMENT, YOU SHOULD USE YOUR BEST JUDGEMENT AND EXERCISE
                 CAUTION WHERE APPROPRIATE.
               </p>
               {/* 16 */}
@@ -631,11 +631,11 @@ export default function TermsAndConditions() {
                 set forth in these Terms of Use; (4) your violation of the
                 rights of a third party, including but not limited to
                 intellectual property rights; or (5) any overt harmful act
-                toward any other user of the Site with whom you connected via
+                towards any other user of the Site with whom you connected via
                 the Site. Notwithstanding the foregoing, we reserve the right,
-                at your expense, to assume the exclusive defense and control of
+                at your expense, to assume the exclusive defence and control of
                 any matter for which you are required to indemnify us, and you
-                agree to cooperate, at your expense, with our defense of such
+                agree to cooperate, at your expense, with our defence of such
                 claims. We will use reasonable efforts to notify you of any such
                 claim, action, or proceeding which is subject to this
                 indemnification upon becoming aware of it.
@@ -699,7 +699,7 @@ export default function TermsAndConditions() {
                 relationship created between you and us as a result of these
                 Terms of Use or use of the Site. You agree that these Terms of
                 Use will not be construed against us by virtue of having drafted
-                them. You hereby waive any and all defenses you may have based
+                them. You hereby waive any and all defences you may have based
                 on the electronic form of these Terms of Use and the lack of
                 signing by the parties hereto to execute these Terms of Use.
               </p>

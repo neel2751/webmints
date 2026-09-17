@@ -14,11 +14,11 @@ export default function Industry() {
             Industries
           </div>
           <h2 className="font-bold text-black/85 mb-2 text-5xl tracking-tighter">
-            Tailored Solutions for Every Industry
+            Powerful SaaS Solutions Designed for Your Industry
           </h2>
           <p className="text-lg font-medium leading-snug text-gray-600 max-w-3xl mb-8 tracking-tight">
-            We develop industry-focused SaaS platforms that solve real-world
-            problems.
+            We develop industry-focused software solutions designed to solve
+            real business challenges across the UK.
           </p>
           <Button
             className="bg-gradient-to-b from-indigo-600 via-indigo-700 to-indigo-800 hover:bg-gradient-to-t hover:from-indigo-600 hover:via-indigo-700 hover:to-indigo-800 text-white"
@@ -50,13 +50,12 @@ export default function Industry() {
                   Enterprise Solutions
                 </h3>
                 <p className="text-black/65 text-lg font-medium tracking-tight">
-                  {/* On this one we have to include the Workflow optimization, reporting, integrations */}
+                  {/* On this one we have to include the Workflow optimisation, reporting, integrations */}
                   {/* We are as company we are the custom saas company so we can't say the our platforms because we are making for someone for requirement */}
-                  Enterprise solutions are designed to meet the complex needs of
-                  large organizations. Our platforms offer robust features such
-                  as workflow optimization, advanced reporting, and seamless
-                  integrations to enhance productivity and drive business
-                  growth.
+                  Our enterprise SaaS applications will aid large enterprises in
+                  enhancing workflow management, reporting, collaboration, and
+                  operational efficiencies using our software and business
+                  systems.
                 </p>
               </div>
               {/* What we can do here add the both side white with blur */}
@@ -69,13 +68,13 @@ export default function Industry() {
               >
                 <Marquee reverse>
                   {[
-                    { name: "Workflow Optimization", color: "bg-gray-200" },
+                    { name: "Workflow Optimisation", color: "bg-gray-200" },
                     { name: "Reporting", color: "bg-gray-200" },
                     { name: "Integrations", color: "bg-gray-200" },
                     { name: "Scalability", color: "bg-gray-200" },
                     { name: "Security", color: "bg-gray-200" },
                     { name: "Collaboration", color: "bg-gray-200" },
-                    { name: "Customization", color: "bg-gray-200" },
+                    { name: "Customisation", color: "bg-gray-200" },
                   ].map((tech, index) => (
                     <div
                       key={index}
@@ -87,13 +86,13 @@ export default function Industry() {
                 </Marquee>
                 <Marquee>
                   {[
-                    { name: "Workflow Optimization", color: "bg-gray-200" },
+                    { name: "Workflow Optimisation", color: "bg-gray-200" },
                     { name: "Reporting", color: "bg-gray-200" },
                     { name: "Integrations", color: "bg-gray-200" },
                     { name: "Scalability", color: "bg-gray-200" },
                     { name: "Security", color: "bg-gray-200" },
                     { name: "Collaboration", color: "bg-gray-200" },
-                    { name: "Customization", color: "bg-gray-200" },
+                    { name: "Customisation", color: "bg-gray-200" },
                   ].map((tech, index) => (
                     <div
                       key={index}
@@ -130,10 +129,10 @@ export default function Industry() {
                 <p className="text-black/65 text-lg font-medium tracking-tight">
                   {/* We have to use the keyword like order management, inventory management with upto three line content*/}
                   {/* We are providing the cusotm saas for that so we think like that and make the content */}
-                  E-commerce solutions are tailored to help businesses manage
-                  their online stores efficiently. From inventory management to
-                  order processing, we provide tools that enhance the customer
-                  experience and drive sales growth.
+                  Our e-commerce software solutions will assist companies in
+                  managing online operations, inventory management, order
+                  management, payment transactions, customer information, and
+                  order fulfilment through connected digital systems.
                 </p>
               </div>
               <div
@@ -149,7 +148,7 @@ export default function Industry() {
                     { name: "Inventory Management", color: "bg-gray-200" },
                     { name: "Payment Processing", color: "bg-gray-200" },
                     { name: "Cart & Checkout", color: "bg-gray-200" },
-                    { name: "Shipping & Fulfillment", color: "bg-gray-200" },
+                    { name: "Shipping & Fulfilment", color: "bg-gray-200" },
                     { name: "Customer Insights", color: "bg-gray-200" },
                     { name: "Storefront Design", color: "bg-gray-200" },
                   ].map((tech, index) => (
@@ -167,7 +166,7 @@ export default function Industry() {
                     { name: "Inventory Management", color: "bg-gray-200" },
                     { name: "Payment Processing", color: "bg-gray-200" },
                     { name: "Cart & Checkout", color: "bg-gray-200" },
-                    { name: "Shipping & Fulfillment", color: "bg-gray-200" },
+                    { name: "Shipping & Fulfilment", color: "bg-gray-200" },
                     { name: "Customer Insights", color: "bg-gray-200" },
                     { name: "Storefront Design", color: "bg-gray-200" },
                   ].map((tech, index) => (
@@ -202,15 +201,14 @@ export default function Industry() {
             <div className="relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8 md:pb-0 [&amp;>.title-container]:mb-5 md:[&amp;>.title-container]:mb-8 xl:[&amp;>.image-container]:translate-x-6 [&amp;>.image-container]:translate-x-2">
               <div className="title-container text-balance space-y-2">
                 <h3 className="lg:text-3xl sm:text-2xl font-semibold tracking-tight text-indigo-600">
-                  Education
+                  Education Solutions
                 </h3>
 
                 <p className="text-black/65 text-lg font-medium tracking-tight">
-                  Our education solutions enhance learning experiences, foster
-                  collaboration, and streamline administrative processes. We
-                  provide tools that empower educators and students to achieve
-                  their goals, ensuring a seamless and engaging learning
-                  environment.
+                  Our education software solutions will help organisations to
+                  enhance administration, collaboration, communication, and
+                  digital learning workflows using technologies tailored to
+                  their business processes.
                 </p>
               </div>
               <div className="from-muted/80 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent md:hidden"></div>
@@ -237,13 +235,13 @@ export default function Industry() {
             <div className="relative flex flex-col px-0 py-6 md:px-6 md:py-8 md:pb-0 justify-normal [&amp;>.title-container]:mb-5 md:[&amp;>.title-container]:mb-0 [&amp;>.image-container]:flex-1 md:[&amp;>.image-container]:place-items-center md:[&amp;>.image-container]:-translate-y-3">
               <div className="title-container text-balance space-y-2">
                 <h3 className="lg:text-3xl sm:text-2xl font-semibold tracking-tight text-indigo-600">
-                  HealthCare
+                  Healthcare Solutions
                 </h3>
                 <p className="text-black/65 text-lg font-medium tracking-tight">
-                  Healthcare solutions improve patient outcomes, streamline
-                  operations, and ensure compliance with industry regulations
-                  and data-driven insights that enhance patient engagement and
-                  streamline care delivery.
+                  Our healthcare software solutions will be built for workflow
+                  management, patient engagement, data management, and
+                  connected systems taking into account the requirements of the
+                  healthcare industry.
                 </p>
               </div>
               <div className="image-container grid grid-cols-1 gap-4">
@@ -269,14 +267,12 @@ export default function Industry() {
             <div className="relative flex flex-col justify-between px-0 py-6 md:px-6 md:py-8 md:pb-0 [&amp;>.title-container]:mb-5 md:[&amp;>.title-container]:mb-8 xl:[&amp;>.image-container]:translate-x-6 [&amp;>.image-container]:translate-x-2">
               <div className="title-container text-balance space-y-2">
                 <h3 className="lg:text-3xl sm:text-2xl font-semibold tracking-tight text-indigo-600">
-                  Construction
+                  Construction Solutions
                 </h3>
                 <p className="text-black/65 text-lg font-medium tracking-tight">
-                  Construction solutions optimize project management, enhance
-                  safety protocols, and ensure timely delivery while adhering to
-                  budget constraints with improve efficiency, reduce costs, and
-                  foster collaboration across all stages of the construction
-                  process.
+                  Our construction software solutions will help organisations to
+                  manage construction projects, workflow management,
+                  collaboration, reporting, and operational processes.
                 </p>
               </div>
               <div className="from-muted/80 absolute inset-0 z-10 bg-linear-to-t via-transparent to-transparent md:hidden"></div>

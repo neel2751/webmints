@@ -33,7 +33,7 @@ const jobs = {
       "Design, develop, and maintain web applications using modern JavaScript frameworks (React, Next.js) and Node.js",
       "Write clean, efficient, and well-documented code",
       "Collaborate with cross-functional teams to define, design, and ship new features",
-      "Optimize applications for maximum speed and scalability",
+      "Optimise applications for maximum speed and scalability",
       "Implement security and data protection measures",
       "Participate in code reviews and mentor junior developers",
       "Stay up-to-date with emerging trends and technologies",
@@ -50,7 +50,7 @@ const jobs = {
     ],
     preferred: [
       "Experience with GraphQL and REST API design",
-      "Knowledge of containerization technologies (Docker, Kubernetes)",
+      "Knowledge of containerisation technologies (Docker, Kubernetes)",
       "Experience with microservices architecture",
       "Contributions to open-source projects",
       "Experience in SaaS product development",
@@ -71,7 +71,7 @@ const jobs = {
       "Conduct user research and usability testing to inform design decisions",
       "Develop and maintain design systems and component libraries",
       "Collaborate with developers to ensure accurate implementation of designs",
-      "Create user flows, journey maps, and other UX artifacts",
+      "Create user flows, journey maps, and other UX artefacts",
       "Stay current with UX/UI trends, tools, and best practices",
       "Advocate for the user throughout the product development process",
     ],
@@ -89,7 +89,7 @@ const jobs = {
       "Knowledge of front-end frameworks like React",
       "Experience with motion design and micro-interactions",
       "Background in user research and usability testing",
-      "Understanding of data visualization design",
+      "Understanding of data visualisation design",
     ],
   },
   "digital-marketing-specialist": {
@@ -105,7 +105,7 @@ const jobs = {
     responsibilities: [
       "Develop and implement digital marketing strategies across various channels (SEO, SEM, social media, email, content marketing)",
       "Create and manage content for blogs, social media, and email campaigns",
-      "Analyze campaign performance and optimize based on data",
+      "Analyse campaign performance and optimise based on data",
       "Conduct keyword research and implement SEO best practices",
       "Manage PPC campaigns and monitor ROI",
       "Collaborate with the design team to create engaging visuals",
@@ -117,11 +117,11 @@ const jobs = {
       "Experience with marketing automation tools (HubSpot, Marketo, etc.)",
       "Proficiency in Google Analytics and other analytics tools",
       "Excellent writing and content creation skills",
-      "Ability to analyze data and derive actionable insights",
-      "Strong project management and organizational skills",
+      "Ability to analyse data and derive actionable insights",
+      "Strong project management and organisational skills",
     ],
     preferred: [
-      "Experience with A/B testing and conversion rate optimization",
+      "Experience with A/B testing and conversion rate optimisation",
       "Familiarity with CRM systems (Salesforce, Zoho, etc.)",
       "Knowledge of HTML/CSS for email and landing page design",
       "Experience with video marketing and production",
@@ -137,11 +137,11 @@ const jobs = {
     shortDescription:
       "Join our engineering team to build and maintain scalable, secure, and reliable cloud infrastructure for our SaaS platform.",
     aboutRole:
-      "As a DevOps Engineer at Webmints, you'll be responsible for building and maintaining our cloud infrastructure, implementing CI/CD pipelines, and ensuring the reliability, security, and scalability of our platform. You'll work closely with development teams to streamline deployment processes and optimize system performance.",
+      "As a DevOps Engineer at Webmints, you'll be responsible for building and maintaining our cloud infrastructure, implementing CI/CD pipelines, and ensuring the reliability, security, and scalability of our platform. You'll work closely with development teams to streamline deployment processes and optimise system performance.",
     responsibilities: [
       "Design, implement, and maintain cloud infrastructure on AWS, Azure, or GCP",
       "Build and improve CI/CD pipelines for automated testing and deployment",
-      "Monitor system performance and implement optimizations",
+      "Monitor system performance and implement optimisations",
       "Implement security best practices and ensure compliance requirements are met",
       "Troubleshoot and resolve infrastructure and application issues",
       "Automate manual processes to improve efficiency and reliability",
@@ -152,13 +152,13 @@ const jobs = {
       "Strong knowledge of cloud platforms (AWS, Azure, or GCP)",
       "Experience with infrastructure as code tools (Terraform, CloudFormation)",
       "Proficiency with CI/CD tools (Jenkins, GitHub Actions, CircleCI)",
-      "Knowledge of containerization technologies (Docker, Kubernetes)",
+      "Knowledge of containerisation technologies (Docker, Kubernetes)",
       "Understanding of networking, security, and system administration",
       "Scripting and automation skills (Bash, Python, or similar)",
     ],
     preferred: [
       "Experience with monitoring and observability tools (Prometheus, Grafana, ELK)",
-      "Knowledge of database administration and optimization",
+      "Knowledge of database administration and optimisation",
       "Experience with microservices architecture",
       "Security certifications or experience with security automation",
       "Experience supporting SaaS applications in production",
@@ -189,7 +189,7 @@ const jobs = {
       "Ability to quickly understand and articulate complex value propositions",
       "Goal-oriented mindset with a track record of meeting targets",
       "Experience with CRM systems (Salesforce preferred)",
-      "Excellent organizational and time management skills",
+      "Excellent organisational and time management skills",
       "Fluency in English (additional European languages a plus)",
     ],
     preferred: [
@@ -213,7 +213,7 @@ const jobs = {
     responsibilities: [
       "Create and manage content for various channels (blog, social media, email, etc.)",
       "Plan and execute digital marketing campaigns to generate leads",
-      "Analyze campaign performance and optimize based on data",
+      "Analyse campaign performance and optimise based on data",
       "Collaborate with product teams to develop messaging for new features and solutions",
       "Support event planning and execution (webinars, conferences, etc.)",
       "Maintain and update the company website and marketing materials",
@@ -223,9 +223,9 @@ const jobs = {
       "2+ years of experience in B2B marketing, preferably in SaaS or technology",
       "Strong writing and content creation skills",
       "Experience with digital marketing channels and tools",
-      "Data-driven approach to measuring and optimizing marketing efforts",
+      "Data-driven approach to measuring and optimising marketing efforts",
       "Ability to understand complex products and communicate their value clearly",
-      "Excellent project management and organizational skills",
+      "Excellent project management and organisational skills",
       "Proficiency with marketing automation and CRM platforms",
     ],
     preferred: [
@@ -479,7 +479,7 @@ export default async function JobDetailPage({ params }) {
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
-                      <span>Comprehensive health insurance</span>
+                      <span>Private medical insurance</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
@@ -487,7 +487,7 @@ export default async function JobDetailPage({ params }) {
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
-                      <span>Generous paid time off</span>
+                      <span>Generous paid holiday</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
@@ -499,7 +499,7 @@ export default async function JobDetailPage({ params }) {
                     </li>
                     {/* <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
-                      <span>401(k) matching</span>
+                      <span>Workplace pension contributions</span>
                     </li> */}
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
@@ -515,11 +515,11 @@ export default async function JobDetailPage({ params }) {
                     </li>
                     <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
-                      <span>Access to wellness programs</span>
+                      <span>Access to wellness programmes</span>
                     </li>
                     {/* <li className="flex items-start gap-2">
                       <Check className="h-5 w-5 text-indigo-600 mt-0.5 flex-shrink-0" />
-                      <span>Wellness programs</span>
+                      <span>Wellness programmes</span>
                     </li> */}
                   </ul>
                 </CardContent>

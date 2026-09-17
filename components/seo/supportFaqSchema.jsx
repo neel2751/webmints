@@ -27,7 +27,7 @@ export default function SupportFaqSchema() {
                   "@type": "Offer",
                   name: "Monthly Maintenance Retainer",
                   description:
-                    "Proactive monthly support packages for security, optimization, and bug fixes.",
+                    "Proactive monthly support packages for security, optimisation, and bug fixes.",
                   url: `${SITE_URL}/maintenance-support`,
                   availability: "https://schema.org/InStock",
                 },

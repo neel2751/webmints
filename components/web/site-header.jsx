@@ -323,7 +323,7 @@ export function WhyUS() {
   const cardData = [
     {
       Icon: LayoutGrid,
-      title: "Personalized learning paths",
+      title: "Personalised learning paths",
       desc: "Tailor your learning experience with custom tracks based on your goals, skill level, and preferred learning pace. Get recommendations designed just for you.",
       color: "red",
     },
@@ -342,7 +342,7 @@ export function WhyUS() {
     {
       Icon: GraduationCap,
       title: "Expert instructors",
-      desc: "Learn from experienced professionals who have a deep understanding of the subject matter. Get personalized feedback and guidance to help you achieve your goals.",
+      desc: "Learn from experienced professionals who have a deep understanding of the subject matter. Get personalised feedback and guidance to help you achieve your goals.",
       color: "purple",
     },
     {
@@ -387,7 +387,7 @@ export function WhyUS() {
               </h2>
               <p className="text-gray-600 mb-6">
                 Stop settling for off-the-shelf solutions. We empower your
-                business with a fully customizable SaaS platform, providing the
+                business with a fully customisable SaaS platform, providing the
                 exact tools and flexibility you need to thrive in today's
                 dynamic environment. Discover why choosing us means choosing a
                 solution as unique as your business.

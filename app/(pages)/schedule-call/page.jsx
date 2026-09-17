@@ -38,7 +38,7 @@ export default function ScheduleCallPage() {
             <p className="text-lg text-gray-600 font-medium tracking-tight">
               Ready to explore how our SaaS solutions can transform your
               business? Schedule a call with our sales experts to discuss your
-              unique needs and discover the perfect fit for your organization.
+              unique needs and discover the perfect fit for your organisation.
             </p>
           </div> */}
           <Card>
@@ -51,7 +51,7 @@ export default function ScheduleCallPage() {
                 touch to confirm the details. */}
                 Ready to explore how our SaaS solutions can transform your
                 business? Schedule a call with our sales experts to discuss your
-                unique needs and discover the perfect fit for your organization.
+                unique needs and discover the perfect fit for your organisation.
                 Choose a convenient time for your call, and our team will be in
                 touch to confirm the details.
               </CardDescription>

@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "Can you maintain a platform not built by you?",
     answer:
-      "Yes. We can assess existing systems and provide maintenance, optimization, and modernization services regardless of who originally built the platform. We start with a thorough technical audit to understand the architecture and codebase.",
+      "Yes. We can assess existing systems and provide maintenance, optimisation, and modernisation services regardless of who originally built the platform. We start with a thorough technical audit to understand the architecture and codebase.",
   },
   {
     question: "Do you offer 24/7 support?",
@@ -19,7 +19,7 @@ const faqs = [
       "Support availability depends on the selected support model. Enterprise clients can opt for extended coverage options including 24/7 monitoring and emergency response. We tailor coverage to match your operational requirements.",
   },
   {
-    question: "Can support plans be customized?",
+    question: "Can support plans be customised?",
     answer:
       "Yes, support plans are tailored based on platform complexity, user volume, and business needs. We work with you to define the right level of coverage, response times, and service scope for your specific situation.",
   },

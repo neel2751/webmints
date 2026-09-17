@@ -414,7 +414,7 @@ function CalculatorOption() {
               </h3>
               <div className="text-4xl font-medium tracking-tight">
                 ${breakdown.total.toLocaleString()}
-                {/* we have to make this shiny text like with any color */}
+                {/* we have to make this shiny text like with any colour */}
                 <span
                   className="text-sm font-normal ml-2
                   bg-gradient-to-r from-amber-800 via-amber-600 to-amber-900 bg-clip-text text-transparent

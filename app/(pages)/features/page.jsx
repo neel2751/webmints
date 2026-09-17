@@ -96,7 +96,7 @@ export default function FeaturesPage() {
                 White Labeling Support
               </h3>
               <p className="text-base mb-4 font-medium tracking-tight leading-snug text-gray-600">
-                Customize the platform with your branding, colors, and logo to
+                Customise the platform with your branding, colours, and logo to
                 create a unique experience for your customers.
               </p>
             </div>
@@ -289,7 +289,7 @@ export default function FeaturesPage() {
             </h2>
             <p className="text-lg font-medium leading-snug text-gray-600 mb-8 tracking-tight">
               Our platform is packed with powerful features designed to help you
-              build, scale, and optimize your SaaS solutions with ease.
+              build, scale, and optimise your SaaS solutions with ease.
             </p>
           </div>
           <Section1 data={Section1Data[0]} />
@@ -331,7 +331,7 @@ export default function FeaturesPage() {
             </h2>
             <p className="text-lg font-medium leading-snug text-gray-600 mb-8 tracking-tight">
               Our platform is packed with powerful features designed to help you
-              build, scale, and optimize your SaaS solutions with ease.
+              build, scale, and optimise your SaaS solutions with ease.
             </p>
             {/* <div className="flex items-center mt-8 space-x-4">
               <a
@@ -695,7 +695,7 @@ export default function FeaturesPage() {
             Industry-Specific Features
           </h2>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            Our platform includes specialized features designed for the unique
+            Our platform includes specialised features designed for the unique
             needs of different industries.
           </p>
         </div>
@@ -714,7 +714,7 @@ export default function FeaturesPage() {
               Industry-Specific Technologies
             </h2>
             <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8 font-sans">
-              We leverage specialized technologies to address the unique
+              We leverage specialised technologies to address the unique
               requirements of different industries.
             </p>
           </div>
@@ -811,7 +811,7 @@ const coreFeatures = [
   {
     title: "Advanced Analytics",
     description:
-      "Gain valuable insights with powerful analytics tools and customizable dashboards tailored to your business needs.",
+      "Gain valuable insights with powerful analytics tools and customisable dashboards tailored to your business needs.",
     icon: <BarChart2 className="size-5" />,
   },
   {
@@ -845,7 +845,7 @@ const coreFeatures = [
     icon: <Database className="size-5" />,
   },
   {
-    title: "Customizable Workflows",
+    title: "Customisable Workflows",
     description:
       "Tailor workflows to fit your unique business processes and improve efficiency.",
     icon: <Settings className="size-5" />,
@@ -877,7 +877,7 @@ const productivityFeatures = [
   {
     title: "Workflow Automation",
     description:
-      "Automate repetitive tasks and processes with customizable workflow rules.",
+      "Automate repetitive tasks and processes with customisable workflow rules.",
     icon: <Zap className="h-5 w-5" />,
   },
   {
@@ -949,13 +949,13 @@ const analyticsFeatures = [
   {
     title: "Custom Dashboards",
     description:
-      "Build personalized dashboards with drag-and-drop widgets for your key metrics.",
+      "Build personalised dashboards with drag-and-drop widgets for your key metrics.",
     icon: <BarChart2 className="h-5 w-5" />,
   },
   {
     title: "Advanced Reporting",
     description:
-      "Generate detailed reports with custom filters, grouping, and visualization options.",
+      "Generate detailed reports with custom filters, grouping, and visualisation options.",
     icon: <FileText className="h-5 w-5" />,
   },
   {
@@ -978,7 +978,7 @@ const Section1Data = [
     subtitle: "Data-Driven Insights",
     title: "Scalable Analytics Solutions",
     description:
-      "We design SaaS platforms using scalable, cloud-native architectures that can handle growing user bases and data loads. This includes microservices, containerization, and serverless computing.",
+      "We design SaaS platforms using scalable, cloud-native architectures that can handle growing user bases and data loads. This includes microservices, containerisation, and serverless computing.",
     description2:
       "Our architecture focuses on modularity, allowing individual components to be updated or scaled independently, ensuring optimal performance and reliability.",
     features: [
@@ -1033,7 +1033,7 @@ const Section2Data = [
   {
     title: "Scalable SaaS Architecture",
     description:
-      "Our SaaS platforms are built on scalable architectures that can efficiently handle increasing user loads and data volumes. We utilize cloud-native technologies, microservices, and containerization to ensure that our platforms can grow seamlessly with your business needs.",
+      "Our SaaS platforms are built on scalable architectures that can efficiently handle increasing user loads and data volumes. We utilise cloud-native technologies, microservices, and containerisation to ensure that our platforms can grow seamlessly with your business needs.",
     description2:
       "This approach allows for modular development, enabling us to update and scale individual components without disrupting the entire system, ensuring high availability and performance.",
     features: [
@@ -1068,7 +1068,7 @@ const Section2Data = [
     description:
       "We develop SaaS platforms with robust CRM and data management features to help businesses effectively manage customer relationships and data. Our solutions include contact management, lead tracking, sales pipeline management, and data analytics.",
     description2:
-      "These capabilities enable businesses to gain insights into customer behavior, improve sales processes, and enhance overall customer satisfaction.",
+      "These capabilities enable businesses to gain insights into customer behaviour, improve sales processes, and enhance overall customer satisfaction.",
     features: [
       {
         icon: <Shield className="h-4 w-4" />,
@@ -1078,7 +1078,7 @@ const Section2Data = [
       },
       {
         icon: <Lock className="h-4 w-4" />,
-        title: "Data synchronization across systems",
+        title: "Data synchronisation across systems",
         description:
           " Ensuring consistent and up-to-date information across all platforms.",
       },
@@ -1100,17 +1100,17 @@ const Section2Data = [
   {
     title: "Advanced Analytics & Reporting",
     description:
-      "Our SaaS platforms feature advanced analytics and reporting capabilities that provide businesses with valuable insights into their operations. We offer customizable dashboards, real-time data visualization, and in-depth reporting tools to help businesses make informed decisions.",
+      "Our SaaS platforms feature advanced analytics and reporting capabilities that provide businesses with valuable insights into their operations. We offer customisable dashboards, real-time data visualisation, and in-depth reporting tools to help businesses make informed decisions.",
     features: [
       {
         icon: <BarChart2 className="h-4 w-4" />,
-        title: "Customizable dashboards",
+        title: "Customisable dashboards",
         description:
-          "Creating personalized views of key metrics and data visualizations.",
+          "Creating personalised views of key metrics and data visualisations.",
       },
       {
         icon: <FileText className="h-4 w-4" />,
-        title: "Real-time data visualization",
+        title: "Real-time data visualisation",
         description:
           "Monitoring business performance with up-to-the-minute insights.",
       },
@@ -1118,7 +1118,7 @@ const Section2Data = [
         icon: <Zap className="h-4 w-4" />,
         title: "Performance and usage metrics",
         description:
-          "Generating comprehensive reports to analyze trends and performance.",
+          "Generating comprehensive reports to analyse trends and performance.",
       },
       {
         icon: <Clock className="h-4 w-4" />,
@@ -1132,11 +1132,11 @@ const Section2Data = [
   {
     title: "Performance, Scalability & Reliability",
     description:
-      "We build SaaS platforms with a focus on performance, scalability, and reliability. Our solutions are designed to handle high traffic volumes, ensure minimal downtime, and provide a seamless user experience. We utilize load balancing, caching, and auto-scaling techniques to optimize performance and ensure that our platforms can grow with your business needs.",
+      "We build SaaS platforms with a focus on performance, scalability, and reliability. Our solutions are designed to handle high traffic volumes, ensure minimal downtime, and provide a seamless user experience. We utilise load balancing, caching, and auto-scaling techniques to optimise performance and ensure that our platforms can grow with your business needs.",
     features: [
       {
         icon: <Shield className="h-4 w-4" />,
-        title: "Load and performance optimization",
+        title: "Load and performance optimisation",
         description:
           "Techniques to ensure fast response times and efficient resource usage.",
       },
@@ -1178,7 +1178,7 @@ const Section3Data = [
       },
       {
         icon: <Zap className="h-4 w-4" />,
-        title: "Authentication and Authorization",
+        title: "Authentication and Authorisation",
         description:
           "Implementing industry-standard security protocols to protect data and user access.",
       },
@@ -1202,7 +1202,7 @@ const Section3Data = [
     subtitle: "Modular & Extensible",
     title: "Designed for Growth & Flexibility",
     description:
-      "We design SaaS platforms using scalable, cloud-native architectures that can handle growing user bases and data loads. This includes microservices, containerization, and serverless computing.",
+      "We design SaaS platforms using scalable, cloud-native architectures that can handle growing user bases and data loads. This includes microservices, containerisation, and serverless computing.",
     features: [
       {
         icon: <Database className="h-4 w-4" />,
@@ -1218,7 +1218,7 @@ const Section3Data = [
       },
       {
         icon: <Zap className="h-4 w-4" />,
-        title: "Customize workflows per team or role",
+        title: "Customise workflows per team or role",
         description:
           "Tailoring processes to fit specific business needs and improve efficiency.",
       },

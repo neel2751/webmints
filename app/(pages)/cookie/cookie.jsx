@@ -47,7 +47,7 @@ const DEFAULT_COOKIE_CATEGORIES = [
   {
     id: "marketing",
     name: "Marketing Cookies",
-    description: "Enable personalized ads across websites.",
+    description: "Enable personalised ads across websites.",
   },
 ];
 
@@ -226,7 +226,7 @@ function CookieBanner({
                 variant="outline"
                 className="w-full sm:flex-1 h-9 rounded-lg text-sm transition-all hover:shadow-md"
               >
-                Customize
+                Customise
               </Button>
               <Button
                 onClick={onAcceptAll}
@@ -260,7 +260,7 @@ function CookieCustomizeDialog({
             Manage Cookies
           </DialogTitle>
           <DialogDescription className="text-muted-foreground">
-            Customize your cookie preferences below.
+            Customise your cookie preferences below.
           </DialogDescription>
         </DialogHeader>
         <div className="px-6 py-6 space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto">

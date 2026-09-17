@@ -29,7 +29,7 @@ export default function UseCookie() {
           id: "marketing",
           name: "Marketing & Advertising",
           description:
-            "Enable personalized ads and marketing content across websites and social platforms.",
+            "Enable personalised ads and marketing content across websites and social platforms.",
           icon: <Target className="h-4 w-4 text-purple-600" />,
         },
       ]}

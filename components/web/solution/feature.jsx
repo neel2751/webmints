@@ -55,7 +55,7 @@ export default function FeatureSol() {
                   Enhancement in Customer Engagement
                 </h3>
                 <p className="mt-1 text-neutral-400">
-                  With the aim of optimizing customer interactions and boosting
+                  With the aim of optimising customer interactions and boosting
                   brand loyalty, the team at Preline leveraged Mailchimp's
                   powerful tools and expertise to deliver exceptional results.
                 </p>
@@ -102,7 +102,7 @@ export default function FeatureSol() {
                 </h3>
                 <p className="mt-1 text-neutral-400">
                   In collaboration with Shopify, Preline embarked on a mission
-                  to revolutionize the e-commerce experience for a fictitious
+                  to revolutionise the e-commerce experience for a fictitious
                   fashion brand, "StyleAura.".
                 </p>
               </div>

@@ -27,7 +27,7 @@ export default function WhatWeOffer() {
                 Transform Your Business with Measurable Results
               </h2>
               <p className="text-center text-white/90 lg:text-left lg:text-lg tracking-tight mt-4 font-sans">
-                We provide a uniquely customizable SaaS platform that adapts to
+                We provide a uniquely customisable SaaS platform that adapts to
                 your exact business needs. Our modular design and flexible
                 architecture empower you to build the perfect solution,
                 unlocking efficiency, driving growth, and providing a

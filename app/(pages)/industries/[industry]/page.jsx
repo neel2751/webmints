@@ -311,7 +311,7 @@ export default async function IndustryPage({ params }) {
             <div className="mt-8 text-center">
               <p className="text-muted-foreground mb-4">
                 Didn't find what you were looking for? Check our comprehensive
-                help center.
+                help centre.
               </p>
               <Button
                 asChild
@@ -330,7 +330,7 @@ export default async function IndustryPage({ params }) {
       {/* CTA Section */}
       <IndustryDetailCta
         heading={`Ready to transform your ${industryData?.title?.toLowerCase()} business?`}
-        description={`Get in touch with our experts to discuss how our tailored SaaS solutions can drive efficiency, security, and growth for your organization.`}
+        description={`Get in touch with our experts to discuss how our tailored SaaS solutions can drive efficiency, security, and growth for your organisation.`}
         buttonText={"Contact Us"}
         buttonProps={{ href: "/contact-us" }}
       />

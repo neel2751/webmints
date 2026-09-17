@@ -11,10 +11,10 @@ export default function KeyFeature() {
           Key Features of Our Custom SaaS Solutions
         </h2>
         <p className="text-lg max-w-md font-medium leading-snug text-gray-300 tracking-tight">
-          Discover the powerful features that set our custom SaaS solutions
-          apart. Designed to enhance efficiency, scalability, and user
-          experience, our platform is built to meet the unique needs of your
-          business.
+          Find out custom SaaS solutions aimed at assisting UK companies
+          increase their efficiency, streamline operations and build scalable
+          digital systems. All solutions are tailored according to your
+          company’s processes, users and future growth prospects.
         </p>
         {/* <motion.a
           whileHover={{ scale: 1.05 }}
@@ -68,8 +68,10 @@ export default function KeyFeature() {
                 </h3>
               </div>
               <p className="text-gray-200 text-base mt-4">
-                Tailored to your industry's unique requirements, our SaaS
-                platforms deliver targeted functionalities that drive success.
+                We create custom-built SaaS applications that cater to the
+                unique needs of your industry. Whether you're in healthcare,
+                construction, e-commerce, education, enterprise solutions, or
+                any other industry, we have what it takes.
               </p>
               <Image
                 src={"/images/home/sol1.svg"}
@@ -88,8 +90,10 @@ export default function KeyFeature() {
                 </h3>
               </div>
               <p className="text-gray-200 text-base mt-4">
-                Built on a robust infrastructure, our SaaS solutions grow with
-                your business while ensuring data security and integrity.
+                Our custom SaaS platforms use scalable architecture designed to
+                support business growth. We focus on reliable infrastructure,
+                secure application development and technology that can adapt as
+                your users, data and operational requirements increase.
               </p>
               <Image
                 // src="https://notioly.com/wp-content/uploads/2025/03/525.Waiting-In-Line.png"
@@ -111,10 +115,10 @@ export default function KeyFeature() {
                 </h3>
               </div>
               <p className="text-gray-200 text-base mt-4">
-                Experience faster load times and improved responsiveness with
-                our optimized SaaS solutions.
-                {/* Our dedicated support team is available 24/7 to help you with
-              any questions or concerns. */}
+                We develop high-performing SaaS applications that have
+                responsive interfaces and efficient systems. This ensures
+                businesses provide their customers, employees, and teams with a
+                seamless experience.
               </p>
             </div>
             <div className="relative p-6 group before:absolute before:inset-0 before:bg-gradient-to-t before:from-purple-600/15 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:p-8 lg:p-12">
@@ -125,13 +129,13 @@ export default function KeyFeature() {
                 </h3>
               </div>
               <p className="text-gray-200 text-base mt-4">
-                within your platform, you can easily integrate with your
-                favorite applications and services.
-                {/* We use industry-standard encryption to ensure your payment
-              information is secure. */}
+                Integrate your SaaS solution with the products and services
+                already used by your company. We can help you implement
+                third-party integration and API development solutions, which can
+                help companies link systems and eliminate routine tasks.
               </p>
             </div>
-            <div className="relative p-6 group before:absolute before:inset-0 before:bg-gradient-to-t before:from-green-600/15 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:hidden sm:p-8 lg:block lg:p-12">
+            <div className="relative p-6 group before:absolute before:inset-0 before:bg-gradient-to-t before:from-green-600/15 before:opacity-0 before:duration-300 hover:before:opacity-100 sm:col-span-2 sm:!border-l-0 sm:border-t sm:border-white/10 sm:p-8 lg:col-span-1 lg:!border-l lg:border-t-0 lg:p-12">
               <div className="flex items-center gap-2">
                 <Headset className="text-gray-500 size-5 group-hover:text-green-400" />
 
@@ -140,8 +144,10 @@ export default function KeyFeature() {
                 </h3>
               </div>
               <p className="text-gray-200 text-base mt-4">
-                Our dedicated support team is available 24/7 to help you with
-                any questions or concerns you may have.
+                Our team offers professional technical support and advice on how
+                you can make the most out of your SaaS solution. We will assist
+                you from implementation and training to further improvement and
+                scaling of the software.
               </p>
             </div>
           </div>

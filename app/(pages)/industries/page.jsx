@@ -54,10 +54,10 @@ export default function IndustriesPage() {
           </>
         }
         description={
-          "We offer a range of services that can be customized to meet the needs of various industries."
+          "We offer a range of services that can be customised to meet the needs of various industries."
         }
         supportingText={
-          "These services are customized and configured differently depending on industry requirements."
+          "These services are customised and configured differently depending on industry requirements."
         }
       />
       <section className="py-28 lg:py-32 lg:pt-44 font-grotesk bg-gradient-to-b from-white to-gray-50">

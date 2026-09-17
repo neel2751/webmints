@@ -13,7 +13,7 @@ const models = [
       "Well-documented project scopes",
     ],
     benefits: ["Predictable cost", "Clear deliverables", "Structured timeline"],
-    note: "This model works well when requirements are finalized and unlikely to change during development.",
+    note: "This model works well when requirements are finalised and unlikely to change during development.",
     featured: false,
   },
   {

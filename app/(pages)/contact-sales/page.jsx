@@ -42,7 +42,7 @@ export default function ContactSalesPage() {
                 <p className="text-lg text-gray-500 font-medium tracking-tight">
                   Interested in a custom SaaS solution? Our sales experts are
                   here to help you find the perfect fit for your business needs.
-                  Inquire about features, and tailored solutions.
+                  Enquire about features, and tailored solutions.
                 </p>
               </div>
 
@@ -153,7 +153,7 @@ const salesBenefits = [
       "Our sales team has deep knowledge of various industries and can help identify the best solution for your specific needs.",
   },
   {
-    title: "Customized Solutions",
+    title: "Customised Solutions",
     description:
       "We don't believe in one-size-fits-all. Our team will work with you to create a tailored SaaS solution for your business.",
   },
@@ -194,7 +194,7 @@ const interests = [
   "Industry-Specific Solutions",
   "Enterprise Integration",
   "Data Migration",
-  "System Modernization",
+  "System Modernisation",
   "Maintenance & Support",
   "Consulting Services",
   "Training & Onboarding",

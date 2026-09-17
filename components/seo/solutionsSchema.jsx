@@ -28,7 +28,7 @@ export default function SolutionsSchema() {
               "@type": "Service",
               name: "Enterprise Resource Planning (ERP) Solutions",
               description:
-                "Comprehensive ERP solutions integrating finance, HR, and operations with real-time data synchronization and customizable workflows.",
+                "Comprehensive ERP solutions integrating finance, HR, and operations with real-time data synchronisation and customisable workflows.",
               provider: {
                 "@id": `${SITE_URL}/#organization`,
               },
@@ -48,7 +48,7 @@ export default function SolutionsSchema() {
               "@type": "Service",
               name: "Supply Chain Management Solutions",
               description:
-                "End-to-end supply chain visibility, inventory management, and logistics optimization.",
+                "End-to-end supply chain visibility, inventory management, and logistics optimisation.",
               provider: {
                 "@id": `${SITE_URL}/#organization`,
               },

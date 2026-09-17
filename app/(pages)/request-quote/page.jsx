@@ -52,7 +52,7 @@ export default async function page({ searchParams }) {
                     Let's Talk About Your Project
                   </h2>
                   <p className="mt-4 text-muted-foreground">
-                    Schedule a personalized consultation with our sales team to
+                    Schedule a personalised consultation with our sales team to
                     discuss how our custom SaaS solutions can help your business
                     grow.
                   </p>
@@ -120,7 +120,7 @@ export default async function page({ searchParams }) {
                         Need Immediate Assistance?
                       </h3>
                       <p className="text-sm text-muted-foreground mb-4">
-                        If you have an urgent inquiry, you can reach us
+                        If you have an urgent enquiry, you can reach us
                         directly:
                       </p>
                       <div className="space-y-2">
@@ -327,7 +327,7 @@ const callOptions = [
   {
     title: "One-on-One Consultation",
     description:
-      "A personalized call with a sales representative focused on your specific needs.",
+      "A personalised call with a sales representative focused on your specific needs.",
     icon: <Phone className="h-5 w-5 text-indigo-600" />,
   },
   {
@@ -402,6 +402,6 @@ const faqs = [
   {
     question: "Will I receive any materials after the call?",
     answer:
-      "Yes, our team will follow up with a summary of the discussion, relevant resources, and a customized proposal based on your needs within 48 hours after the call.",
+      "Yes, our team will follow up with a summary of the discussion, relevant resources, and a customised proposal based on your needs within 48 hours after the call.",
   },
 ];

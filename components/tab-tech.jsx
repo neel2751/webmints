@@ -6,7 +6,7 @@ import Image from "next/image";
 const TabTechFeature = ({
   badge = "Features",
   heading = "Comprehensive Solution Categories",
-  description = "Our SaaS solutions are categorized to address specific business needs across various domains.",
+  description = "Our SaaS solutions are categorised to address specific business needs across various domains.",
   tabs,
 }) => {
   return (

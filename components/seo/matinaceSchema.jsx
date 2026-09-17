@@ -28,7 +28,7 @@ export default function MaintenanceSupportSchema() {
               "@type": "Service",
               name: "SaaS Maintenance & Support",
               description:
-                "Ongoing technical support, performance optimization, security updates, and cloud infrastructure management for SaaS platforms, offered as On-Demand Support, Monthly Maintenance Retainer, and Dedicated Support Team plans.",
+                "Ongoing technical support, performance optimisation, security updates, and cloud infrastructure management for SaaS platforms, offered as On-Demand Support, Monthly Maintenance Retainer, and Dedicated Support Team plans.",
               provider: {
                 "@id": `${SITE_URL}/#organization`,
               },

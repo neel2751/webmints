@@ -51,7 +51,7 @@ export default function CareersPage() {
                   Growth Opportunities
                 </h3>
                 <p className="text-md mb-4 font-medium tracking-tight leading-snug text-gray-600">
-                  We prioritize professional development and provide ample
+                  We prioritise professional development and provide ample
                   opportunities for growth through training, mentorship, and
                   career advancement paths.
                 </p>
@@ -396,7 +396,7 @@ const benefits = [
   {
     title: "Health & Wellness",
     description:
-      "Comprehensive health insurance, mental health support, wellness programs, and generous paid time off.",
+      "Private medical insurance, mental health support, wellness programmes, and generous paid holiday.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -417,7 +417,7 @@ const benefits = [
   {
     title: "Professional Growth",
     description:
-      "Learning stipends, conference attendance, mentorship programs, and clear career advancement paths.",
+      "Learning stipends, conference attendance, mentorship programmes, and clear career advancement paths.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -592,7 +592,7 @@ const recruitmentSteps = [
     title: "Offer & Onboarding",
     bg: "bg-indigo-500",
     description:
-      "If selected, you'll receive a competitive offer. Once accepted, our comprehensive onboarding program will help you hit the ground running.",
+      "If selected, you'll receive a competitive offer. Once accepted, our comprehensive onboarding programme will help you hit the ground running.",
   },
 ];
 
@@ -616,12 +616,12 @@ const careerFaqs = [
   {
     question: "How do you support professional development?",
     answer:
-      "We provide annual learning stipends, access to online learning platforms, internal mentorship programs, and opportunities to attend industry conferences. We also encourage internal mobility and career growth through regular performance discussions.",
+      "We provide annual learning stipends, access to online learning platforms, internal mentorship programmes, and opportunities to attend industry conferences. We also encourage internal mobility and career growth through regular performance discussions.",
   },
   {
     question: "What benefits do you offer?",
     answer:
-      "Our comprehensive benefits package includes health, dental, and vision insurance, 401(k) matching, generous PTO, parental leave, mental health resources, wellness programs, and equity options. Benefits may vary by location.",
+      "Our comprehensive benefits package includes private medical, dental, and optical cover, workplace pension contributions, generous paid holiday, parental leave, mental health resources, wellness programmes, and equity options. Benefits may vary by location.",
   },
   {
     question: "How do you ensure diversity and inclusion?",

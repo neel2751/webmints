@@ -102,7 +102,7 @@ export default function HomeHero() {
               <span className="underline inline-block transition-transform duration-300 hover:scale-105 text-indigo-600 cursor-pointer">
                 SaaS
               </span>{" "}
-              & Business Automation Solutions Built for Growth
+              & Business Automation Solutions for UK Businesses
             </h1>
           </AnimatedGroup>
           <AnimatedGroup
@@ -110,14 +110,20 @@ export default function HomeHero() {
             className="flex flex-col items-center gap-4"
           >
             <p className="max-w-[25rem] md:max-w-[50rem] text-center text-base lg:text-xl text-black/65 font-medium sm:px-0 px-3">
-              {/* We provide fully customizable SaaS platforms to scale your business
+              {/* We provide fully customisable SaaS platforms to scale your business
             with flexibility and efficiency. Our solutions are tailored to meet
             your specific needs, ensuring seamless integration and maximum ROI. */}
-              At WebMints, we design and develop custom SaaS solutions and
-              business automation software tailored to your unique workflows.
-              Whether you’re a startup or an enterprise, we help you streamline
-              operations, improve efficiency, and scale faster with technology
-              built specifically for your needs.
+              WebMints provides the services of developing and designing bespoke
+              SaaS platforms, business automation software and cloud software for
+              businesses in the UK. We tailor-make technology that will suit your
+              particular business process, helping small-scale companies,
+              businesses and enterprise companies optimise processes, automate
+              and scale with ease.
+            </p>
+            <p className="max-w-[25rem] md:max-w-[50rem] text-center text-base lg:text-xl text-black/65 font-medium sm:px-0 px-3">
+              Whether you require Custom SaaS platform development, API
+              integration or cloud software, our solutions are tailored according
+              to your business needs, and not vice versa.
             </p>
           </AnimatedGroup>
           <AnimatedGroup

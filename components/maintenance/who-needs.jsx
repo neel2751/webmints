@@ -24,9 +24,9 @@ const audiences = [
   },
   {
     icon: RefreshCw,
-    title: "Companies Modernizing Legacy Software",
+    title: "Companies Modernising Legacy Software",
     description:
-      "Organizations transitioning from legacy systems that need ongoing support during and after modernization projects.",
+      "Organisations transitioning from legacy systems that need ongoing support during and after modernisation projects.",
     color: "bg-indigo-600/10 text-indigo-600",
   },
 ];

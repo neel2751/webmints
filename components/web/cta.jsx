@@ -61,13 +61,19 @@ const Cta = () => {
                   {/* Ready to Scale Your Business with Custom SaaS? */}
                   Ready to Build Your SaaS Platform?
                 </h2>
-                <p className="text-white/90 text-lg mb-10 max-w-lg ">
+                <p className="text-white/90 text-lg mb-4 max-w-lg ">
                   {/* Our team is here to help you every step of the way. From
                   consultation to implementation, we'll work with you to create
-                  a customized solution that meets your unique needs and goals. */}
-                  If you’re looking for a custom SaaS development company that
-                  understands your business and delivers results — WebMints is
-                  your partner.
+                  a customised solution that meets your unique needs and goals. */}
+                  If you are looking for a custom SaaS development company in the
+                  UK, WebMints can help you turn your software idea or business
+                  requirement into a scalable digital solution.
+                </p>
+                <p className="text-white/80 text-base mb-10 max-w-lg">
+                  Whether you need custom SaaS development, business process
+                  automation, cloud software, CRM workflow automation or API
+                  integration, our team can help you plan, build and scale
+                  technology around your business.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 mb-10">
                   <div className="flex items-center gap-1">
@@ -79,13 +85,13 @@ const Cta = () => {
                   <div className="flex items-center gap-1">
                     <CheckCircle className="text-amber-400 w-4" />
                     <span className="text-white whitespace-nowrap font-grotesk">
-                      Customized Solutions
+                      Customised Solutions
                     </span>
                   </div>
                   <div className="flex items-center gap-1">
                     <CheckCircle className="text-amber-400 w-4" />
                     <span className="text-white whitespace-nowrap font-grotesk">
-                      Free Quote
+                      Free Project Assessment
                     </span>
                   </div>
                 </div>
