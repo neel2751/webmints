@@ -621,7 +621,7 @@ const careerFaqs = [
   {
     question: "What benefits do you offer?",
     answer:
-      "Our comprehensive benefits package includes private medical, dental, and optical cover, workplace pension contributions, generous paid holiday, parental leave, mental health resources, wellness programmes, and equity options. Benefits may vary by location.",
+      "Our comprehensive benefits package includes private medical insurance, workplace pension contributions, generous paid holiday, parental leave, mental health resources, wellness programmes, and equity options. Benefits may vary by location.",
   },
   {
     question: "How do you ensure diversity and inclusion?",

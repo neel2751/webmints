@@ -190,8 +190,8 @@ export default function BenefitsAndPerks() {
                 Health & Pension
               </h3>
               <p className="text-lg font-medium leading-snug text-gray-600 max-w-3xl mb-8 tracking-tight">
-                Private medical, dental, and optical cover, plus workplace
-                pension contributions and financial wellness programmes
+                Private medical insurance, plus workplace pension contributions
+                and financial wellness programmes
               </p>
             </div>
 
