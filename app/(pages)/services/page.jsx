@@ -12,7 +12,6 @@ import {
   TrendingUp,
   PhoneCall,
 } from "lucide-react";
-import Text from "@/components/animation/text";
 import { BadgeAlertIcon } from "@/components/animation/currency/currency";
 import Stacking from "@/components/animation/stacking";
 import { SERVICE_FEATURES, SERVICES } from "@/data/data";
@@ -20,11 +19,12 @@ import { HowItWorksNew } from "../home/home";
 import FeatureCard from "@/components/feature-card";
 import { CTANEW } from "@/components/web/cta";
 import ServicesSchema from "@/components/seo/servicesSchema";
+import FAQs from "@/components/faq";
 
 export const metadata = {
-  title: "Our Services",
+  title: "Business Automation Services for UK Businesses",
   description:
-    "Discover our comprehensive range of SaaS development services tailored to transform your business operations and drive growth.",
+    "WebMints builds custom software, SaaS, business automation, cloud apps, CRM solutions and APIs for businesses across London and the UK.",
   alternates: {
     canonical: "/services",
   },
@@ -37,8 +37,6 @@ export const metadata = {
 };
 
 export default function ServicesPage() {
-  const titles = ["Businesses", "Startups", "Enterprises", "Innovators"];
-
   return (
     <main className="flex flex-col font-grotesk overflow-hidden">
       <ServicesSchema />
@@ -51,16 +49,21 @@ export default function ServicesPage() {
               🚀 Transforming Businesses Since 2020
             </Badge>
             <h1 className="mb-6 font-bold text-black/85 tracking-tighter text-3xl sm:text-4xl md:text-6xl relative">
-              Automation Solutions <br />
-              Built for Growing
-              <Text keywords={titles} className="text-indigo-600" />
+              Business Automation Services for{" "}
+              <span className="text-indigo-600">UK Businesses</span>
             </h1>
+            <p className="text-xl font-medium leading-snug text-gray-600 mb-4 tracking-tight">
+              WebMints is a software development company providing businesses
+              across London and the UK with high-quality, scalable solutions
+              that are designed specifically for their needs. This ranges from
+              creating custom software and SaaS, business automation, cloud
+              apps, CRM solutions, and APIs to building technology that suits
+              your business.
+            </p>
             <p className="text-xl font-medium leading-snug text-gray-600 mb-8 tracking-tight">
-              At WebMints, we help businesses design, build, and scale custom
-              SaaS platforms and automation solutions that solve real
-              operational problems. Our services are focused on creating
-              software that fits your workflows, supports growth, and delivers
-              long-term value.
+              If you are starting something new in the digital sphere or need to
+              upgrade or improve your current system, we will help you get there
+              through software solutions.
               {/* We'll support you throughout the full cycle of software product
               development. From initial consultation and planning to design,
               development, testing, deployment, and ongoing maintenance, our
@@ -279,20 +282,28 @@ export default function ServicesPage() {
             </svg>
 
             <h2 className="font-bold text-black/85 mb-2 text-5xl tracking-tight">
-              Comprehensive SaaS Development{" "}
+              Custom Software & SaaS Development{" "}
               <span className="text-indigo-600 whitespace-nowrap">
                 Services
               </span>
             </h2>
           </div>
+          <p className="text-lg font-medium leading-snug text-gray-600 max-w-4xl mb-4 tracking-tight">
+            Our custom software and SaaS development services are created
+            according to your business needs and growth strategy. We provide
+            technology solutions that can grow with your business from product
+            development and automation to cloud software and modernisation and
+            integration.
+          </p>
           <p className="text-lg font-medium leading-snug text-gray-600 max-w-4xl mb-8 tracking-tight">
-            Our Services are tailored to your unique needs, ensuring you get the
-            most value without any hidden fees. From initial consultation to
-            deployment and ongoing support, we handle every aspect of your SaaS
-            journey.
+            The software development services that we offer are aimed at
+            assisting companies in simplifying their processes, enhancing the
+            customer experience and enabling growth. Our services range from the
+            strategy and planning stage to development and deployment according
+            to your needs.
           </p>
           <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
-            {SERVICES.map((service, index) => (
+            {SERVICES_PAGE_ITEMS.map((service, index) => (
               <Stacking key={service.title} items={service} />
             ))}
           </div>
@@ -309,22 +320,24 @@ export default function ServicesPage() {
             Managing Every Aspect
           </div>
           <h2 className="font-bold text-black/85 mb-2 text-5xl tracking-tighter">
-            We Handle the Tech, You Focus on{" "}
-            <span className="text-indigo-600 whitespace-nowrap">Growth</span>
+            Your Trusted Software Development Partner in{" "}
+            <span className="text-indigo-600 whitespace-nowrap">UK</span>
           </h2>
           <p className="text-lg font-medium leading-snug text-gray-600 max-w-4xl mb-8 tracking-tight">
-            From cloud infrastructure to user experience design, our team has
-            the skills and experience to deliver end-to-end SaaS solutions that
-            drive real business results.
+            From strategy and planning to development and long-term support,
+            WebMints helps businesses build software that drives measurable
+            results. Our team focuses on creating reliable, scalable, and
+            user-friendly solutions that improve business operations and support
+            growth.
           </p>
-          <FeatureCard features={SERVICE_FEATURES} />
+          <FeatureCard features={SERVICES_PAGE_FEATURES} />
           <div className="flex mt-8 max-w-[1200px] items-start space-x-1.5">
             <BadgeAlertIcon size={20} className="text-black/50" />
             <div className="text-sm font-medium text-black/50 tracking-tight">
-              <strong>Webmints</strong> is your full-service partner for{" "}
-              <strong>Custom Software Development</strong>. From initial concept
-              to <strong>Ongoing Support</strong>, we manage every aspect of
-              your software journey.
+              <strong>WebMints</strong> is your reliable software development
+              company, developing custom software, SaaS, CRM solutions, business
+              automation solutions, and cloud software. Let us help you create
+              value-generating software.{" "}
               <Link className="font-bold" href="/contact-us">
                 Get in touch to learn more.
               </Link>
@@ -457,7 +470,48 @@ export default function ServicesPage() {
         </div>
       </section> */}
 
-      <HowItWorksNew />
+      <HowItWorksNew
+        heading={
+          <>
+            Our Software Development{" "}
+            <span className="text-indigo-600 whitespace-nowrap">Process</span>
+          </>
+        }
+        description="Our proven development process ensures every project is delivered efficiently, transparently, and aligned with your business objectives."
+        steps={[
+          {
+            details:
+              "Tell us about your project goals and business requirements.",
+          },
+          { details: "Discuss your vision with our software specialists." },
+          {
+            title: "Launch and",
+            details:
+              "Deploy your solution and continuously improve performance.",
+          },
+          {
+            details:
+              "Expand your software capabilities as your business grows.",
+          },
+        ]}
+      />
+
+      <section
+        className="py-16 lg:py-24 px-6 font-grotesk"
+        style={{ backgroundColor: "rgb(250,250,250)" }}
+      >
+        <div className="container mx-auto">
+          <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center mb-12">
+            <div className="text-sm font-semibold text-indigo-600">FAQs</div>
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tighter">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div className="mx-auto max-w-3xl">
+            <FAQs faqs={SERVICES_FAQS} />
+          </div>
+        </div>
+      </section>
 
       {/* <section className="bg-gradient-to-r from-indigo-600 via-purple-600 to-blue-600 py-16 rounded-lg my-12 container mx-auto">
         <div className="container mx-auto">
@@ -489,7 +543,24 @@ export default function ServicesPage() {
           </div>
         </div>
       </section> */}
-      <CTANEW />
+      <CTANEW
+        heading="Looking for a Custom Software Development Company in UK?"
+        description={
+          <>
+            <p>
+              From SaaS, CRM, workflow automation, cloud apps, or enterprise
+              software, WebMints can assist. Our experts work with companies
+              from all over London and the UK to develop scalable digital
+              products to boost efficiency and cut down costs.
+            </p>
+            <p className="mt-4">
+              Get in touch and book your free consultation today to see how
+              custom software can revolutionise your business.
+            </p>
+          </>
+        }
+        buttonText="Book Your Free Consultation"
+      />
 
       {/* <section className="">
         <div
@@ -611,6 +682,210 @@ export default function ServicesPage() {
 }
 
 // Data
+const listHtml = (heading, items) => `
+      <h4 class="text-2xl font-bold mb-3 text-gray-700">${heading}</h4>
+      <ul class="list-disc list-inside mb-6 font-medium tracking-tight leading-snug text-gray-600">
+        ${items.map((item) => `<li>${item}</li>`).join("")}
+      </ul>`;
+
+// Services page copy, keyed by SERVICES id (home page keeps its own copy)
+const SERVICES_PAGE_COPY = {
+  "custom-saas-platform-development": {
+    title: "Custom SaaS Development",
+    longDescription:
+      "Our custom SaaS development services allow companies to develop scalable, secure, and easy-to-use software products. Working in close collaboration with your team, we will be able to develop solutions that meet your business needs and offer an excellent user experience.",
+    detailsHtml:
+      listHtml("Build Scalable SaaS Platforms", [
+        "Multi-tenant SaaS architecture",
+        "Subscription and billing systems",
+        "User authentication and access management",
+        "Cloud-native application development",
+        "Third-party integrations",
+      ]) +
+      listHtml("Key Features", [
+        "Custom user roles and permissions",
+        "Scalable infrastructure",
+        "Advanced security controls",
+        "API integrations",
+        "Performance optimisation",
+      ]),
+  },
+  "business-process-automation": {
+    title: "Business Process Automation Services",
+    longDescription:
+      "Manual operations hinder expansion and lead to increased expenses. Business automation services from us enable organisations to streamline their operations by eliminating tedious activities and increasing productivity via automation.",
+    detailsHtml:
+      listHtml("Reduce Manual Work with Smart Automation", [
+        "Workflow analysis and process mapping",
+        "Automation strategy and implementation",
+        "System integration and automation tools",
+        "Data synchronisation across platforms",
+      ]) +
+      listHtml("Benefits of Business Automation", [
+        "Increased efficiency",
+        "Reduced operational costs",
+        "Improved compliance",
+        "Faster decision-making",
+        "Greater productivity",
+      ]),
+  },
+  "crm-and-workflow-automation": {
+    title: "CRM & Workflow Automation",
+    longDescription:
+      "We create customised CRM systems that allow you to effectively manage customer relations, sales cycles, and workflow from one interface. Our systems are based on your processes and not the other way around.",
+    detailsHtml:
+      listHtml("Custom CRM Systems Built Around Your Business", [
+        "CRM development and implementation",
+        "Lead management automation",
+        "Sales workflow optimisation",
+        "Customer data centralisation",
+        "Business application integrations",
+      ]) +
+      listHtml("Workflow Automation Features", [
+        "Automated lead tracking",
+        "Custom sales pipelines",
+        "Reporting dashboards",
+        "Marketing integrations",
+        "Real-time customer insights",
+      ]),
+  },
+  "cloud-based-software-solutions": {
+    title: "Cloud Application Development",
+    longDescription:
+      "Cloud computing helps companies grow effectively and enhances accessibility, security, and performance. We develop cloud-based applications that can support present-day business needs and future scalability.",
+    detailsHtml:
+      listHtml("Scalable Cloud Application Development", [
+        "Cloud-native software development",
+        "Microservices architecture",
+        "Serverless solutions",
+        "Secure cloud infrastructure",
+        "Cloud migration services",
+      ]) +
+      listHtml("Benefits of Cloud Solutions", [
+        "Flexible scalability",
+        "Remote accessibility",
+        "Lower infrastructure costs",
+        "Improved reliability",
+        "Business continuity support",
+      ]),
+  },
+  "saas-product-modernization": {
+    title: "Software Modernisation Services",
+    longDescription:
+      "Legacy systems can lead to inefficiencies, insecurity, and constraints for expanding firms. Our modernisation services allow clients to enhance their legacy systems using contemporary technology and techniques.",
+    detailsHtml:
+      listHtml("Upgrade Legacy Systems for Better Performance", [
+        "Legacy application assessment",
+        "Software re-engineering",
+        "Framework migration",
+        "Database modernisation",
+        "User experience improvements",
+      ]) +
+      listHtml("Key Benefits", [
+        "Better performance",
+        "Improved security",
+        "Enhanced user experience",
+        "Easier maintenance",
+        "Increased scalability",
+      ]),
+  },
+  "api-integration-and-third-party-tools": {
+    title: "API Development & Third-Party Integrations",
+    longDescription:
+      "In modern companies, there are several software platforms running in sync. We provide integration of your systems using APIs which are safe to use for exchanging data.",
+    detailsHtml:
+      listHtml("Connect Your Entire Software Ecosystem", [
+        "REST API development",
+        "GraphQL API development",
+        "Payment gateway integrations",
+        "CRM integrations",
+        "ERP and business software integrations",
+      ]) +
+      listHtml("Benefits of API Integration", [
+        "Improved data accuracy",
+        "Enhanced functionality",
+        "Reduced manual data entry",
+        "Better operational efficiency",
+        "Scalable system architecture",
+      ]),
+  },
+};
+
+const SERVICES_PAGE_ITEMS = SERVICES.map((service) => ({
+  ...service,
+  ...SERVICES_PAGE_COPY[service.id],
+}));
+
+const SERVICES_PAGE_FEATURE_COPY = {
+  "Task Management": {
+    description:
+      "Maintain order within projects and teams through custom task management solutions tailored specifically for your needs.",
+  },
+  "Real-time Updates": {
+    title: "Real-Time Updates",
+    description:
+      "Get real-time notifications and updates that ensure your teams stay up-to-date and collaborative.",
+  },
+  "Team Collaboration": {
+    description:
+      "Enhance your communication and productivity through built-in collaboration features.",
+  },
+  "Goal Tracking": {
+    description:
+      "Monitor your business goals and project milestones through custom reporting solutions.",
+  },
+  "Analytics & Reporting": {
+    description:
+      "Gain valuable business insights through analytics and reporting dashboards.",
+  },
+  "Resource Management": {
+    description:
+      "Manage your resources more efficiently and plan operations with ease.",
+  },
+  "Time Tracking": {
+    description:
+      "Improve project performance monitoring and productivity through built-in time tracking.",
+  },
+  "Client Communication": {
+    description:
+      "Establish better relationships with customers through effective communications.",
+  },
+};
+
+const SERVICES_PAGE_FEATURES = SERVICE_FEATURES.map((feature) => ({
+  ...feature,
+  ...SERVICES_PAGE_FEATURE_COPY[feature.title],
+}));
+
+const SERVICES_FAQS = [
+  {
+    question: "What software development services does WebMints provide?",
+    answer:
+      "WebMints provides custom SaaS development, business process automation, CRM and workflow automation, cloud software development, SaaS modernisation and API integration services.",
+  },
+  {
+    question:
+      "Do you provide software development services for businesses in London?",
+    answer:
+      "Yes. WebMints provides tailored software and SaaS development solutions for businesses in London and across the UK.",
+  },
+  {
+    question: "Can you build a custom SaaS platform from scratch?",
+    answer:
+      "Yes. We can develop SaaS platforms around your business requirements, including architecture, features, integrations, testing, deployment and ongoing improvements.",
+  },
+  {
+    question: "Can you modernise an existing SaaS platform?",
+    answer:
+      "Yes. We can help improve existing software through modernisation, performance improvements, updated technologies, improved user experience and new integrations.",
+  },
+  {
+    question: "Can you integrate our existing business systems?",
+    answer:
+      "Yes. We can connect CRM systems, payment platforms, analytics tools and other third-party applications using APIs and software integrations.",
+  },
+];
+
 const processSteps = [
   {
     title: "Discovery & Planning",

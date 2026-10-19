@@ -42,7 +42,7 @@ const HomePage = () => {
 
 export default HomePage;
 
-export function HowItWorksNew() {
+export function HowItWorksNew({ heading, description, steps } = {}) {
   const processSteps = [
     {
       title: "Fill Out the",
@@ -93,12 +93,18 @@ export function HowItWorksNew() {
             Our Onboarding Process
           </div>
           <h2 className="font-bold text-black/85 mb-2 text-5xl tracking-tighter">
-            Simple Process, Powerful{" "}
-            <span className="text-indigo-600 whitespace-nowrap">Results</span>
+            {heading || (
+              <>
+                Simple Process, Powerful{" "}
+                <span className="text-indigo-600 whitespace-nowrap">
+                  Results
+                </span>
+              </>
+            )}
           </h2>
           <p className="text-lg font-medium leading-snug text-gray-600 mb-8 tracking-tight">
-            Our simple onboarding process will help you get started with your
-            custom SaaS software development or business automation project.
+            {description ||
+              "Our simple onboarding process will help you get started with your custom SaaS software development or business automation project."}
           </p>
         </div>
         <div className="mt-[40px] grid grid-cols-1 md:grid-cols-2 xl:grid-cols-8 gap-8">
@@ -232,7 +238,12 @@ export function HowItWorksNew() {
           </div> */}
 
           {processSteps.map((step, index) => (
-            <FeatureCard key={index} index={index} {...step} />
+            <FeatureCard
+              key={index}
+              index={index}
+              {...step}
+              {...steps?.[index]}
+            />
           ))}
         </div>
         <div className="flex mt-6 max-w-[1200px] items-start space-x-1.5">

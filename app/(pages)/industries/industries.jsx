@@ -38,7 +38,13 @@ export default function Industries() {
         //     </Button>
         //   </CardFooter>
         // </Card>
-        <ProjectCard key={industry.id} {...industry} />
+        <ProjectCard
+          key={industry.id}
+          {...industry}
+          title={industry.listingTitle || industry.title}
+          description={industry.listingDescription || industry.description}
+          headingAs="h2"
+        />
       ))}
       <IndustriesContantUSCard />
     </div>

@@ -487,6 +487,9 @@ export const industriesPricing = [
 export const HomePageIndustries = [
   {
     id: "healthcare",
+    listingTitle: "Healthcare Software Development",
+    listingDescription:
+      "We design custom healthcare software solutions tailored to make things easier and increase efficiency. Be it patient management systems, healthcare platforms, workflow automation or system integration, our solutions are always customised based on your unique needs. Our scalable healthcare software solutions can be used by healthcare firms and organisations all across London and even the whole United Kingdom to help them streamline their operations and integrate their current systems.",
     title: "Healthcare",
     description:
       "We provide healthcare solutions that improve patient care and streamline administrative processes. Our HIPAA-compliant systems include Electronic Health Records (EHR), telemedicine platforms, and patient management systems, ensuring secure and efficient healthcare delivery.",
@@ -758,6 +761,9 @@ export const HomePageIndustries = [
   },
   {
     id: "enterprise",
+    listingTitle: "Enterprise Business Software Development",
+    listingDescription:
+      "Our services for developing enterprise software assist organisations to effectively control business processes and make them more efficient. Custom-tailored software is being created by us for companies in London and all over the United Kingdom.",
     title: "Enterprise Solutions",
     description:
       "Our enterprise solutions are designed to scale with your business, providing robust features that enhance productivity and streamline operations. We focus on delivering high-quality, customisable solutions that meet the unique needs of large organisations.",
@@ -1007,6 +1013,9 @@ export const HomePageIndustries = [
   },
   {
     id: "ecommerce",
+    listingTitle: "E-commerce Platforms Designed for Growth",
+    listingDescription:
+      "Our company develops specialised solutions for electronic commerce software, which are aimed at improving business operation, customer experience, and processes within the company. These solutions may be developed according to the needs of the client.",
     title: "E-commerce",
     description:
       "We specialise in building e-commerce platforms that drive sales and enhance customer experiences. Our solutions include advanced payment integrations, inventory management, and personalised shopping experiences to help you succeed in the online retail space.",
@@ -1255,6 +1264,9 @@ export const HomePageIndustries = [
   },
   {
     id: "education",
+    listingTitle: "Education Software Development Solutions",
+    listingDescription:
+      "We design educational software products that facilitate online learning and administrative functions. Our educational software includes learning management systems, course management systems and custom educational applications which make the educational process better integrated.",
 
     title: "Education",
     description:
@@ -1498,6 +1510,9 @@ export const HomePageIndustries = [
   },
   {
     id: "construction",
+    listingTitle: "Technology Solutions for Construction & Project Management",
+    listingDescription:
+      "Our software solutions for construction help organisations handle their projects, teams, resources, and field operations through an integrated system. We can build applications for project management, scheduling, equipment management, data collection, and workflow management according to the needs of your construction firm.",
 
     title: "Construction",
     description:

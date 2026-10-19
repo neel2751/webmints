@@ -105,9 +105,9 @@ export default function Stacking({ items }) {
                 className="font-display text-base font-semibold before:text-indigo-600 before:content-['/_'] after:text-indigo-600 after:content-[counter(section,decimal-leading-zero)]"
                 aria-hidden="true"
               ></div>
-              <h2 className="text-4xl font-bold mb-2 tracking-tighter text-gray-800">
+              <h3 className="text-4xl font-bold mb-2 tracking-tighter text-gray-800">
                 {items?.title}
-              </h2>
+              </h3>
               <div className="mt-6">
                 <p className="text-md mb-4 font-medium tracking-tight leading-snug text-gray-600">
                   {items?.longDescription}

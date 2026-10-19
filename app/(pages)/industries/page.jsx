@@ -1,6 +1,7 @@
 import Industries from "./industries";
 import { IndustyCta } from "@/components/web/industy-cta";
 import { Services } from "../home/home";
+import { SERVICES } from "@/data/data";
 import { BadgeAlertIcon } from "@/components/animation/currency/currency";
 import Link from "next/link";
 import IndustrySchema from "@/components/seo/industrySchema";
@@ -20,6 +21,45 @@ export const metadata = {
   },
 };
 
+// Short service descriptions used on the industries page only
+const INDUSTRY_SERVICES_COPY = {
+  "custom-saas-platform-development": {
+    title: "Custom SaaS Development",
+    description:
+      "Create scalable SaaS platforms that will be suited for your business.",
+  },
+  "business-process-automation": {
+    title: "Business Process Automation",
+    description:
+      "Automate the workflow and processes to save your time and become more efficient.",
+  },
+  "crm-and-workflow-automation": {
+    title: "CRM & Workflow Automation",
+    description:
+      "Manage customers in an easier way and automate your workflows using dedicated CRMs.",
+  },
+  "cloud-based-software-solutions": {
+    title: "Cloud-Based Software Development",
+    description:
+      "Create scalable cloud-based software which works in interconnected systems.",
+  },
+  "saas-product-modernization": {
+    title: "SaaS Product Improvement",
+    description:
+      "Enhance your SaaS product through improved technology, performance, integration and usability.",
+  },
+  "api-integration-and-third-party-tools": {
+    title: "API Integration Services",
+    description:
+      "Connect apps and third-party tools to ensure data exchange and workflow automation.",
+  },
+};
+
+const INDUSTRY_SERVICES = SERVICES.map((service) => ({
+  ...service,
+  ...INDUSTRY_SERVICES_COPY[service.id],
+}));
+
 export default function IndustriesPage() {
   return (
     <main className="font-grotesk">
@@ -27,17 +67,18 @@ export default function IndustriesPage() {
       <div className="container bg-white  2xl:max-w-[1400px] mx-auto p-4 relative py-12 lg:pt-24 overflow-hidden">
         <div className="relative text-center">
           <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-6xl mt-8 font-bold tracking-tighter text-black/85 lg:text-balance">
-            SaaS Solutions Tailored to Industry-Specific Needs
+            Industry-Specific SaaS Solutions for UK Businesses
           </h1>
           <p className="text-lg md:text-xl max-w-4xl mt-4 font-medium text-gray-600 md:text-balance tracking-tight mx-auto">
-            Every industry operates differently - with unique workflows,
-            compliance requirements, and business challenges. At WebMints, we
-            build custom software platforms and automation solutions that are
-            designed to fit the realities of each industy we serve.
+            All industries have their own specific workflows, problems, and
+            technological requirements. At WebMints, we create custom SaaS
+            applications, automation software, and digital platforms tailored to
+            meet your industry-specific demands.
             <br />
             <br />
-            Rather than offering generic software, we tailor our technology to
-            match industry-specific processes and goals.
+            Whether you are a new company or an established one based in London
+            or anywhere in the UK, we can help you optimise your processes and
+            develop software for scalability.
           </p>
         </div>
       </div>
@@ -47,9 +88,9 @@ export default function IndustriesPage() {
       <Services
         heading={
           <>
-            How Our Services Apply Across{" "}
+            Custom Business Software{" "}
             <span className="text-indigo-600 underline decoration-wavy">
-              Industries
+              Development Services
             </span>
           </>
         }
@@ -59,19 +100,24 @@ export default function IndustriesPage() {
         supportingText={
           "These services are customised and configured differently depending on industry requirements."
         }
+        items={INDUSTRY_SERVICES}
       />
       <section className="py-28 lg:py-32 lg:pt-44 font-grotesk bg-gradient-to-b from-white to-gray-50">
         <div className="container flex flex-col justify-between gap-8 md:gap-14 lg:flex-row lg:gap-20 mx-auto 2xl:max-w-[1400px]">
           <div className="flex-1">
             <h2 className="font-heading text-4xl font-bold leading-tight text-black/85 md:text-5xl lg:text-6xl tracking-tight">
-              Industy-Focused. Technology-Driven
-              <span className=" text-indigo-600">.</span>
+              Industry-Focused Software Development for London Businesses
             </h2>
             <p className="text-lg font-medium leading-snug text-gray-600 tracking-tight max-w-3xl mx-auto mt-5 ">
-              Build software that aligns perfectly with your industry's
-              workflows and challenges. Our expertise lies in creating tailored
-              SaaS solutions that empower businesses across various sectors to
-              thrive in a competitive landscape.
+              Each company is unique in terms of process and system
+              implementations. Software development services are provided
+              according to the nature of the client&apos;s business, enabling
+              employees to automate their routines and integrate different
+              systems.
+            </p>
+            <p className="text-lg font-medium leading-snug text-gray-600 tracking-tight max-w-3xl mx-auto mt-4">
+              Being business-oriented, we are able to create scalable SaaS
+              platforms and solutions for automation.
             </p>
             <div className="flex mt-8 max-w-[1200px] items-start space-x-1.5">
               <BadgeAlertIcon size={20} className="text-black/50" />
@@ -201,7 +247,21 @@ export default function IndustriesPage() {
           </div>
         </div>
       </section>
-      <IndustyCta />
+      <IndustyCta
+        heading="Looking for Custom SaaS Solutions in London?"
+        description={
+          <>
+            Whether it is specialised software, process automation, or a
+            customised SaaS solution that you require, WebMints can assist you
+            to convert your business needs into a scalable digital solution.
+            <br />
+            <br />
+            Just tell us what your industry is, your business process
+            requirements, and your technology needs, and we can guide you
+            accordingly.
+          </>
+        }
+      />
     </main>
   );
 }

@@ -13,6 +13,7 @@ const ProjectCard = React.forwardRef(
       description,
       link,
       linkText = "View Project",
+      headingAs: Heading = "h3",
       ...props
     },
     ref,
@@ -40,9 +41,9 @@ const ProjectCard = React.forwardRef(
 
         {/* Card Content Section */}
         <div className="flex flex-1 flex-col p-6">
-          <h3 className="text-3xl font-bold mb-2 tracking-tight text-black/85">
+          <Heading className="text-3xl font-bold mb-2 tracking-tight text-black/85">
             {title}
-          </h3>
+          </Heading>
           <p className="text-md mb-4 font-medium tracking-tight leading-snug text-gray-500">
             {description}
           </p>

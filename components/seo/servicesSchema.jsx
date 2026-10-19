@@ -26,9 +26,9 @@ export default function ServicesSchema() {
             },
             {
               "@type": "Service",
-              name: "Custom SaaS platform development",
+              name: "Custom SaaS Development",
               description:
-                "Tailored SaaS solutions built to fit your unique business needs.",
+                "Scalable, secure and easy-to-use SaaS products built around your business needs.",
               provider: {
                 "@id": `${SITE_URL}/#organization`,
               },
@@ -36,9 +36,9 @@ export default function ServicesSchema() {
             },
             {
               "@type": "Service",
-              name: "Business process automation",
+              name: "Business Process Automation Services",
               description:
-                "Streamline operations and improve efficiency with automated workflows.",
+                "Streamline operations by eliminating manual activities and increasing productivity through automation.",
               provider: {
                 "@id": `${SITE_URL}/#organization`,
               },
@@ -46,9 +46,9 @@ export default function ServicesSchema() {
             },
             {
               "@type": "Service",
-              name: "CRM & workflow automation",
+              name: "CRM & Workflow Automation",
               description:
-                "Integrate CRM systems and automate workflows to enhance customer management.",
+                "Custom CRM systems to manage customer relations, sales cycles and workflows from one interface.",
               provider: {
                 "@id": `${SITE_URL}/#organization`,
               },
@@ -56,9 +56,9 @@ export default function ServicesSchema() {
             },
             {
               "@type": "Service",
-              name: "Cloud-based software solutions",
+              name: "Cloud Application Development",
               description:
-                "Leverage cloud technology to build scalable and accessible software solutions.",
+                "Cloud-based applications that support present-day business needs and future scalability.",
               provider: {
                 "@id": `${SITE_URL}/#organization`,
               },
@@ -66,9 +66,9 @@ export default function ServicesSchema() {
             },
             {
               "@type": "Service",
-              name: "SaaS product modernisation",
+              name: "Software Modernisation Services",
               description:
-                "Update and enhance existing SaaS products to improve performance and user experience.",
+                "Enhance legacy systems using contemporary technology and techniques.",
               provider: {
                 "@id": `${SITE_URL}/#organization`,
               },
@@ -76,9 +76,9 @@ export default function ServicesSchema() {
             },
             {
               "@type": "Service",
-              name: "API integration & third-party tools",
+              name: "API Development & Third-Party Integrations",
               description:
-                "Seamlessly connect your SaaS applications with third-party services through robust API integrations.",
+                "Integrate your systems using secure APIs for exchanging data.",
               provider: {
                 "@id": `${SITE_URL}/#organization`,
               },
